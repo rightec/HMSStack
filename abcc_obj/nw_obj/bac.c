@@ -1,14 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Starter Kit version 3.07.02 (2020-12-09)                              **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**    ABCC Driver    5.07.01 (2020-10-12)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2019 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -113,7 +104,7 @@
 #if ABCC_CFG_MAX_MSG_SIZE < ABP_BAC_IA_SUPPORT_ADV_MAPPING_DS
 #error ABCC_CFG_MAX_MSG_SIZE is too small to hold the BACnet Advanced Mapping value!
 #endif
-#if ABCC_CFG_MAX_MSG_SIZE < ( ABP_SIZEOF_UINT16 + ABP_SIZEOF_UINT32 )
+#if ABCC_CFG_MAX_MSG_SIZE < ( ABP_UINT16_SIZEOF + ABP_UINT32_SIZEOF )
 #error ABCC_CFG_MAX_MSG_SIZE is too small to hold the BACnet Get_ADI_By_BACnet_Object_Instance data!
 #endif
 #if ABCC_CFG_MAX_MSG_SIZE < BAC_OBJ_INST_NAME_LENGTH_MAX
@@ -122,7 +113,7 @@
 #if ABCC_CFG_MAX_MSG_SIZE < BAC_CMD_GET_ALL_OBJ_INST_LENGTH
 #error ABCC_CFG_MAX_MSG_SIZE is too small to hold the BACnet Get_All_BACnet_Object_Instances data!
 #endif
-#if ABCC_CFG_MAX_MSG_SIZE < ( ABP_SIZEOF_UINT16 + ABP_SIZEOF_UINT32 )
+#if ABCC_CFG_MAX_MSG_SIZE < ( ABP_UINT16_SIZEOF + ABP_UINT32_SIZEOF )
 #error ABCC_CFG_MAX_MSG_SIZE is too small to hold the BACnet Get_BACnet_Object_Instance_By_ADI data!
 #endif
 #endif
@@ -690,7 +681,7 @@ static void bac_ObjectCommandGetAllBacnetObjInstances( ABP_MsgType* psNewMessage
    */
    for( i = 0; i < BAC_CMD_GET_ALL_OBJ_INST_LENGTH; i++ )
    {
-      ABCC_SetData8( psNewMessage->abData, 0, i );
+      ABCC_SetMsgData8( psNewMessage, 0, i );
    }
    ABP_SetMsgResponse( psNewMessage, BAC_CMD_GET_ALL_OBJ_INST_LENGTH );
 

@@ -1,14 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Starter Kit version 3.07.02 (2020-12-09)                              **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**    ABCC Driver    5.07.01 (2020-10-12)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2019 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -28,6 +19,7 @@
 ********************************************************************************
 */
 
+#include "abcc_obj_cfg.h"
 #include "abcc_time.h"
 
 /*******************************************************************************
@@ -67,7 +59,7 @@ BOOL ABCC_TIME_GetDateAndTime( ABCC_TIME_DateAndTimeType* psTime )
    ** PORTING ALERT!
    ** Needs to be implemented in order for get date and time over BACnet to work
    */
-   error PORTING ALERT!
+   #error PORTING ALERT!
 
    return FALSE;
 }
