@@ -1479,7 +1479,7 @@
 ** range of each data type.
 */
 #ifndef AD_IA_MIN_MAX_DEFAULT_ENABLE
-   #define AD_IA_MIN_MAX_DEFAULT_ENABLE            ( FALSE )
+   #define AD_IA_MIN_MAX_DEFAULT_ENABLE            ( TRUE )
 #endif
 
 /*------------------------------------------------------------------------------

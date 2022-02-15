@@ -1,0 +1,64 @@
+#15022022
+Output con BACNET OK
+************************************************
+ANB_STATUS: ABP_ANB_STATE_SETUP
+RSP MSG_DATA_FORMAT: 0
+RSP MSG_GET_PARAM_SUPPORT: 1
+RSP MSG_GET_MODULE_ID: 0x403
+RSP MSG_GET_NETWORK_ID: 0x87
+RSP MSG_GET_FW_VERSION: 2.21.1
+RSP MSG_MAP_IO_****
+RSP MSG_MAP_IO_****
+RSP MSG_MAP_IO_****
+RSP MSG_MAP_IO_****
+RSP MSG_SETUP_COMPLETE
+Mapped PD size, RdPd 0 WrPd: 7
+ANB_STATUS: ABP_ANB_STATE_NW_INIT
+ANB_STATUS: ABP_ANB_STATE_WAIT_PROCESS
+ANB_STATUS: ABP_ANB_STATE_PROCESS_ACTIVE
+************************************************
+Con SimpleTest
+ANB_STATUS: ABP_ANB_STATE_SETUP
+RSP MSG_DATA_FORMAT: 0
+RSP MSG_GET_PARAM_SUPPORT: 1
+RSP MSG_GET_MODULE_ID: 0x403
+RSP MSG_GET_NETWORK_ID: 0x87
+RSP MSG_GET_FW_VERSION: 2.21.1
+RSP MSG_MAP_IO_****
+RSP MSG_MAP_IO_****
+RSP MSG_SETUP_COMPLETE
+Mapped PD size, RdPd 2 WrPd: 2
+ANB_STATUS: ABP_ANB_STATE_NW_INIT
+ANB_STATUS: ABP_ANB_STATE_WAIT_PROCESS
+ANB_STATUS: ABP_ANB_STATE_ERROR
+
+
+-		psMsg	windows_tp.exe!0x00a35514 {sHeader={iDataSize=4 iReserved=0 bSourceId=6 '\x6' ...} abData=0x00a35520 "" }	ABP_MsgType8 *
+-		sHeader	{iDataSize=4 iReserved=0 bSourceId=6 '\x6' ...}	ABP_MsgHeaderType
+		iDataSize	4	unsigned short
+		iReserved	0	unsigned short
+		bSourceId	6 '\x6'	unsigned char
+		bDestObj	3 '\x3'	unsigned char
+		iInstance	1	unsigned short
+		bCmd	18 '\x12'	unsigned char
+		bReserved	0 '\0'	unsigned char
+		bCmdExt0	1 '\x1'	unsigned char
+		bCmdExt1	0 '\0'	unsigned char
+
+-		psMsg	windows_tp.exe!0x00a35514 {sHeader={iDataSize=4 iReserved=0 bSourceId=7 '\a' ...} abData=0x00a35520 "" }	ABP_MsgType8 *
+-		sHeader	{iDataSize=4 iReserved=0 bSourceId=7 '\a' ...}	ABP_MsgHeaderType
+		iDataSize	4	unsigned short
+		iReserved	0	unsigned short
+		bSourceId	7 '\a'	unsigned char
+		bDestObj	3 '\x3'	unsigned char
+		iInstance	1	unsigned short
+		bCmd	19 '\x13'	unsigned char
+		bReserved	0 '\0'	unsigned char
+		bCmdExt0	1 '\x1'	unsigned char
+		bCmdExt1	0 '\0'	unsigned char
+
+
+
+
+
+

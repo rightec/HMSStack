@@ -65,6 +65,8 @@
 #define APPL_NOT_MAP_WRITE_ACCESS_DESC ( ABP_APPD_DESCR_GET_ACCESS |           \
                                          ABP_APPD_DESCR_SET_ACCESS )
 
+
+
 /*******************************************************************************
 ** Typedefs
 ********************************************************************************
@@ -112,9 +114,12 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
 const AD_MapType APPL_asAdObjDefaultMap[] =
 {
    { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
-   { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+ //  { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { 2, PD_WRITE,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
+
+
 
 /*******************************************************************************
 ** Private Services
