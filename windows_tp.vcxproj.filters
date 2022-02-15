@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\example_app">
+      <UniqueIdentifier>{28161156-e192-4d6a-aeba-04cbfef62bfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_adapt">
+      <UniqueIdentifier>{01226cb1-2c73-4769-a3fb-b0046a48f6fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_adapt\pctransportprovider">
+      <UniqueIdentifier>{2abad123-fd8e-40f6-a63d-ee1db4301b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_obj">
+      <UniqueIdentifier>{286ace1a-0f93-465a-a2c9-c2bd54a4c21c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_obj\nw_obj">
+      <UniqueIdentifier>{1f9a556f-accf-405f-9dfb-b86cb0938094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_abp">
+      <UniqueIdentifier>{49a9eaf2-63d1-4e8b-bc74-a3b9aa11da8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_drv">
+      <UniqueIdentifier>{76ed1095-d29a-4399-ac8c-a16c01640a2a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_drv\src">
+      <UniqueIdentifier>{d39c9319-3e50-474f-a013-eff4b3252e3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\abcc_drv\inc">
+      <UniqueIdentifier>{a782c1f8-19fd-45c6-a3c8-d406de81bf3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_abcc_handler.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_alltypes.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_asm.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_bacnet.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_separate16.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_simple16.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_speed_example.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_sync.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_verif.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_obj_port.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_adapt\abcc_sw_port.c">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_adapt\abcc_sys_adapt.c">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_adapt\abcc_time.c">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_adapt\pctransportprovider\imp_tp.c">
+      <Filter>Source Files\abcc_adapt\pctransportprovider</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\ad_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\anb_fsi_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\app_fsi_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\app_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\asm_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\etn_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\mqtt_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\opcua_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\safe_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\sync_obj.c">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\bac.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\ccl.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\cfn.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\cop.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\dev.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\dpv1.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\ect.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\eip.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\epl.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\mod.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_obj\nw_obj\prt.c">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_cmd_seq.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\serial\abcc_crc16.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\spi\abcc_crc32.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_debug_err.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_handler.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\par\abcc_handler_par.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\par30\abcc_handler_par30.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\serial\abcc_handler_ser.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\spi\abcc_handler_spi.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_link.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_mem.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\par30\abcc_par30_drv.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\par\abcc_par_drv.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_remap.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_seg.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\serial\abcc_serial_drv.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_setup.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\spi\abcc_spi_drv.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+    <ClCompile Include="abcc_drv\src\abcc_timer.c">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="example_app\appl_abcc_handler.h">
+      <Filter>Source Files\example_app</Filter>
+    </ClInclude>
+    <ClInclude Include="example_app\appl_adi_config.h">
+      <Filter>Source Files\example_app</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_drv_cfg.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_identification.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_obj_cfg.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_platform_cfg.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_sw_port.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_td.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\abcc_time.h">
+      <Filter>Source Files\abcc_adapt</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\pctransportprovider\imp_tp.h">
+      <Filter>Source Files\abcc_adapt\pctransportprovider</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_adapt\pctransportprovider\TP.h">
+      <Filter>Source Files\abcc_adapt\pctransportprovider</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\ad_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\anb_fsi_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\app_fsi_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\app_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\asm_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\etn_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\mqtt_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\opcua_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\safe_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\sync_obj.h">
+      <Filter>Source Files\abcc_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\bac.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\ccl.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\cfn.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\cop.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\dev.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\dpv1.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\ect.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\eip.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\epl.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\mod.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_obj\nw_obj\prt.h">
+      <Filter>Source Files\abcc_obj\nw_obj</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_add.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_asm.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_bac.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_ccl.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_cipid.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_cnt.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_cop.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_cpc.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_cpn.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_dev.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_dpv0di.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_dpv1.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_eco.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_ect.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_eip.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_epl.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_er.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_etn.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_fsi.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_fusm.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_mdd.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_mod.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_nwccl.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_nwdpv1.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_nwetn.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_nwpnio.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_pnio.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_safe.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_smtp.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_soc.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_abp\abp_sync.h">
+      <Filter>Source Files\abcc_abp</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_cmd_seq.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\serial\abcc_crc16.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\spi\abcc_crc32.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_debug_err.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_drv_if.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\par30\abcc_drv_par30_if.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\par\abcc_drv_par_if.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\serial\abcc_drv_ser_if.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\spi\abcc_drv_spi_if.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_handler.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_link.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_mem.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_seg.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_setup.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\src\abcc_timer.h">
+      <Filter>Source Files\abcc_drv\src</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_ad_if.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_cfg.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_port.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_sys_adapt.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_sys_adapt_par.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_sys_adapt_ser.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="abcc_drv\inc\abcc_sys_adapt_spi.h">
+      <Filter>Source Files\abcc_drv\inc</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
