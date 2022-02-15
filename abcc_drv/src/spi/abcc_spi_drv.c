@@ -1,13 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Driver version 5.07.01 (2020-10-12)                                   **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2013 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -734,7 +726,9 @@ void ABCC_DrvSpiWriteProcessData( void* pxProcessData )
    }
    else
    {
-      ABCC_ERROR(ABCC_SEV_WARNING, ABCC_EC_SPI_OP_NOT_ALLOWED_DURING_SPI_TRANSACTION,0);
+      ABCC_ERROR( ABCC_SEV_WARNING,
+                  ABCC_EC_SPI_OP_NOT_ALLOWED_DURING_SPI_TRANSACTION,
+                  spi_drv_eState );
    }
 }
 

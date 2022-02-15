@@ -1,13 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Driver version 5.07.01 (2020-10-12)                                   **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2013 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -208,22 +200,20 @@ static void TriggerWrPdUpdateNow( void )
       ** The data format of the process data is network specific.
       ** The application converts the data accordingly.
       */
-      if( pnABCC_DrvISReadyForWrPd() )
+
+      if( ABCC_CbfUpdateWriteProcessData( abcc_pbWrPdBuffer ) )
       {
-         if( ABCC_CbfUpdateWriteProcessData( abcc_pbWrPdBuffer ) )
-         {
-            pnABCC_DrvWriteProcessData( abcc_pbWrPdBuffer );
+         pnABCC_DrvWriteProcessData( abcc_pbWrPdBuffer );
 #if( ABCC_CFG_SYNC_MEASUREMENT_IP )
-            if( ABCC_GetOpmode() == ABP_OP_MODE_SPI )
-            {
-               fAbccUserSyncMeasurementIp = TRUE;
-            }
-            else
-            {
-               ABCC_SYS_GpioReset();
-            }
-#endif
+         if( ABCC_GetOpmode() == ABP_OP_MODE_SPI )
+         {
+            fAbccUserSyncMeasurementIp = TRUE;
          }
+         else
+         {
+            ABCC_SYS_GpioReset();
+         }
+#endif
       }
    }
 }
@@ -297,7 +287,7 @@ static void SetReadyForCommunicationTmo( void )
 #if( ABCC_CFG_DRV_SPI || ABCC_CFG_DRV_PARALLEL_30 || ABCC_CFG_DRV_SERIAL )
 void ABCC_CheckWrPdUpdate( void )
 {
-   if( abcc_fDoWrPdUpdate )
+   if( abcc_fDoWrPdUpdate && pnABCC_DrvISReadyForWrPd() )
    {
       abcc_fDoWrPdUpdate = FALSE;
       TriggerWrPdUpdateNow();
@@ -695,37 +685,6 @@ ABCC_CommunicationStateType ABCC_isReadyForCommunication( void )
 
    return( ABCC_NOT_READY_FOR_COMMUNICATION );
 }
-
-
-void ABCC_NewWrPdEvent( void )
-{
-   if( ABCC_GetMainState() == ABCC_DRV_RUNNING )
-   {
-      /*
-      ** Send new "write process data" to the Anybus-CC.
-      ** The data format of the process data is network specific.
-      ** The application converts the data accordingly.
-      */
-      if ( pnABCC_DrvISReadyForWrPd() )
-      {
-         if( ABCC_CbfUpdateWriteProcessData( abcc_pbWrPdBuffer ) )
-         {
-            pnABCC_DrvWriteProcessData( abcc_pbWrPdBuffer );
-#if( ABCC_CFG_SYNC_MEASUREMENT_IP )
-            if( ABCC_GetOpmode() == ABP_OP_MODE_SPI )
-            {
-               fAbccUserSyncMeasurementIp = TRUE;
-            }
-            else
-            {
-               ABCC_SYS_GpioReset();
-            }
-#endif
-         }
-      }
-   }
-}
-
 
 
 void ABCC_TriggerRdPdUpdate( void )

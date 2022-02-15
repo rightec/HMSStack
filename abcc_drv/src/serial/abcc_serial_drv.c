@@ -1,13 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Driver version 5.07.01 (2020-10-12)                                   **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2013 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -733,6 +725,10 @@ void ABCC_DrvSerWriteProcessData( void* pxProcessData )
    /*
     ** Nothing needs to be done here since the buffer is already updated by the application
    */
+   if ( drv_eState != SM_SER_RDY_TO_SEND_PING )
+   {
+      ABCC_ERROR( ABCC_SEV_WARNING, ABCC_EC_INCORRECT_STATE, drv_eState );
+   }
 }
 
 /*
