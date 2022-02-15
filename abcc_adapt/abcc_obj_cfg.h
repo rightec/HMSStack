@@ -1,14 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Starter Kit version 3.07.02 (2020-12-09)                              **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**    ABCC Driver    5.07.01 (2020-10-12)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2019 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -1212,6 +1203,14 @@
 #ifndef ETN_IA_ENABLE_DHCP_CLIENT_ENABLE
    #define ETN_IA_ENABLE_DHCP_CLIENT_ENABLE        FALSE
    #define ETN_IA_ENABLE_DHCP_CLIENT_VALUE         TRUE
+#endif
+
+/*
+** Attribute 25: Enable WebDAV Server (BOOL - TRUE/FALSE)
+*/
+#ifndef ETN_IA_ENABLE_WEBDAV_ENABLE
+   #define ETN_IA_ENABLE_WEBDAV_ENABLE             FALSE
+   #define ETN_IA_ENABLE_WEBDAV_VALUE              TRUE
 #endif
 
 #ifndef ETN_OBJ_USE_SET_ATTR_SUCCESS_CALLBACK

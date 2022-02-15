@@ -1,14 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Starter Kit version 3.07.02 (2020-12-09)                              **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**    ABCC Driver    5.07.01 (2020-10-12)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2015 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -479,6 +470,17 @@ static void InstanceCommand( ABP_MsgType* psNewMessage )
          */
          ABCC_SetMsgData8( psNewMessage, ETN_IA_ENABLE_DHCP_CLIENT_VALUE, 0 );
          ABP_SetMsgResponse( psNewMessage, ABP_ETN_IA_ENABLE_DHCP_CLIENT_DS );
+         break;
+      }
+#endif
+#if ETN_IA_ENABLE_WEBDAV_ENABLE
+      case ABP_ETN_IA_ENABLE_WEBDAV:
+      {
+         /*
+         ** Copy the 25th Instance 1 attribute (Enable WebDAV Server) to the message.
+         */
+         ABCC_SetMsgData8( psNewMessage, ETN_IA_ENABLE_WEBDAV_VALUE, 0 );
+         ABP_SetMsgResponse( psNewMessage, ABP_ETN_IA_ENABLE_WEBDAV_DS );
          break;
       }
 #endif
