@@ -1,13 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Driver version 5.07.01 (2020-10-12)                                   **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2013 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -232,6 +224,11 @@ static UINT16 GetAdiIndex( UINT16 iInstance )
    UINT16   iLow;
    UINT16   iMid;
    UINT16   iHigh;
+
+   if( abcc_iNumAdi == 0 )
+   {
+      return( AD_INVALID_ADI_INDEX );
+   }
 
    iLow = 0;
    iHigh = abcc_iNumAdi - 1;

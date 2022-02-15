@@ -1,14 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Starter Kit version 3.07.02 (2020-12-09)                              **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**    ABCC Driver    5.07.01 (2020-10-12)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2015 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -457,6 +448,11 @@ static UINT16 GetAdiIndex( UINT16 iInstance )
    if( iInstance == 0 )
    {
       return( AD_MAP_PAD_INDEX );
+   }
+
+   if( ad_iNumOfADIs == 0 )
+   {
+      return( AD_INVALID_ADI_INDEX );
    }
 
    iLow = 0;
