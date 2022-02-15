@@ -1,13 +1,5 @@
 /*******************************************************************************
 ********************************************************************************
-**                                                                            **
-** ABCC Driver version 5.07.01 (2020-10-12)                                   **
-**                                                                            **
-** Delivered with:                                                            **
-**    ABP            7.76.01 (2020-10-19)                                     **
-**                                                                            */
-/*******************************************************************************
-********************************************************************************
 ** COPYRIGHT NOTIFICATION (c) 2013 HMS Industrial Networks AB                 **
 **                                                                            **
 ** This code is the property of HMS Industrial Networks AB.                   **
@@ -214,17 +206,7 @@ void ABCC_LinkInit( void )
    pnMsgSentHandler = NULL;
    link_psNotifyMsg = NULL;
 
-   link_iMaxMsgSize = ABCC_CFG_MAX_MSG_SIZE;
-   /*
-    ** Limit ABCC 30 messages to 255 bytes
-    */
-   if( ABCC_ReadModuleId() == ABP_MODULE_ID_ACTIVE_ABCC30 )
-   {
-      if ( link_iMaxMsgSize > ABP_MAX_MSG_255_DATA_BYTES )
-      {
-         link_iMaxMsgSize = ABP_MAX_MSG_255_DATA_BYTES;
-      }
-   }
+   link_iMaxMsgSize = ABCC_GetMessageChannelSize();
 
    /*
    ** link_CheckNotification will be called by serial driver when a read remap
