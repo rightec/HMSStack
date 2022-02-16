@@ -245,7 +245,7 @@
 **------------------------------------------------------------------------------
 */
 #ifndef ABCC_CFG_REMAP_SUPPORT_ENABLED
-   #define ABCC_CFG_REMAP_SUPPORT_ENABLED             ( FALSE )
+   #define ABCC_CFG_REMAP_SUPPORT_ENABLED             ( TRUE )
 #endif
 
 /*------------------------------------------------------------------------------

@@ -94,6 +94,7 @@ static AD_UINT16Type appl_sUint16Prop = { { 0, 0xFFFF, 0 } };
 ** Public Globals
 ********************************************************************************
 */
+#define ADI_DESCR_ALL_ACCESS  ( ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_SET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD | ABP_APPD_DESCR_MAPPABLE_READ_PD )
 
 /*-------------------------------------------------------------------------------------------------------------
 ** 1. iInstance | 2. pabName | 3. bDataType | 4. bNumOfElements | 5. bDesc | 6. pxValuePtr | 7. pxValuePropPtr
@@ -102,7 +103,9 @@ static AD_UINT16Type appl_sUint16Prop = { { 0, 0xFFFF, 0 } };
 const AD_AdiEntryType APPL_asAdiEntryList[] =
 {
    {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
-   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+//   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+//   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
 };
 
 /*------------------------------------------------------------------------------
@@ -114,8 +117,9 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
 const AD_MapType APPL_asAdObjDefaultMap[] =
 {
    { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
- //  { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
-   { 2, PD_WRITE,  AD_MAP_ALL_ELEM, 0 },
+//   { 1, PD_READ, AD_MAP_ALL_ELEM, 0 },
+   { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+//   { 2, PD_WRITE,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
 

@@ -52,7 +52,7 @@
    #define BAC_OBJ_ENABLE                          FALSE
 #endif
 #ifndef ECT_OBJ_ENABLE
-   #define ECT_OBJ_ENABLE                          FALSE
+   #define ECT_OBJ_ENABLE                          TRUE
 #endif
 #ifndef PRT_OBJ_ENABLE
    #define PRT_OBJ_ENABLE                          FALSE
@@ -287,7 +287,7 @@
 ** Attribute 13: Name (Array of CHAR - {0x00-0xFF))
 */
 #ifndef ASM_IA_NAME_ENABLE
-   #define ASM_IA_NAME_ENABLE                      FALSE
+   #define ASM_IA_NAME_ENABLE                      TRUE
 #endif
 
 /*
@@ -436,7 +436,7 @@
 **------------------------------------------------------------------------------
 */
 #ifndef ECT_OBJ_CMD_GET_OBJ_DESC_ENABLE
-   #define ECT_OBJ_CMD_GET_OBJ_DESC_ENABLE   FALSE
+   #define ECT_OBJ_CMD_GET_OBJ_DESC_ENABLE   TRUE
    #define ECT_GET_OBJ_DESC_NUM_OBJ          1
    #define ECT_GET_OBJ_DESC_CONTENT          { { 0x2001, ECT_DATATYPE_UNSIGNED32, ECT_OBJCODE_ARRAY } }
 #endif
@@ -464,7 +464,7 @@
 **------------------------------------------------------------------------------
 */
 #ifndef ECT_SUPPORT_SYNC_ERR_COUNTERS
-   #define ECT_SUPPORT_SYNC_ERR_COUNTERS  FALSE
+   #define ECT_SUPPORT_SYNC_ERR_COUNTERS  TRUE
 #endif
 
 #if ECT_SUPPORT_SYNC_ERR_COUNTERS
@@ -473,7 +473,7 @@
    ** error counters are enabled.
    */
    #ifndef ECT_IA_OBJ_SUB_TRANS_ENABLE
-      #define ECT_IA_OBJ_SUB_TRANS_ENABLE       TRUE
+      #define ECT_IA_OBJ_SUB_TRANS_ENABLE       FALSE
    #endif
 
    /*
@@ -523,7 +523,7 @@
 ** Network Guide for more details about this attribute.
 */
 #ifndef ECT_IA_ENUM_ADIS_ENABLE
-   #define ECT_IA_ENUM_ADIS_ENABLE                 FALSE
+   #define ECT_IA_ENUM_ADIS_ENABLE                 TRUE
 #endif
 
 /*
@@ -531,7 +531,7 @@
 ** (Array of UINT16 - {0x1A00-0x1BFF})
 */
 #ifndef ECT_IA_WR_PD_ASSY_INST_TRANS_ENABLE
-   #define ECT_IA_WR_PD_ASSY_INST_TRANS_ENABLE     FALSE
+   #define ECT_IA_WR_PD_ASSY_INST_TRANS_ENABLE     TRUE
    #define ECT_IA_WR_PD_ASSY_INST_TRANS_VALUE      { 0x1BFF }
    #define ECT_IA_WR_PD_ASSY_INST_TRANS_SIZE       1
 #endif
@@ -541,7 +541,7 @@
 ** (Array of UINT16 - {0x1600-0x17FF})
 */
 #ifndef ECT_IA_RD_PD_ASSY_INST_TRANS_ENABLE
-   #define ECT_IA_RD_PD_ASSY_INST_TRANS_ENABLE     FALSE
+   #define ECT_IA_RD_PD_ASSY_INST_TRANS_ENABLE     TRUE
    #define ECT_IA_RD_PD_ASSY_INST_TRANS_VALUE      { 0x17FF }
    #define ECT_IA_RD_PD_ASSY_INST_TRANS_SIZE       1
 #endif
@@ -600,7 +600,7 @@
 ** Attribute 21: State Transition Timeouts (Array of UINT32)
 */
 #ifndef ECT_IA_STATE_TIMEOUTS_ENABLE
-   #define ECT_IA_STATE_TIMEOUTS_ENABLE            FALSE
+   #define ECT_IA_STATE_TIMEOUTS_ENABLE            TRUE
    #define ECT_IA_STATE_TIMEOUTS_VALUE             { 1000, 5000, 1000, 200 }
 #endif
 
@@ -608,7 +608,7 @@
 ** Attribute 22: Compare Identity Lists (BOOL - TRUE/FALSE)
 */
 #ifndef ECT_IA_COMP_IDENT_LISTS_ENABLE
-   #define ECT_IA_COMP_IDENT_LISTS_ENABLE          FALSE
+   #define ECT_IA_COMP_IDENT_LISTS_ENABLE          TRUE
    #define ECT_IA_COMP_IDENT_LISTS_VALUE           TRUE
 #endif
 
@@ -1487,7 +1487,7 @@
 **------------------------------------------------------------------------------
 */
 #ifndef APP_OBJ_ENABLE
-   #define APP_OBJ_ENABLE                          TRUE
+   #define APP_OBJ_ENABLE                          FALSE
 #endif
 
 #if APP_OBJ_ENABLE

@@ -260,7 +260,7 @@
 */
 #ifndef ECT_IA_VENDOR_ID_ENABLE
    #define ECT_IA_VENDOR_ID_ENABLE                 TRUE
-   #define ECT_IA_VENDOR_ID_VALUE                  0xFFFFFFFF
+   #define ECT_IA_VENDOR_ID_VALUE                  0xe000001b
 #endif
 
 /*
@@ -268,31 +268,31 @@
 */
 #ifndef ECT_IA_PRODUCT_CODE_ENABLE
    #define ECT_IA_PRODUCT_CODE_ENABLE              TRUE
-   #define ECT_IA_PRODUCT_CODE_VALUE               0xFFFFFFFF
+   #define ECT_IA_PRODUCT_CODE_VALUE               0x00000036
 #endif
 
 /*
 ** Attribute 3: Revision High Word (UINT16 - 0x0000-0xFFFF)
 */
 #ifndef ECT_IA_MAJOR_REV_ENABLE
-   #define ECT_IA_MAJOR_REV_ENABLE                 TRUE
-   #define ECT_IA_REVISION_HW_VALUE                0xFFFF
+   #define ECT_IA_MAJOR_REV_ENABLE                 FALSE
+   #define ECT_IA_REVISION_HW_VALUE                0x0002
 #endif
 
 /*
 ** Attribute 4: Revision Low Word (UINT16 - 0x0000-0xFFFF)
 */
 #ifndef ECT_IA_MINOR_REV_ENABLE
-   #define ECT_IA_MINOR_REV_ENABLE                 TRUE
-   #define ECT_IA_REVISION_LW_VALUE                0xFFFF
+   #define ECT_IA_MINOR_REV_ENABLE                 FALSE
+   #define ECT_IA_REVISION_LW_VALUE                0x0015
 #endif
 
 /*
 ** Attribute 5: Serial number (UINT32 - function/variable/0x00000000-0xFFFFFFFF)
 */
 #ifndef ECT_IA_SERIAL_NUMBER_ENABLE
-   #define ECT_IA_SERIAL_NUMBER_ENABLE             TRUE
-   #define ECT_IA_SERIAL_NUMBER_VALUE              0x12345678
+   #define ECT_IA_SERIAL_NUMBER_ENABLE             FALSE
+   #define ECT_IA_SERIAL_NUMBER_VALUE              0xa051f05c
 #endif
 
 /*
@@ -300,7 +300,7 @@
 */
 #ifndef ECT_IA_MANF_DEVICE_NAME_ENABLE
    #define ECT_IA_MANF_DEVICE_NAME_ENABLE          TRUE
-   #define ECT_IA_MANF_DEVICE_NAME_VALUE           "Manufacturer device name"
+   #define ECT_IA_MANF_DEVICE_NAME_VALUE           "Anybus CompactCom 40 EtherCAT"
 #endif
 
 /*
@@ -308,7 +308,7 @@
 */
 #ifndef ECT_IA_MANF_HW_VERSION_ENABLE
    #define ECT_IA_MANF_HW_VERSION_ENABLE           TRUE
-   #define ECT_IA_MANF_HW_VERSION_VALUE            "FF"
+   #define ECT_IA_MANF_HW_VERSION_VALUE            "2"
 #endif
 
 /*
@@ -316,7 +316,7 @@
 */
 #ifndef ECT_IA_MANF_SW_VERSION_ENABLE
    #define ECT_IA_MANF_SW_VERSION_ENABLE           TRUE
-   #define ECT_IA_MANF_SW_VERSION_VALUE            "FF"
+   #define ECT_IA_MANF_SW_VERSION_VALUE            "2.21.01"
 #endif
 
 /*
@@ -324,7 +324,7 @@
 */
 #ifndef ECT_IA_DEVICE_TYPE_ENABLE
    #define ECT_IA_DEVICE_TYPE_ENABLE               TRUE
-   #define ECT_IA_DEVICE_TYPE_VALUE                0xFFFFFFFF
+   #define ECT_IA_DEVICE_TYPE_VALUE                0x0
 #endif
 
 #endif /* #if ECT_OBJ_ENABLE */

@@ -114,7 +114,7 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
 const AD_MapType APPL_asAdObjDefaultMap[] =
 {
    { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
-   { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   {  2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
 

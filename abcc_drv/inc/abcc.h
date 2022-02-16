@@ -341,14 +341,17 @@ ParameterSupportType;
 ** Macros for reading/writing byte to/from a 16 bit word.
 **------------------------------------------------------------------------------
 */
+int ab;
 #ifndef ABCC_iSetLSB
 #define ABCC_iSetLSB( iDest, iSrc )                               \
+ab = 20000;                                                         \
 do                                                                \
 {                                                                 \
    (iDest) &= (UINT16)0xFF00;                                     \
    (iDest) |= (UINT16)(iSrc) & (UINT16)0x00FF;                    \
+    ab--;                                                          \
 }                                                                 \
-while( 0 )
+while( ab != 0 )     
 #endif
 
 #ifndef ABCC_iSetMSB

@@ -623,8 +623,8 @@ static ABCC_CmdSeqCmdStatusType ReadWriteMapCmd( ABP_MsgType* psMsg )
 
       if( abcc_psDefaultMap[ abcc_iMappingIndex ].eDir == PD_READ )
       {
-         ABCC_SetLowAddrOct( pMsgSendBuffer.psMsg16->sHeader.iCmdReserved, ABP_MSG_HEADER_C_BIT | ABP_NW_CMD_MAP_ADI_READ_EXT_AREA );
-         abcc_iPdReadBitSize += iLocalSize;
+          ABCC_SetLowAddrOct(pMsgSendBuffer.psMsg16->sHeader.iCmdReserved, ABP_MSG_HEADER_C_BIT | ABP_NW_CMD_MAP_ADI_READ_EXT_AREA);
+          abcc_iPdReadBitSize += iLocalSize;
          abcc_iPdReadSize = ( abcc_iPdReadBitSize + 7 )/8;
       }
       else
