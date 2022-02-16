@@ -88,13 +88,24 @@ static AD_UINT16Type appl_sUint16Prop = { { 0, 0xFFFF, 0 } };
 ** 1. iInstance | 2. pabName | 3. bDataType | 4. bNumOfElements | 5. bDesc | 6. pxValuePtr | 7. pxValuePropPtr
 **--------------------------------------------------------------------------------------------------------------
 */
-// @tag_1602_01: 
-// Speed is mappable on write process data: ABP_APPD_DESCR_MAPPABLE_WRITE_PD
-// RefSpeed is mappable on read process data: ABP_APPD_DESCR_MAPPABLE_READ_PD
+/* @tag_1602_01: 
+Speed is mappable on write process data: ABP_APPD_DESCR_MAPPABLE_WRITE_PD
+RefSpeed is mappable on read process data: ABP_APPD_DESCR_MAPPABLE_READ_PD
+*/
+/*@tag_1602_02:
+The ADI access descriptor values cannot be changed :
+Input ADIs : 09h(Get access + Write process data mapping possible).
+ ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD
+Output ADIs : 11h(Get access + Read process data mapping possible)
+ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD
+*/
+#define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD  // @tag_1602_02
+#define ABP_ADI_OUTPUT_TECNA             ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD  // @tag_1602_02
+
 const AD_AdiEntryType APPL_asAdiEntryList[] =
 {
-   {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_APPD_DESCR_MAPPABLE_WRITE_PD, { { &appl_iSpeed,    &appl_sUint16Prop } } },
-   {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_APPD_DESCR_MAPPABLE_READ_PD, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+   {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_ADI_INPUT_TECNA, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_ADI_OUTPUT_TECNA, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
 };
 
 /*------------------------------------------------------------------------------

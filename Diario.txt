@@ -3,3 +3,10 @@
 Modifiche per leggere in automatico dallo speed example, la revisione di prodotto
 @tag_1602_01:
 Creazione nuova applicazione di test appl_adimap_tecna.c
+@tag_1602_02:
+The ADI access descriptor values cannot be changed:
+Input ADIs: 09h (Get access + Write process data mapping possible).
+Output ADIs: 11h (Get access + Read process data mapping possible)
+Dal manuale estraggo quanto sopra. 
+@tag_1602_03:
+Mi sembra che manchi il set nella parte di input
