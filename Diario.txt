@@ -9,4 +9,43 @@ Input ADIs: 09h (Get access + Write process data mapping possible).
 Output ADIs: 11h (Get access + Read process data mapping possible)
 Dal manuale estraggo quanto sopra. 
 @tag_1602_03:
-Mi sembra che manchi il set nella parte di input
+Mi sembra che manchi il set nella parte di input. Lo inserisco
+Però non mi tornano i conti. Vedo nel mapping accessi non congruenti
+Invertendo INPUT con OUTPUT in rif a speed a refspeed ora ottengo risultati
+congruenti in:
+0x2001      "SPEED"                                       [VAR]
+    0x00      "SPEED"                                       [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2002      "REF_SPEED"                                   [VAR]
+    0x00      "REF_SPEED"                                   [UNSIGNED16       RWRWRW]      0x0000 / 0
+
+Quindi SPEED è R_R_R_ e REF_SPEED RWRWRW come dovrebbe essere.
+Resta il fatto che al primo giro (all'accensione della board) ho sempre un errore nella mappatura
+
+0x2001      "SPEED"                                       [VAR]
+    0x00      "SPEED"                                       [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2002      "REF_SPEED"                                   [VAR]
+- Time:1645017072.835 PACKET slave:1 index:2002.00 error:1
+
+Questo è il mapping dell' esempio base
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+ {
+    {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+    {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+ };
+
+APPL_WRITE_MAP_READ_ACCESS_DESC ( ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD ) 					---> Speed
+APPL_READ_MAP_WRITE_ACCESS_DESC ( ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_SET_ACCESS |  ABP_APPD_DESCR_MAPPABLE_READ_PD )		---> RefSpeed
+
+ABP_ADI_OUTPUT_TECNA             ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD  						---> Speed
+ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_SET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD 		---> RefSpeed
+
+Nel tecna.c sono invertiti i 
+const AD_MapType APPL_asAdObjDefaultMap[] =
+{
+   { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { AD_MAP_END_ENTRY }
+};
+
+
+

@@ -1,0 +1,94 @@
+SOEM (Simple Open EtherCAT Master)
+Slaveinfo
+Starting slaveinfo
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+Time:1645016999.655 PACKET slave:1 index:1c00.00 error:1
+Time:1645016999.741 PACKET slave:1 index:1c00.00 error:3
+1 slaves found and configured.
+Calculated workcounter 0
+
+Slave:1
+ Name:Anybus CompactCom 40 EtherCAT
+ Output size: 0bits
+ Input size: 0bits
+ State: 4
+ Delay: 0[ns]
+ Has DC: 1
+ DCParentport:0
+ Activeports:0.1.0.0
+ Configured address: 1001
+ Man: e000001b ID: 00000036 Rev: 00020015
+ SM0 A:4000 L: 276 F:00010026 Type:1
+ SM1 A:4800 L: 276 F:00010022 Type:2
+ SM2 A:1000 L:   2 F:00010064 Type:3
+ SM3 A:2800 L:   2 F:00010020 Type:4
+ FMMUfunc 0:1 1:2 2:3 3:0
+ MBX length wr: 276 rd: 276 MBX protocols : 0e
+ CoE details: 2f FoE details: 01 EoE details: 01 SoE details: 00
+ Ebus current: 0[mA]
+ only LRD/LWR:0
+ CoE Object Description found, 17 entries.
+0x1000      "Device Type"                                 [VAR]
+    0x00      "Device Type"                                 [UNSIGNED32       R_R_R_]      0x00000000 / 0
+0x1001      "Error Register"                              [VAR]
+    0x00      "Error Register"                              [UNSIGNED8        R_R_R_]      0x00 / 0
+0x1003      "Pre-defined error field"                     [ARRAY  maxsub(0x05 / 5)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWRWRW]      0x00 / 0
+0x1008      "Manufacturer Device Name"                    [VAR]
+    0x00      "Manufacturer Device Name"                    [VISIBLE_STR(232) R_R_R_]      "Anybus CompactCom 40 EtherCAT"
+0x1009      "Manufacturer Hardware Version"               [VAR]
+    0x00      "Manufacturer Hardware Version"               [VISIBLE_STR(8)   R_R_R_]      "2"
+0x100a      "Manufacturer Software Version"               [VAR]
+    0x00      "Manufacturer Software Version"               [VISIBLE_STR(56)  R_R_R_]      "2.21.01"
+0x1011      "Restore default parameters"                  [ARRAY  maxsub(0x01 / 1)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED32       RWRWRW]      0x00000001 / 1
+0x1018      "Identity Object"                             [RECORD  maxsub(0x04 / 4)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x04 / 4
+    0x01      "Vendor ID"                                   [UNSIGNED32       R_R_R_]      0xe000001b / 3758096411
+    0x02      "Product Code"                                [UNSIGNED32       R_R_R_]      0x00000036 / 54
+    0x03      "Revision Number"                             [UNSIGNED32       R_R_R_]      0x00020015 / 131093
+    0x04      "Serial Number"                               [UNSIGNED32       R_R_R_]      0xa051f05c / 2689724508
+0x1600      "Receive PDO Mapping"                         [RECORD  maxsub(0xfe / 254)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "Mapped Object 001"                           [UNSIGNED32       RWR_R_]      0x20020010 / 537002000
+0x1a00      "Transmit PDO Mapping"                        [RECORD  maxsub(0xfe / 254)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "Mapped Object 001"                           [UNSIGNED32       RWR_R_]      0x20010010 / 536936464
+0x1c00      "Sync Manager Communication Type"             [ARRAY  maxsub(0x04 / 4)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x04 / 4
+    0x01      "SubIndex 001"                                [UNSIGNED8        R_R_R_]      0x01 / 1
+    0x02      "SubIndex 002"                                [UNSIGNED8        R_R_R_]      0x02 / 2
+    0x03      "SubIndex 003"                                [UNSIGNED8        R_R_R_]      0x03 / 3
+    0x04      "SubIndex 004"                                [UNSIGNED8        R_R_R_]      0x04 / 4
+0x1c12      "Sync Manager Rx PDO assign"                  [ARRAY  maxsub(0x01 / 1)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWR_R_]      0x1600 / 5632
+0x1c13      "Sync Manager Tx PDO assign"                  [ARRAY  maxsub(0x01 / 1)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWR_R_]      0x1a00 / 6656
+0x1c32      "Output SyncManager Parameter"                [RECORD  maxsub(0x0c / 12)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x0c / 12
+    0x01      "Synchronization Type"                        [UNSIGNED16       RWR_R_]      0x0000 / 0
+    0x02      "Cycle Time"                                  [UNSIGNED32       RWR_R_]      0x001e8480 / 2000000
+    0x03      "Shift Time"                                  [UNSIGNED32       RWR_R_]      0x00000000 / 0
+    0x04      "Synchronization Types supported"             [UNSIGNED16       R_R_R_]      0x0001 / 1
+    0x05      "Minimum Cycle Time"                          [UNSIGNED32       R_R_R_]      0x000186a0 / 100000
+    0x06      "Calc and Copy Time"                          [UNSIGNED32       R_R_R_]      0x000001f4 / 500
+    0x09      "Delay Time"                                  [UNSIGNED32       R_R_R_]      0x00000000 / 0
+    0x0c      "Cycle Time Too Small Counter"                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x1c33      "Input SyncManager Parameter"                 [RECORD  maxsub(0x0c / 12)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x0c / 12
+    0x01      "Synchronization Type"                        [UNSIGNED16       RWR_R_]      0x0000 / 0
+    0x02      "Cycle Time"                                  [UNSIGNED32       R_R_R_]      0x001e8480 / 2000000
+    0x03      "Shift Time"                                  [UNSIGNED32       RWR_R_]      0x00000000 / 0
+    0x04      "Synchronization Types supported"             [UNSIGNED16       R_R_R_]      0x0001 / 1
+    0x05      "Minimum Cycle Time"                          [UNSIGNED32       R_R_R_]      0x000186a0 / 100000
+    0x06      "Calc and Copy Time"                          [UNSIGNED32       R_R_R_]      0x000001f4 / 500
+    0x0c      "Cycle Time Too Small Counter"                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2001      "SPEED"                                       [VAR]
+    0x00      "SPEED"                                       [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2002      "REF_SPEED"                                   [VAR]
+    0x00      "REF_SPEED"                                   [UNSIGNED16       RWRWRW]      0x0000 / 0
+End slaveinfo, close socket
+End program

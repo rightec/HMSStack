@@ -99,13 +99,15 @@ Input ADIs : 09h(Get access + Write process data mapping possible).
 Output ADIs : 11h(Get access + Read process data mapping possible)
 ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD
 */
-#define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD  // @tag_1602_02
+// #define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD  // @tag_1602_02
 #define ABP_ADI_OUTPUT_TECNA             ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD  // @tag_1602_02
+#define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_SET_ACCESS |  \
+                                            ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD  // @tag_1602_03
 
 const AD_AdiEntryType APPL_asAdiEntryList[] =
 {
-   {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_ADI_INPUT_TECNA, { { &appl_iSpeed,    &appl_sUint16Prop } } },
-   {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_ADI_OUTPUT_TECNA, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+   {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_ADI_OUTPUT_TECNA, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_ADI_INPUT_TECNA, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
 };
 
 /*------------------------------------------------------------------------------
