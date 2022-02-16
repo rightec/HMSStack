@@ -1,0 +1,5 @@
+#16022022
+@tag_1602_00:
+Modifiche per leggere in automatico dallo speed example, la revisione di prodotto
+@tag_1602_01:
+Creazione nuova applicazione di test appl_adimap_tecna.c

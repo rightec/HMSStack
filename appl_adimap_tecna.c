@@ -9,26 +9,12 @@
 **                                                                            */
 /*******************************************************************************
 ********************************************************************************
-** COPYRIGHT NOTIFICATION (c) 2015 HMS Industrial Networks AB                 **
+** COPYRIGHT NOTIFICATION (c) 2022 TECNA                                      **
 **                                                                            **
-** This code is the property of HMS Industrial Networks AB.                   **
-** The source code may not be reproduced, distributed, or used without        **
-** permission. When used together with a product from HMS, permission is      **
-** granted to modify, reproduce and distribute the code in binary form        **
-** without any restrictions.                                                  **
-**                                                                            **
-** THE CODE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND. HMS DOES NOT    **
-** WARRANT THAT THE FUNCTIONS OF THE CODE WILL MEET YOUR REQUIREMENTS, OR     **
-** THAT THE OPERATION OF THE CODE WILL BE UNINTERRUPTED OR ERROR-FREE, OR     **
-** THAT DEFECTS IN IT CAN BE CORRECTED.                                       **
 ********************************************************************************
 ********************************************************************************
-** Example of an ADI setup with two simple UINT16 ADIs simulating speed and
-** reference speed.
-**
-** In abcc_drv_cfg.h make sure that the following definitions are set to:
-** ABCC_CFG_STRUCT_DATA_TYPE     ( FALSE )
-** ABCC_CFG_ADI_GET_SET_CALLBACK ( FALSE )
+** Example of an ADI setup with: TO DO
+@tag_1602_01 - CREATION OF THIS FILE
 ********************************************************************************
 ********************************************************************************
 */
@@ -36,11 +22,13 @@
 #include "appl_adi_config.h"
 #include "abcc.h"
 
-#if ( APPL_ACTIVE_ADI_SETUP == APPL_ADI_SETUP_SPEED_EXAMPLE )
+#if ( APPL_ACTIVE_ADI_SETUP == APPL_ADI_SETUP_TECNA )
 
+/*TO VERIFY
 #if (  ABCC_CFG_STRUCT_DATA_TYPE || ABCC_CFG_ADI_GET_SET_CALLBACK )
-   #error ABCC_CFG_ADI_GET_SET_CALLBACK must be set to FALSE and ABCC_CFG_STRUCT_DATA_TYPE set to FALSE in order to run this example
+#error ABCC_CFG_ADI_GET_SET_CALLBACK must be set to FALSE and ABCC_CFG_STRUCT_DATA_TYPE set to FALSE in order to run this example
 #endif
+*/
 /*******************************************************************************
 ** Constants
 ********************************************************************************
@@ -100,14 +88,13 @@ static AD_UINT16Type appl_sUint16Prop = { { 0, 0xFFFF, 0 } };
 ** 1. iInstance | 2. pabName | 3. bDataType | 4. bNumOfElements | 5. bDesc | 6. pxValuePtr | 7. pxValuePropPtr
 **--------------------------------------------------------------------------------------------------------------
 */
+// @tag_1602_01: 
+// Speed is mappable on write process data: ABP_APPD_DESCR_MAPPABLE_WRITE_PD
+// RefSpeed is mappable on read process data: ABP_APPD_DESCR_MAPPABLE_READ_PD
 const AD_AdiEntryType APPL_asAdiEntryList[] =
 {
-    // @tag_1602_00 - Enabled entry-:{  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
-
-   {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
-//   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
-   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
-//   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+   {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_APPD_DESCR_MAPPABLE_WRITE_PD, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_APPD_DESCR_MAPPABLE_READ_PD, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
 };
 
 /*------------------------------------------------------------------------------
@@ -135,41 +122,41 @@ const AD_MapType APPL_asAdObjDefaultMap[] =
 ********************************************************************************
 */
 
-UINT16 APPL_GetNumAdi( void )
+UINT16 APPL_GetNumAdi(void)
 {
-   return( sizeof( APPL_asAdiEntryList ) / sizeof( AD_AdiEntryType ) );
+    return(sizeof(APPL_asAdiEntryList) / sizeof(AD_AdiEntryType));
 }
 
-void APPL_CyclicalProcessing( void )
+void APPL_CyclicalProcessing(void)
 {
-   if( ABCC_AnbState() == ABP_ANB_STATE_PROCESS_ACTIVE )
-   {
-      /*
-      ** An example of ADI data handling.
-      */
-      if( appl_iSpeed > appl_iRefSpeed )
-      {
-         /*
-         ** Do something that lowers speed.
-         */
-         appl_iSpeed -= 1;
-      }
-      else if( appl_iSpeed < appl_iRefSpeed )
-      {
-         /*
-         ** Do something that increases speed.
-         */
-         appl_iSpeed += 1;
-      }
-   }
-   else
-   {
-      /*
-      ** We are not in process active, the default should be that the motor
-      ** should not run.
-      */
-      appl_iSpeed = 0;
-   }
+    if (ABCC_AnbState() == ABP_ANB_STATE_PROCESS_ACTIVE)
+    {
+        /*
+        ** An example of ADI data handling.
+        */
+        if (appl_iSpeed > appl_iRefSpeed)
+        {
+            /*
+            ** Do something that lowers speed.
+            */
+            appl_iSpeed -= 1;
+        }
+        else if (appl_iSpeed < appl_iRefSpeed)
+        {
+            /*
+            ** Do something that increases speed.
+            */
+            appl_iSpeed += 1;
+        }
+    }
+    else
+    {
+        /*
+        ** We are not in process active, the default should be that the motor
+        ** should not run.
+        */
+        appl_iSpeed = 0;
+    }
 }
 
 /*******************************************************************************

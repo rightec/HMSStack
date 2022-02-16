@@ -133,6 +133,7 @@
     <ClCompile Include="abcc_obj\opcua_obj.c" />
     <ClCompile Include="abcc_obj\safe_obj.c" />
     <ClCompile Include="abcc_obj\sync_obj.c" />
+    <ClCompile Include="appl_adimap_tecna.c" />
     <ClCompile Include="example_app\appl_abcc_handler.c" />
     <ClCompile Include="example_app\appl_adimap_alltypes.c" />
     <ClCompile Include="example_app\appl_adimap_asm.c" />

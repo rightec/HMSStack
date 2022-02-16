@@ -52,7 +52,7 @@
    #define BAC_OBJ_ENABLE                          FALSE
 #endif
 #ifndef ECT_OBJ_ENABLE
-   #define ECT_OBJ_ENABLE                          TRUE
+   #define ECT_OBJ_ENABLE                          FALSE     // @tag_1602_00: set to FALSE
 #endif
 #ifndef PRT_OBJ_ENABLE
    #define PRT_OBJ_ENABLE                          FALSE

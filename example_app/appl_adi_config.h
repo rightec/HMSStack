@@ -205,6 +205,7 @@
 #define APPL_ADI_SETUP_ASM             6
 #define APPL_ADI_SETUP_ECT_SEMI        7
 #define APPL_ADI_SETUP_BACNET          8
+#define APPL_ADI_SETUP_TECNA           9		// @tag_1602_01 Add define
 
 /*------------------------------------------------------------------------------
 ** Active ADI setup to use
@@ -214,7 +215,7 @@
 #ifdef USE_BOARD_SPECIFIC_ADI_SETUP
 #define APPL_ACTIVE_ADI_SETUP   APPL_ADI_SETUP_BOARD_SPECIFIC
 #else
-#define APPL_ACTIVE_ADI_SETUP    APPL_ADI_SETUP_SPEED_EXAMPLE
+#define APPL_ACTIVE_ADI_SETUP    APPL_ADI_SETUP_TECNA		// @tag_1602_01 set application
 #endif
 #endif
 

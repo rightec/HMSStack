@@ -210,6 +210,9 @@
     <ClCompile Include="abcc_drv\src\abcc_timer.c">
       <Filter>Source Files\abcc_drv\src</Filter>
     </ClCompile>
+    <ClCompile Include="appl_adimap_tecna.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="example_app\appl_abcc_handler.h">
