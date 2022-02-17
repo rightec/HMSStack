@@ -59,6 +59,10 @@ Ci deve essere un problema quando lancio il Codesys. O si fa Codesys o si fa SOE
 A questo punto ritorno sul branch develNewApp
 Sta andando.
 
+@tag_1702_03
+Verifying tecna app against simple test
+
+
 
 
 

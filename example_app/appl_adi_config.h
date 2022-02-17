@@ -215,8 +215,8 @@
 #ifdef USE_BOARD_SPECIFIC_ADI_SETUP
 #define APPL_ACTIVE_ADI_SETUP   APPL_ADI_SETUP_BOARD_SPECIFIC
 #else
-// #define APPL_ACTIVE_ADI_SETUP    APPL_ADI_SETUP_TECNA		// @tag_1602_01 set application
-#define APPL_ACTIVE_ADI_SETUP    APPL_ADI_SETUP_SPEED_EXAMPLE		// @tag_1702_02 set application
+	#define APPL_ACTIVE_ADI_SETUP    APPL_ADI_SETUP_TECNA		// @tag_1702_03 and @tag_1602_01 set application
+	// #define APPL_ACTIVE_ADI_SETUP    APPL_ADI_SETUP_SPEED_EXAMPLE		// @tag_1702_02 set application
 #endif
 #endif
 
