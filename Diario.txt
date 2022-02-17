@@ -11,6 +11,22 @@ Use of AD_MAP_PAD_ADI
 
 Abbiamo verificato che l'uso di AD_MAP_PAD_ADI è corretta ma non porta benefici al simpleTest.
 
+Verifico se queste impostazioni funzionano col Codesys
+Creando il nuovo file XML tramite l'ESI generator ho in effetti molte discrepanze rispetto a quello fornito da
+ HMS. Certo lo stack è cambiato molto e pare anche la versione dell'ESI generator
+La mia è 1.8.0.0 mentre quella del XML fornito 1.7.1
+
+Vado a provarlo
+Dal test mi pare che questo XML mi produca un AL Status read from slave address 1001 status 16#24 : Invalid input mapping
+
+Faccio quindi un passo indietro
+@tag_1702_01: Restore simple example changing name and number of variables
+
+Ora con il codesys riesco a leggere ma il debug non mi funziona.
+E' possibile che sia qualcosa di mancante nello stack dovuto alle mie precedenti
+modifiche. 
+Faccio il commit di questa situazione e verifico la mail del supporto.
+
 
 
 #16022022

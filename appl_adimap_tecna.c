@@ -21,6 +21,7 @@
 
 #include "appl_adi_config.h"
 #include "abcc.h"
+#include "../abcc_drv/src/abcc_debug_err.h"  // @tag_1702_01
 
 #if ( APPL_ACTIVE_ADI_SETUP == APPL_ADI_SETUP_TECNA )
 
@@ -71,6 +72,8 @@
 */
 static UINT16 appl_iSpeed;
 static UINT16 appl_iRefSpeed;
+static UINT16 appl_iWelCur;
+static UINT16 appl_iRefWelCur;
 
 /*------------------------------------------------------------------------------
 ** Min, max and default value for appl_aiUint16
@@ -104,11 +107,27 @@ ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD
 #define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_SET_ACCESS |  \
                                             ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD  // @tag_1602_03
 
+#define USE_OF_MAP_ADI
+#define USE_OF_SIMPLE_TEST
+#undef USE_OF_MAP_ADI
+// #undef USE_OF_SIMPLE_TEST
+
+#ifdef USE_OF_SIMPLE_TEST
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+   {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } },
+   {  0x3,  "WEL_CUR",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iWelCur,    &appl_sUint16Prop } } },
+   {  0x4,  "REF_WEL_CUR", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefWelCur, &appl_sUint16Prop } } }
+};
+
+#else
 const AD_AdiEntryType APPL_asAdiEntryList[] =
 {
    {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_ADI_OUTPUT_TECNA, { { &appl_iSpeed,    &appl_sUint16Prop } } },
    {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_ADI_INPUT_TECNA, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
 };
+#endif
 
 /*------------------------------------------------------------------------------
 ** Map all adi:s in both directions
@@ -117,12 +136,6 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
 **------------------------------------------------------------------------------
 */
 
-/*@tag_1702_00:
-Use of AD_MAP_PAD_ADI
-#define USE_OF_MAP_ADI
-*/
-#define USE_OF_MAP_ADI
-#undef USE_OF_MAP_ADI
 #ifdef USE_OF_MAP_ADI
 /*@tag_1702_00*/
 const AD_MapType APPL_asAdObjDefaultMap[] =
@@ -132,12 +145,24 @@ const AD_MapType APPL_asAdObjDefaultMap[] =
    { AD_MAP_END_ENTRY }
 };
 #else
+#ifdef USE_OF_SIMPLE_TEST
+// @tag_1702_01: Restore simple example changing nameand number of variables
+const AD_MapType APPL_asAdObjDefaultMap[] =
+{
+   { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { 3, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 4, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { AD_MAP_END_ENTRY }
+};
+#else
 const AD_MapType APPL_asAdObjDefaultMap[] =
 {
    { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
    { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
+#endif
 #endif
 
 
@@ -171,6 +196,8 @@ void APPL_CyclicalProcessing(void)
             /*
             ** Do something that lowers speed.
             */
+            DEBUG_EVENT(("appl_iSpeed > appl_iRefSpeed\n")); // @tag_1702_01
+
             appl_iSpeed -= 1;
         }
         else if (appl_iSpeed < appl_iRefSpeed)
@@ -178,6 +205,8 @@ void APPL_CyclicalProcessing(void)
             /*
             ** Do something that increases speed.
             */
+            DEBUG_EVENT(("appl_iSpeed < appl_iRefSpeed\n")); // @tag_1702_01
+
             appl_iSpeed += 1;
         }
     }
