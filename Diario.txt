@@ -27,6 +27,33 @@ E' possibile che sia qualcosa di mancante nello stack dovuto alle mie precedenti
 modifiche. 
 Faccio il commit di questa situazione e verifico la mail del supporto.
 
+@tag_1702_02
+Verifyng HMS support info
+1) Enable SPEED_TEST
+2) Switch on support for the EtherCAT host application object in abcc_adapt/abcc_obj_cfg.h:
+#ifndef ECT_OBJ_ENABLE
+   #define ECT_OBJ_ENABLE                          TRUE
+3)Disable EoE like this:
+/*
+** Attribute 17: Enable EoE (BOOL - TRUE/FALSE)
+*/
+#ifndef ECT_IA_ENABLE_EOE_ENABLE
+   #define ECT_IA_ENABLE_EOE_ENABLE                TRUE
+   #define ECT_IA_ENABLE_EOE_VALUE                 FALSE
+#endif
+4) set all EtherCAT identification attributes to their default values by disabling them in abcc_adapt/abcc_identification.h
+(Era già fatto. Quindi non è taggato)
+
+La compilazione è ok ma ci sono errori nell'applicazione a run time
+Forse manca questo setting che originariamente c'era e che era il sospettato
+anche per il fallimento del debug codesys dell'altra prova:
+APP_OBJ_ENABLE TRUE
+
+Ripristino anche #define AD_IA_MIN_MAX_DEFAULT_ENABLE            ( FALSE )
+che avevo abilitato per il BACNET
+
+
+
 
 
 #16022022

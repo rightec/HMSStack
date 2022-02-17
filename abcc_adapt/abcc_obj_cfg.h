@@ -52,7 +52,8 @@
    #define BAC_OBJ_ENABLE                          FALSE
 #endif
 #ifndef ECT_OBJ_ENABLE
-   #define ECT_OBJ_ENABLE                          FALSE     // @tag_1602_00: set to FALSE
+   // #define ECT_OBJ_ENABLE                          FALSE     // @tag_1602_00: set to FALSE
+   #define ECT_OBJ_ENABLE                          TRUE         // @tag_1702_02: set to TRUE
 #endif
 #ifndef PRT_OBJ_ENABLE
    #define PRT_OBJ_ENABLE                          FALSE
@@ -576,10 +577,12 @@
 /*
 ** Attribute 17: Enable EoE (BOOL - TRUE/FALSE)
 */
+
 #ifndef ECT_IA_ENABLE_EOE_ENABLE
-   #define ECT_IA_ENABLE_EOE_ENABLE                FALSE
-   #define ECT_IA_ENABLE_EOE_VALUE                 TRUE
+    #define ECT_IA_ENABLE_EOE_ENABLE                TRUE   // @tag_1702_02 set to TRUE
+    #define ECT_IA_ENABLE_EOE_VALUE                 FALSE  // @tag_1702_02 set to FALSE
 #endif
+
 
 /*
 ** Attribute 19: Set Device ID as Configured Station Alias (BOOL - TRUE/FALSE)
@@ -1479,7 +1482,7 @@
 ** range of each data type.
 */
 #ifndef AD_IA_MIN_MAX_DEFAULT_ENABLE
-   #define AD_IA_MIN_MAX_DEFAULT_ENABLE            ( TRUE )
+    #define AD_IA_MIN_MAX_DEFAULT_ENABLE            ( FALSE ) // @tag_1702_01 set to false
 #endif
 
 /*------------------------------------------------------------------------------
@@ -1487,7 +1490,7 @@
 **------------------------------------------------------------------------------
 */
 #ifndef APP_OBJ_ENABLE
-   #define APP_OBJ_ENABLE                          FALSE
+   #define APP_OBJ_ENABLE                          TRUE  // @tag_1702_01 set to true
 #endif
 
 #if APP_OBJ_ENABLE
