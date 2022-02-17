@@ -1,3 +1,18 @@
+#17022022
+Se dovessimo usare:
+#define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_SET_ACCESS |  \
+                                            ABP_APPD_DESCR_MAPPABLE_WRITE_PD 
+Effettivamente la mappatura nel file sdo è solo di tipo write ma non mi cambia nulla per il simpleTest
+
+Utilizzando AD_MAP_PAD_ADI piuttosto che AD_MAP_ALL_ELEM dovremmo forzare il numero di bit effettivamente da mappare
+Vediamo se fa differenza e se c'è un bug qui
+@tag_1702_00: 
+Use of AD_MAP_PAD_ADI
+
+Abbiamo verificato che l'uso di AD_MAP_PAD_ADI è corretta ma non porta benefici al simpleTest.
+
+
+
 #16022022
 @tag_1602_00:
 Modifiche per leggere in automatico dallo speed example, la revisione di prodotto
@@ -39,13 +54,43 @@ APPL_READ_MAP_WRITE_ACCESS_DESC ( ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_SET
 ABP_ADI_OUTPUT_TECNA             ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_MAPPABLE_READ_PD  						---> Speed
 ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_GET_ACCESS | ABP_APPD_DESCR_SET_ACCESS | ABP_APPD_DESCR_MAPPABLE_WRITE_PD 		---> RefSpeed
 
-Nel tecna.c sono invertiti i 
+Per tutti vale (tecna e simpleExample)
 const AD_MapType APPL_asAdObjDefaultMap[] =
 {
    { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
    { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
+
+
+Nel tecna.c
+
+onst AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+   {  0x1,  "SPEED",     ABP_UINT16,   1, ABP_ADI_OUTPUT_TECNA, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, ABP_ADI_INPUT_TECNA, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+};
+
+
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+
+   {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } }
+};
+/*------------------------------------------------------------------------------
+** Map all adi:s in both directions
+**------------------------------------------------------------------------------
+** 1. AD instance | 2. Direction | 3. Num elements | 4. Start index |
+**------------------------------------------------------------------------------
+*/
+const AD_MapType APPL_asAdObjDefaultMap[] =
+{
+   { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { AD_MAP_END_ENTRY }
+};
+
 
 
 

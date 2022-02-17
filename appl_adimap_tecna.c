@@ -116,12 +116,31 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
 ** 1. AD instance | 2. Direction | 3. Num elements | 4. Start index |
 **------------------------------------------------------------------------------
 */
+
+/*@tag_1702_00:
+Use of AD_MAP_PAD_ADI
+#define USE_OF_MAP_ADI
+*/
+#define USE_OF_MAP_ADI
+#undef USE_OF_MAP_ADI
+#ifdef USE_OF_MAP_ADI
+/*@tag_1702_00*/
+const AD_MapType APPL_asAdObjDefaultMap[] =
+{
+   { AD_MAP_PAD_ADI, PD_WRITE, 16, 0 },
+   { AD_MAP_PAD_ADI, PD_READ,  16, 0 },
+   { AD_MAP_END_ENTRY }
+};
+#else
 const AD_MapType APPL_asAdObjDefaultMap[] =
 {
    { 1, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
    { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
+#endif
+
+
 
 
 
