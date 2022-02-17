@@ -52,6 +52,13 @@ APP_OBJ_ENABLE TRUE
 Ripristino anche #define AD_IA_MIN_MAX_DEFAULT_ENABLE            ( FALSE )
 che avevo abilitato per il BACNET
 
+Riavvio il sistema completamente
+Ora sul branch newdevel va bene.
+Ci deve essere un problema quando lancio il Codesys. O si fa Codesys o si fa SOEM
+
+A questo punto ritorno sul branch develNewApp
+Sta andando.
+
 
 
 
