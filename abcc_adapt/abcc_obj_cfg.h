@@ -1490,7 +1490,8 @@
 **------------------------------------------------------------------------------
 */
 #ifndef APP_OBJ_ENABLE
-   #define APP_OBJ_ENABLE                          TRUE  // @tag_1702_01 set to true
+   #define APP_OBJ_ENABLE                          FALSE  // @tag_1702_04 set to false
+   // #define APP_OBJ_ENABLE                          TRUE  // @tag_1702_01 set to true
 #endif
 
 #if APP_OBJ_ENABLE

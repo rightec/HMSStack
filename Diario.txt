@@ -62,6 +62,14 @@ Sta andando.
 @tag_1702_03
 Verifying tecna app against simple test
 
+@tag_1702_04
+Voglio verificare 2 cose:
+1) Vedere se effettivamente
+APP_OBJ_ENABLE TRUE è determinante nel funzionamento del test
+Mi sembra di no.
+2) Vedere se riesco a creare un ESI compatibile col codesys
+
+Una volta ricostruito l'ESI file e mappato sul codesys riesco a forzare le variabili e quindi l'applicazione possiamo dire che sta in piedi correttamente.
 
 
 
