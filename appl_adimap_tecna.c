@@ -74,6 +74,9 @@ static UINT16 appl_iSpeed;
 static UINT16 appl_iRefSpeed;
 static UINT16 appl_iWelCur;
 static UINT16 appl_iRefWelCur;
+static UINT16 appl_aiUint16[32];  // @tag_1802_00
+static UINT16 appl_aiUint16Ghost[32];  // @tag_1802_00
+
 
 /*------------------------------------------------------------------------------
 ** Min, max and default value for appl_aiUint16
@@ -118,7 +121,9 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
    {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
    {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } },
    {  0x3,  "WEL_CUR",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iWelCur,    &appl_sUint16Prop } } },
-   {  0x4,  "REF_WEL_CUR", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefWelCur, &appl_sUint16Prop } } }
+   {  0x4,  "REF_WEL_CUR", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefWelCur, &appl_sUint16Prop } } },
+   {  0x5,  "ABP_UINT16_WRITE",   ABP_UINT16,   32, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16, &appl_sUint16Prop } } },  // @tag_1802_00
+   {  0x6,  "ABP_UINT16_READ",    ABP_UINT16,   32, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint16, &appl_sUint16Prop } } }  // @tag_1802_00
 };
 
 #else
@@ -153,6 +158,8 @@ const AD_MapType APPL_asAdObjDefaultMap[] =
    { 2, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { 3, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
    { 4, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { 5, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 6, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
 #else
@@ -191,12 +198,23 @@ void APPL_CyclicalProcessing(void)
         /*
         ** An example of ADI data handling.
         */
+
+        for (int i = 0; i < 32; i++) {
+            if (appl_aiUint16Ghost[i] != appl_aiUint16[i]) {
+                /// Align internal array as soon as external var is changed
+                appl_aiUint16Ghost[i] = appl_aiUint16[i];
+                DEBUG_EVENT(("Update %d element of the ghost array\n",i)); // @tag_1802_00
+            } /// else
+        }
+
+
         if (appl_iSpeed > appl_iRefSpeed)
         {
             /*
             ** Do something that lowers speed.
             */
-            DEBUG_EVENT(("appl_iSpeed > appl_iRefSpeed\n")); // @tag_1702_01
+            // DEBUG_EVENT(("appl_iSpeed > appl_iRefSpeed\n")); // @tag_1702_01
+            DEBUG_EVENT(("appl_iSpeed is %d and appl_iRefSpeed is %d\n", appl_iSpeed,appl_iRefSpeed)); // @tag_1802_00
 
             appl_iSpeed -= 1;
         }

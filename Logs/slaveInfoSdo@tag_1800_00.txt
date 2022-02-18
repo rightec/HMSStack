@@ -1,0 +1,232 @@
+SOEM (Simple Open EtherCAT Master)
+Slaveinfo
+Starting slaveinfo
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+Calculated workcounter 3
+
+Slave:1
+ Name:Anybus CompactCom 40 EtherCAT
+ Output size: 544bits
+ Input size: 544bits
+ State: 4
+ Delay: 0[ns]
+ Has DC: 1
+ DCParentport:0
+ Activeports:1.0.0.0
+ Configured address: 1001
+ Man: e000001b ID: 00000036 Rev: 00020015
+ SM0 A:4000 L: 276 F:00010026 Type:1
+ SM1 A:4800 L: 276 F:00010022 Type:2
+ SM2 A:1000 L:  68 F:00010064 Type:3
+ SM3 A:2800 L:  68 F:00010020 Type:4
+ FMMU0 Ls:00000000 Ll:  68 Lsb:0 Leb:7 Ps:1000 Psb:0 Ty:02 Act:01
+ FMMU1 Ls:00000044 Ll:  68 Lsb:0 Leb:7 Ps:2800 Psb:0 Ty:01 Act:01
+ FMMUfunc 0:1 1:2 2:3 3:0
+ MBX length wr: 276 rd: 276 MBX protocols : 0c
+ CoE details: 2f FoE details: 01 EoE details: 00 SoE details: 00
+ Ebus current: 0[mA]
+ only LRD/LWR:0
+ CoE Object Description found, 21 entries.
+0x1000      "Device Type"                                 [VAR]
+    0x00      "Device Type"                                 [UNSIGNED32       R_R_R_]      0x00000000 / 0
+0x1001      "Error Register"                              [VAR]
+    0x00      "Error Register"                              [UNSIGNED8        R_R_R_]      0x00 / 0
+0x1003      "Pre-defined error field"                     [ARRAY  maxsub(0x05 / 5)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWRWRW]      0x00 / 0
+0x1008      "Manufacturer Device Name"                    [VAR]
+    0x00      "Manufacturer Device Name"                    [VISIBLE_STR(232) R_R_R_]      "Anybus CompactCom 40 EtherCAT"
+0x1009      "Manufacturer Hardware Version"               [VAR]
+    0x00      "Manufacturer Hardware Version"               [VISIBLE_STR(8)   R_R_R_]      "2"
+0x100a      "Manufacturer Software Version"               [VAR]
+    0x00      "Manufacturer Software Version"               [VISIBLE_STR(56)  R_R_R_]      "2.21.01"
+0x1011      "Restore default parameters"                  [ARRAY  maxsub(0x01 / 1)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED32       RWRWRW]      0x00000001 / 1
+0x1018      "Identity Object"                             [RECORD  maxsub(0x04 / 4)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x04 / 4
+    0x01      "Vendor ID"                                   [UNSIGNED32       R_R_R_]      0xe000001b / 3758096411
+    0x02      "Product Code"                                [UNSIGNED32       R_R_R_]      0x00000036 / 54
+    0x03      "Revision Number"                             [UNSIGNED32       R_R_R_]      0x00020015 / 131093
+    0x04      "Serial Number"                               [UNSIGNED32       R_R_R_]      0xa051f05c / 2689724508
+0x1600      "Receive PDO Mapping"                         [RECORD  maxsub(0xfe / 254)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x22 / 34
+    0x01      "Mapped Object 001"                           [UNSIGNED32       RWR_R_]      0x20020010 / 537002000
+    0x02      "Mapped Object 002"                           [UNSIGNED32       RWR_R_]      0x20040010 / 537133072
+    0x03      "Mapped Object 003"                           [UNSIGNED32       RWR_R_]      0x20060110 / 537264400
+    0x04      "Mapped Object 004"                           [UNSIGNED32       RWR_R_]      0x20060210 / 537264656
+    0x05      "Mapped Object 005"                           [UNSIGNED32       RWR_R_]      0x20060310 / 537264912
+    0x06      "Mapped Object 006"                           [UNSIGNED32       RWR_R_]      0x20060410 / 537265168
+    0x07      "Mapped Object 007"                           [UNSIGNED32       RWR_R_]      0x20060510 / 537265424
+    0x08      "Mapped Object 008"                           [UNSIGNED32       RWR_R_]      0x20060610 / 537265680
+    0x09      "Mapped Object 009"                           [UNSIGNED32       RWR_R_]      0x20060710 / 537265936
+    0x0a      "Mapped Object 010"                           [UNSIGNED32       RWR_R_]      0x20060810 / 537266192
+    0x0b      "Mapped Object 011"                           [UNSIGNED32       RWR_R_]      0x20060910 / 537266448
+    0x0c      "Mapped Object 012"                           [UNSIGNED32       RWR_R_]      0x20060a10 / 537266704
+    0x0d      "Mapped Object 013"                           [UNSIGNED32       RWR_R_]      0x20060b10 / 537266960
+    0x0e      "Mapped Object 014"                           [UNSIGNED32       RWR_R_]      0x20060c10 / 537267216
+    0x0f      "Mapped Object 015"                           [UNSIGNED32       RWR_R_]      0x20060d10 / 537267472
+    0x10      "Mapped Object 016"                           [UNSIGNED32       RWR_R_]      0x20060e10 / 537267728
+    0x11      "Mapped Object 017"                           [UNSIGNED32       RWR_R_]      0x20060f10 / 537267984
+    0x12      "Mapped Object 018"                           [UNSIGNED32       RWR_R_]      0x20061010 / 537268240
+    0x13      "Mapped Object 019"                           [UNSIGNED32       RWR_R_]      0x20061110 / 537268496
+    0x14      "Mapped Object 020"                           [UNSIGNED32       RWR_R_]      0x20061210 / 537268752
+    0x15      "Mapped Object 021"                           [UNSIGNED32       RWR_R_]      0x20061310 / 537269008
+    0x16      "Mapped Object 022"                           [UNSIGNED32       RWR_R_]      0x20061410 / 537269264
+    0x17      "Mapped Object 023"                           [UNSIGNED32       RWR_R_]      0x20061510 / 537269520
+    0x18      "Mapped Object 024"                           [UNSIGNED32       RWR_R_]      0x20061610 / 537269776
+    0x19      "Mapped Object 025"                           [UNSIGNED32       RWR_R_]      0x20061710 / 537270032
+    0x1a      "Mapped Object 026"                           [UNSIGNED32       RWR_R_]      0x20061810 / 537270288
+    0x1b      "Mapped Object 027"                           [UNSIGNED32       RWR_R_]      0x20061910 / 537270544
+    0x1c      "Mapped Object 028"                           [UNSIGNED32       RWR_R_]      0x20061a10 / 537270800
+    0x1d      "Mapped Object 029"                           [UNSIGNED32       RWR_R_]      0x20061b10 / 537271056
+    0x1e      "Mapped Object 030"                           [UNSIGNED32       RWR_R_]      0x20061c10 / 537271312
+    0x1f      "Mapped Object 031"                           [UNSIGNED32       RWR_R_]      0x20061d10 / 537271568
+    0x20      "Mapped Object 032"                           [UNSIGNED32       RWR_R_]      0x20061e10 / 537271824
+    0x21      "Mapped Object 033"                           [UNSIGNED32       RWR_R_]      0x20061f10 / 537272080
+    0x22      "Mapped Object 034"                           [UNSIGNED32       RWR_R_]      0x20062010 / 537272336
+0x1a00      "Transmit PDO Mapping"                        [RECORD  maxsub(0xfe / 254)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x22 / 34
+    0x01      "Mapped Object 001"                           [UNSIGNED32       RWR_R_]      0x20010010 / 536936464
+    0x02      "Mapped Object 002"                           [UNSIGNED32       RWR_R_]      0x20030010 / 537067536
+    0x03      "Mapped Object 003"                           [UNSIGNED32       RWR_R_]      0x20050110 / 537198864
+    0x04      "Mapped Object 004"                           [UNSIGNED32       RWR_R_]      0x20050210 / 537199120
+    0x05      "Mapped Object 005"                           [UNSIGNED32       RWR_R_]      0x20050310 / 537199376
+    0x06      "Mapped Object 006"                           [UNSIGNED32       RWR_R_]      0x20050410 / 537199632
+    0x07      "Mapped Object 007"                           [UNSIGNED32       RWR_R_]      0x20050510 / 537199888
+    0x08      "Mapped Object 008"                           [UNSIGNED32       RWR_R_]      0x20050610 / 537200144
+    0x09      "Mapped Object 009"                           [UNSIGNED32       RWR_R_]      0x20050710 / 537200400
+    0x0a      "Mapped Object 010"                           [UNSIGNED32       RWR_R_]      0x20050810 / 537200656
+    0x0b      "Mapped Object 011"                           [UNSIGNED32       RWR_R_]      0x20050910 / 537200912
+    0x0c      "Mapped Object 012"                           [UNSIGNED32       RWR_R_]      0x20050a10 / 537201168
+    0x0d      "Mapped Object 013"                           [UNSIGNED32       RWR_R_]      0x20050b10 / 537201424
+    0x0e      "Mapped Object 014"                           [UNSIGNED32       RWR_R_]      0x20050c10 / 537201680
+    0x0f      "Mapped Object 015"                           [UNSIGNED32       RWR_R_]      0x20050d10 / 537201936
+    0x10      "Mapped Object 016"                           [UNSIGNED32       RWR_R_]      0x20050e10 / 537202192
+    0x11      "Mapped Object 017"                           [UNSIGNED32       RWR_R_]      0x20050f10 / 537202448
+    0x12      "Mapped Object 018"                           [UNSIGNED32       RWR_R_]      0x20051010 / 537202704
+    0x13      "Mapped Object 019"                           [UNSIGNED32       RWR_R_]      0x20051110 / 537202960
+    0x14      "Mapped Object 020"                           [UNSIGNED32       RWR_R_]      0x20051210 / 537203216
+    0x15      "Mapped Object 021"                           [UNSIGNED32       RWR_R_]      0x20051310 / 537203472
+    0x16      "Mapped Object 022"                           [UNSIGNED32       RWR_R_]      0x20051410 / 537203728
+    0x17      "Mapped Object 023"                           [UNSIGNED32       RWR_R_]      0x20051510 / 537203984
+    0x18      "Mapped Object 024"                           [UNSIGNED32       RWR_R_]      0x20051610 / 537204240
+    0x19      "Mapped Object 025"                           [UNSIGNED32       RWR_R_]      0x20051710 / 537204496
+    0x1a      "Mapped Object 026"                           [UNSIGNED32       RWR_R_]      0x20051810 / 537204752
+    0x1b      "Mapped Object 027"                           [UNSIGNED32       RWR_R_]      0x20051910 / 537205008
+    0x1c      "Mapped Object 028"                           [UNSIGNED32       RWR_R_]      0x20051a10 / 537205264
+    0x1d      "Mapped Object 029"                           [UNSIGNED32       RWR_R_]      0x20051b10 / 537205520
+    0x1e      "Mapped Object 030"                           [UNSIGNED32       RWR_R_]      0x20051c10 / 537205776
+    0x1f      "Mapped Object 031"                           [UNSIGNED32       RWR_R_]      0x20051d10 / 537206032
+    0x20      "Mapped Object 032"                           [UNSIGNED32       RWR_R_]      0x20051e10 / 537206288
+    0x21      "Mapped Object 033"                           [UNSIGNED32       RWR_R_]      0x20051f10 / 537206544
+    0x22      "Mapped Object 034"                           [UNSIGNED32       RWR_R_]      0x20052010 / 537206800
+0x1c00      "Sync Manager Communication Type"             [ARRAY  maxsub(0x04 / 4)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x04 / 4
+    0x01      "SubIndex 001"                                [UNSIGNED8        R_R_R_]      0x01 / 1
+    0x02      "SubIndex 002"                                [UNSIGNED8        R_R_R_]      0x02 / 2
+    0x03      "SubIndex 003"                                [UNSIGNED8        R_R_R_]      0x03 / 3
+    0x04      "SubIndex 004"                                [UNSIGNED8        R_R_R_]      0x04 / 4
+0x1c12      "Sync Manager Rx PDO assign"                  [ARRAY  maxsub(0x01 / 1)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWR_R_]      0x1600 / 5632
+0x1c13      "Sync Manager Tx PDO assign"                  [ARRAY  maxsub(0x01 / 1)]
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWR_R_]      0x1a00 / 6656
+0x1c32      "Output SyncManager Parameter"                [RECORD  maxsub(0x0c / 12)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x0c / 12
+    0x01      "Synchronization Type"                        [UNSIGNED16       RWR_R_]      0x0000 / 0
+    0x02      "Cycle Time"                                  [UNSIGNED32       RWR_R_]      0x001e8480 / 2000000
+    0x03      "Shift Time"                                  [UNSIGNED32       RWR_R_]      0x00000000 / 0
+    0x04      "Synchronization Types supported"             [UNSIGNED16       R_R_R_]      0x0001 / 1
+    0x05      "Minimum Cycle Time"                          [UNSIGNED32       R_R_R_]      0x000186a0 / 100000
+    0x06      "Calc and Copy Time"                          [UNSIGNED32       R_R_R_]      0x000001f4 / 500
+    0x09      "Delay Time"                                  [UNSIGNED32       R_R_R_]      0x00000000 / 0
+    0x0c      "Cycle Time Too Small Counter"                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x1c33      "Input SyncManager Parameter"                 [RECORD  maxsub(0x0c / 12)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x0c / 12
+    0x01      "Synchronization Type"                        [UNSIGNED16       RWR_R_]      0x0000 / 0
+    0x02      "Cycle Time"                                  [UNSIGNED32       R_R_R_]      0x001e8480 / 2000000
+    0x03      "Shift Time"                                  [UNSIGNED32       RWR_R_]      0x00000000 / 0
+    0x04      "Synchronization Types supported"             [UNSIGNED16       R_R_R_]      0x0001 / 1
+    0x05      "Minimum Cycle Time"                          [UNSIGNED32       R_R_R_]      0x000186a0 / 100000
+    0x06      "Calc and Copy Time"                          [UNSIGNED32       R_R_R_]      0x000001f4 / 500
+    0x0c      "Cycle Time Too Small Counter"                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2001      "SPEED"                                       [VAR]
+    0x00      "SPEED"                                       [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2002      "REF_SPEED"                                   [VAR]
+    0x00      "REF_SPEED"                                   [UNSIGNED16       RWRWRW]      0x0000 / 0
+0x2003      "WEL_CUR"                                     [VAR]
+    0x00      "WEL_CUR"                                     [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2004      "REF_WEL_CUR"                                 [VAR]
+    0x00      "REF_WEL_CUR"                                 [UNSIGNED16       RWRWRW]      0x0000 / 0
+0x2005      "ABP_UINT16_WRITE"                            [ARRAY  maxsub(0x20 / 32)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32
+    0x01      "SubIndex 001"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x02      "SubIndex 002"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x03      "SubIndex 003"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x04      "SubIndex 004"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x05      "SubIndex 005"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x06      "SubIndex 006"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x07      "SubIndex 007"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x08      "SubIndex 008"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x09      "SubIndex 009"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x0a      "SubIndex 010"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x0b      "SubIndex 011"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x0c      "SubIndex 012"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x0d      "SubIndex 013"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x0e      "SubIndex 014"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x0f      "SubIndex 015"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x10      "SubIndex 016"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x11      "SubIndex 017"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x12      "SubIndex 018"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x13      "SubIndex 019"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x14      "SubIndex 020"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x15      "SubIndex 021"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x16      "SubIndex 022"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x17      "SubIndex 023"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x18      "SubIndex 024"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x19      "SubIndex 025"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x1a      "SubIndex 026"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x1b      "SubIndex 027"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x1c      "SubIndex 028"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x1d      "SubIndex 029"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x1e      "SubIndex 030"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x1f      "SubIndex 031"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+    0x20      "SubIndex 032"                                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x2006      "ABP_UINT16_READ"                             [ARRAY  maxsub(0x20 / 32)]
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x02      "SubIndex 002"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x03      "SubIndex 003"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x04      "SubIndex 004"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x05      "SubIndex 005"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x06      "SubIndex 006"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x07      "SubIndex 007"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x08      "SubIndex 008"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x09      "SubIndex 009"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x0a      "SubIndex 010"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x0b      "SubIndex 011"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x0c      "SubIndex 012"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x0d      "SubIndex 013"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x0e      "SubIndex 014"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x0f      "SubIndex 015"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x10      "SubIndex 016"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x11      "SubIndex 017"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x12      "SubIndex 018"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x13      "SubIndex 019"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x14      "SubIndex 020"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x15      "SubIndex 021"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x16      "SubIndex 022"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x17      "SubIndex 023"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x18      "SubIndex 024"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x19      "SubIndex 025"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x1a      "SubIndex 026"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x1b      "SubIndex 027"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x1c      "SubIndex 028"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x1d      "SubIndex 029"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x1e      "SubIndex 030"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x1f      "SubIndex 031"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+    0x20      "SubIndex 032"                                [UNSIGNED16       RWRWRW]      0x0000 / 0
+End slaveinfo, close socket
+End program

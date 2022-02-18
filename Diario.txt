@@ -1,3 +1,29 @@
+#18022022
+@tag_1802_00
+Extending App
+
+Pensiamo ad estendere l'applicazione ad altri tipi di dati:
+Utilizzo un 32 element array of UINT16 (mapped to input data)
+Per utilizzarlo in entrambe le direzioni devo mapparlo in input ed in output
+Aggiungo quindi 2 entry nella AdiEntryList.
+La nuova variabile quando aggiornata dall'esterno deve mantenere allineata una sua var
+duale all'interno della applicazione.
+Lo testiamo prima col SOEM e poi con il Codesys.
+
+Col Soem è ok. Prima di attivare il codesys voglio verificare una cosa
+CoE details: 2f FoE details: 01 EoE details: 00 SoE details: 00
+Questo si legge dal file map prodotto dal SOEM.
+Abbiamo visto che EoE ci da problemi
+Cosa è FoE? ne abbiamo bisogno?
+FoE è file over Ethercat. Potrebbe essere necessario per aggiornare il fw
+Vale la pena approfondire.
+File Access over EtherCAT (FoE)
+If the device should support firmware download via EtherCAT, FoE should be supported. FoE is
+based on TFTP. It provides fast file transfer and small protocol implementation.
+
+Ma prima chiudo con la prova col codesys.
+
+
 #17022022
 Se dovessimo usare:
 #define ABP_ADI_INPUT_TECNA              ABP_APPD_DESCR_SET_ACCESS |  \
