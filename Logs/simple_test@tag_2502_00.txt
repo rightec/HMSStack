@@ -1,0 +1,1584 @@
+SOEM (Simple Open EtherCAT Master)
+Simple test
+ARGV simple_test.exe
+strlen(*argv) 15
+argvMain 0 is simple_test.exe
+ARGV \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+strlen(*argv) 50
+argvMain 1 is \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+SOEM (Simple Open EtherCAT Master)
+Slaveinfo
+ifbuf is: \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+Starting slaveinfo
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+Calculated workcounter 3
+
+Slave:1
+ Name:Anybus CompactCom 40 EtherCAT
+ Output size: 4656bits
+ Input size: 4656bits
+ State: 4
+ Delay: 0[ns]
+ Has DC: 1
+ DCParentport:0
+ Activeports:0.1.0.0
+ Configured address: 1001
+ Man: e000001b ID: 00000036 Rev: 00020015
+ SM0 A:4000 L: 276 F:00010026 Type:1
+ SM1 A:4800 L: 276 F:00010022 Type:2
+ SM2 A:1000 L: 582 F:00010064 Type:3
+ SM3 A:2800 L: 582 F:00010020 Type:4
+ FMMU0 Ls:00000000 Ll: 582 Lsb:0 Leb:7 Ps:1000 Psb:0 Ty:02 Act:01
+ FMMU1 Ls:00000246 Ll: 582 Lsb:0 Leb:7 Ps:2800 Psb:0 Ty:01 Act:01
+ FMMUfunc 0:1 1:2 2:3 3:0
+ MBX length wr: 276 rd: 276 MBX protocols : 0c
+ CoE details: 2f FoE details: 01 EoE details: 00 SoE details: 00
+ Ebus current: 0[mA]
+ only LRD/LWR:0
+PDO mapping according to CoE :
+  SM2 outputs
+     addr b   index: sub bitl data_type    name
+
+idxloop is  1
+
+
+subidxloop is  1
+
+  [0x0000.0] 0x2002:0x00 0x10 UNSIGNED16   REF_SPEED
+
+subidxloop is  2
+
+  [0x0002.0] 0x2004:0x00 0x10 UNSIGNED16   REF_WEL_CUR
+
+subidxloop is  3
+
+  [0x0004.0] 0x2006:0x01 0x10 UNSIGNED16   SubIndex 001
+
+subidxloop is  4
+
+  [0x0006.0] 0x2006:0x02 0x10 UNSIGNED16   SubIndex 002
+
+subidxloop is  5
+
+  [0x0008.0] 0x2006:0x03 0x10 UNSIGNED16   SubIndex 003
+
+subidxloop is  6
+
+  [0x000A.0] 0x2006:0x04 0x10 UNSIGNED16   SubIndex 004
+
+subidxloop is  7
+
+  [0x000C.0] 0x2006:0x05 0x10 UNSIGNED16   SubIndex 005
+
+subidxloop is  8
+
+  [0x000E.0] 0x2006:0x06 0x10 UNSIGNED16   SubIndex 006
+
+subidxloop is  9
+
+  [0x0010.0] 0x2006:0x07 0x10 UNSIGNED16   SubIndex 007
+
+subidxloop is  10
+
+  [0x0012.0] 0x2006:0x08 0x10 UNSIGNED16   SubIndex 008
+
+subidxloop is  11
+
+  [0x0014.0] 0x2006:0x09 0x10 UNSIGNED16   SubIndex 009
+
+subidxloop is  12
+
+  [0x0016.0] 0x2006:0x0A 0x10 UNSIGNED16   SubIndex 010
+
+subidxloop is  13
+
+  [0x0018.0] 0x2006:0x0B 0x10 UNSIGNED16   SubIndex 011
+
+subidxloop is  14
+
+  [0x001A.0] 0x2006:0x0C 0x10 UNSIGNED16   SubIndex 012
+
+subidxloop is  15
+
+  [0x001C.0] 0x2006:0x0D 0x10 UNSIGNED16   SubIndex 013
+
+subidxloop is  16
+
+  [0x001E.0] 0x2006:0x0E 0x10 UNSIGNED16   SubIndex 014
+
+subidxloop is  17
+
+  [0x0020.0] 0x2006:0x0F 0x10 UNSIGNED16   SubIndex 015
+
+subidxloop is  18
+
+  [0x0022.0] 0x2006:0x10 0x10 UNSIGNED16   SubIndex 016
+
+subidxloop is  19
+
+  [0x0024.0] 0x2006:0x11 0x10 UNSIGNED16   SubIndex 017
+
+subidxloop is  20
+
+  [0x0026.0] 0x2006:0x12 0x10 UNSIGNED16   SubIndex 018
+
+subidxloop is  21
+
+  [0x0028.0] 0x2006:0x13 0x10 UNSIGNED16   SubIndex 019
+
+subidxloop is  22
+
+  [0x002A.0] 0x2006:0x14 0x10 UNSIGNED16   SubIndex 020
+
+subidxloop is  23
+
+  [0x002C.0] 0x2006:0x15 0x10 UNSIGNED16   SubIndex 021
+
+subidxloop is  24
+
+  [0x002E.0] 0x2006:0x16 0x10 UNSIGNED16   SubIndex 022
+
+subidxloop is  25
+
+  [0x0030.0] 0x2006:0x17 0x10 UNSIGNED16   SubIndex 023
+
+subidxloop is  26
+
+  [0x0032.0] 0x2006:0x18 0x10 UNSIGNED16   SubIndex 024
+
+subidxloop is  27
+
+  [0x0034.0] 0x2006:0x19 0x10 UNSIGNED16   SubIndex 025
+
+subidxloop is  28
+
+  [0x0036.0] 0x2006:0x1A 0x10 UNSIGNED16   SubIndex 026
+
+subidxloop is  29
+
+  [0x0038.0] 0x2006:0x1B 0x10 UNSIGNED16   SubIndex 027
+
+subidxloop is  30
+
+  [0x003A.0] 0x2006:0x1C 0x10 UNSIGNED16   SubIndex 028
+
+subidxloop is  31
+
+  [0x003C.0] 0x2006:0x1D 0x10 UNSIGNED16   SubIndex 029
+
+subidxloop is  32
+
+  [0x003E.0] 0x2006:0x1E 0x10 UNSIGNED16   SubIndex 030
+
+subidxloop is  33
+
+  [0x0040.0] 0x2006:0x1F 0x10 UNSIGNED16   SubIndex 031
+
+subidxloop is  34
+
+  [0x0042.0] 0x2006:0x20 0x10 UNSIGNED16   SubIndex 032
+
+subidxloop is  35
+
+  [0x0044.0] 0x2008:0x01 0x20 UNSIGNED32   SubIndex 001
+
+subidxloop is  36
+
+  [0x0048.0] 0x2008:0x02 0x20 UNSIGNED32   SubIndex 002
+
+subidxloop is  37
+
+  [0x004C.0] 0x2008:0x03 0x20 UNSIGNED32   SubIndex 003
+
+subidxloop is  38
+
+  [0x0050.0] 0x2008:0x04 0x20 UNSIGNED32   SubIndex 004
+
+subidxloop is  39
+
+  [0x0054.0] 0x2008:0x05 0x20 UNSIGNED32   SubIndex 005
+
+subidxloop is  40
+
+  [0x0058.0] 0x2008:0x06 0x20 UNSIGNED32   SubIndex 006
+
+subidxloop is  41
+
+  [0x005C.0] 0x2008:0x07 0x20 UNSIGNED32   SubIndex 007
+
+subidxloop is  42
+
+  [0x0060.0] 0x2008:0x08 0x20 UNSIGNED32   SubIndex 008
+
+subidxloop is  43
+
+  [0x0064.0] 0x2008:0x09 0x20 UNSIGNED32   SubIndex 009
+
+subidxloop is  44
+
+  [0x0068.0] 0x2008:0x0A 0x20 UNSIGNED32   SubIndex 010
+
+subidxloop is  45
+
+  [0x006C.0] 0x2008:0x0B 0x20 UNSIGNED32   SubIndex 011
+
+subidxloop is  46
+
+  [0x0070.0] 0x2008:0x0C 0x20 UNSIGNED32   SubIndex 012
+
+subidxloop is  47
+
+  [0x0074.0] 0x2008:0x0D 0x20 UNSIGNED32   SubIndex 013
+
+subidxloop is  48
+
+  [0x0078.0] 0x2008:0x0E 0x20 UNSIGNED32   SubIndex 014
+
+subidxloop is  49
+
+  [0x007C.0] 0x2008:0x0F 0x20 UNSIGNED32   SubIndex 015
+
+subidxloop is  50
+
+  [0x0080.0] 0x2008:0x10 0x20 UNSIGNED32   SubIndex 016
+
+subidxloop is  51
+
+  [0x0084.0] 0x2008:0x11 0x20 UNSIGNED32   SubIndex 017
+
+subidxloop is  52
+
+  [0x0088.0] 0x2008:0x12 0x20 UNSIGNED32   SubIndex 018
+
+subidxloop is  53
+
+  [0x008C.0] 0x2008:0x13 0x20 UNSIGNED32   SubIndex 019
+
+subidxloop is  54
+
+  [0x0090.0] 0x2008:0x14 0x20 UNSIGNED32   SubIndex 020
+
+subidxloop is  55
+
+  [0x0094.0] 0x2008:0x15 0x20 UNSIGNED32   SubIndex 021
+
+subidxloop is  56
+
+  [0x0098.0] 0x2008:0x16 0x20 UNSIGNED32   SubIndex 022
+
+subidxloop is  57
+
+  [0x009C.0] 0x2008:0x17 0x20 UNSIGNED32   SubIndex 023
+
+subidxloop is  58
+
+  [0x00A0.0] 0x2008:0x18 0x20 UNSIGNED32   SubIndex 024
+
+subidxloop is  59
+
+  [0x00A4.0] 0x2008:0x19 0x20 UNSIGNED32   SubIndex 025
+
+subidxloop is  60
+
+  [0x00A8.0] 0x2008:0x1A 0x20 UNSIGNED32   SubIndex 026
+
+subidxloop is  61
+
+  [0x00AC.0] 0x2008:0x1B 0x20 UNSIGNED32   SubIndex 027
+
+subidxloop is  62
+
+  [0x00B0.0] 0x2008:0x1C 0x20 UNSIGNED32   SubIndex 028
+
+subidxloop is  63
+
+  [0x00B4.0] 0x2008:0x1D 0x20 UNSIGNED32   SubIndex 029
+
+subidxloop is  64
+
+  [0x00B8.0] 0x2008:0x1E 0x20 UNSIGNED32   SubIndex 030
+
+subidxloop is  65
+
+  [0x00BC.0] 0x2008:0x1F 0x20 UNSIGNED32   SubIndex 031
+
+subidxloop is  66
+
+  [0x00C0.0] 0x2008:0x20 0x20 UNSIGNED32   SubIndex 032
+
+subidxloop is  67
+
+  [0x00C4.0] 0x2008:0x21 0x20 UNSIGNED32   SubIndex 033
+
+subidxloop is  68
+
+  [0x00C8.0] 0x2008:0x22 0x20 UNSIGNED32   SubIndex 034
+
+subidxloop is  69
+
+  [0x00CC.0] 0x2008:0x23 0x20 UNSIGNED32   SubIndex 035
+
+subidxloop is  70
+
+  [0x00D0.0] 0x2008:0x24 0x20 UNSIGNED32   SubIndex 036
+
+subidxloop is  71
+
+  [0x00D4.0] 0x2008:0x25 0x20 UNSIGNED32   SubIndex 037
+
+subidxloop is  72
+
+  [0x00D8.0] 0x2008:0x26 0x20 UNSIGNED32   SubIndex 038
+
+subidxloop is  73
+
+  [0x00DC.0] 0x2008:0x27 0x20 UNSIGNED32   SubIndex 039
+
+subidxloop is  74
+
+  [0x00E0.0] 0x2008:0x28 0x20 UNSIGNED32   SubIndex 040
+
+subidxloop is  75
+
+  [0x00E4.0] 0x2008:0x29 0x20 UNSIGNED32   SubIndex 041
+
+subidxloop is  76
+
+  [0x00E8.0] 0x2008:0x2A 0x20 UNSIGNED32   SubIndex 042
+
+subidxloop is  77
+
+  [0x00EC.0] 0x2008:0x2B 0x20 UNSIGNED32   SubIndex 043
+
+subidxloop is  78
+
+  [0x00F0.0] 0x2008:0x2C 0x20 UNSIGNED32   SubIndex 044
+
+subidxloop is  79
+
+  [0x00F4.0] 0x2008:0x2D 0x20 UNSIGNED32   SubIndex 045
+
+subidxloop is  80
+
+  [0x00F8.0] 0x2008:0x2E 0x20 UNSIGNED32   SubIndex 046
+
+subidxloop is  81
+
+  [0x00FC.0] 0x2008:0x2F 0x20 UNSIGNED32   SubIndex 047
+
+subidxloop is  82
+
+  [0x0100.0] 0x2008:0x30 0x20 UNSIGNED32   SubIndex 048
+
+subidxloop is  83
+
+  [0x0104.0] 0x2008:0x31 0x20 UNSIGNED32   SubIndex 049
+
+subidxloop is  84
+
+  [0x0108.0] 0x2008:0x32 0x20 UNSIGNED32   SubIndex 050
+
+subidxloop is  85
+
+  [0x010C.0] 0x2008:0x33 0x20 UNSIGNED32   SubIndex 051
+
+subidxloop is  86
+
+  [0x0110.0] 0x2008:0x34 0x20 UNSIGNED32   SubIndex 052
+
+subidxloop is  87
+
+  [0x0114.0] 0x2008:0x35 0x20 UNSIGNED32   SubIndex 053
+
+subidxloop is  88
+
+  [0x0118.0] 0x2008:0x36 0x20 UNSIGNED32   SubIndex 054
+
+subidxloop is  89
+
+  [0x011C.0] 0x2008:0x37 0x20 UNSIGNED32   SubIndex 055
+
+subidxloop is  90
+
+  [0x0120.0] 0x2008:0x38 0x20 UNSIGNED32   SubIndex 056
+
+subidxloop is  91
+
+  [0x0124.0] 0x2008:0x39 0x20 UNSIGNED32   SubIndex 057
+
+subidxloop is  92
+
+  [0x0128.0] 0x2008:0x3A 0x20 UNSIGNED32   SubIndex 058
+
+subidxloop is  93
+
+  [0x012C.0] 0x2008:0x3B 0x20 UNSIGNED32   SubIndex 059
+
+subidxloop is  94
+
+  [0x0130.0] 0x2008:0x3C 0x20 UNSIGNED32   SubIndex 060
+
+subidxloop is  95
+
+  [0x0134.0] 0x2008:0x3D 0x20 UNSIGNED32   SubIndex 061
+
+subidxloop is  96
+
+  [0x0138.0] 0x2008:0x3E 0x20 UNSIGNED32   SubIndex 062
+
+subidxloop is  97
+
+  [0x013C.0] 0x2008:0x3F 0x20 UNSIGNED32   SubIndex 063
+
+subidxloop is  98
+
+  [0x0140.0] 0x2008:0x40 0x20 UNSIGNED32   SubIndex 064
+
+subidxloop is  99
+
+  [0x0144.0] 0x2008:0x41 0x20 UNSIGNED32   SubIndex 065
+
+subidxloop is  100
+
+  [0x0148.0] 0x2008:0x42 0x20 UNSIGNED32   SubIndex 066
+
+subidxloop is  101
+
+  [0x014C.0] 0x2008:0x43 0x20 dt:0x0000 (32) 
+
+subidxloop is  102
+
+  [0x0150.0] 0x2008:0x44 0x20 UNSIGNED32   SubIndex 068
+
+subidxloop is  103
+
+  [0x0154.0] 0x2008:0x45 0x20 UNSIGNED32   SubIndex 069
+
+subidxloop is  104
+
+  [0x0158.0] 0x2008:0x46 0x20 UNSIGNED32   SubIndex 070
+
+subidxloop is  105
+
+  [0x015C.0] 0x2008:0x47 0x20 UNSIGNED32   SubIndex 071
+
+subidxloop is  106
+
+  [0x0160.0] 0x2008:0x48 0x20 UNSIGNED32   SubIndex 072
+
+subidxloop is  107
+
+  [0x0164.0] 0x2008:0x49 0x20 UNSIGNED32   SubIndex 073
+
+subidxloop is  108
+
+  [0x0168.0] 0x2008:0x4A 0x20 UNSIGNED32   SubIndex 074
+
+subidxloop is  109
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  110
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  111
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  112
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  113
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  114
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  115
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  116
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  117
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  118
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  119
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  120
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  121
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  122
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  123
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  124
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  125
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  126
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  127
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  128
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  129
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  130
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  131
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  132
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  133
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  134
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  135
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  136
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  137
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  138
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  139
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  140
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  141
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  142
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  143
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  144
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  145
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  146
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  147
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  148
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  149
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  150
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  151
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  152
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  153
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  154
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  155
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  156
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  157
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  158
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  159
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  160
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  161
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  162
+
+  [0x016C.0] 0x0000:0x00 0x00
+
+subidxloop is  163
+
+  [0x016C.0] 0x0000:0x00 0x00
+End slaveinfo, close socket
+End SlaveInfo program
+
+Starting simple test revision simple_Test@tag_2500_00.txt
+Against Slave with tag; tag_2500_00
+
+We mapped 108 items in the OEList Array
+OElist item at 0 entry.
+OElist.Name[i] is REF_SPEED at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 1 entry.
+OElist.Name[i] is REF_WEL_CUR at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 2 entry.
+OElist.Name[i] is SubIndex 001 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 3 entry.
+OElist.Name[i] is SubIndex 002 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 4 entry.
+OElist.Name[i] is SubIndex 003 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 5 entry.
+OElist.Name[i] is SubIndex 004 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 6 entry.
+OElist.Name[i] is SubIndex 005 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 7 entry.
+OElist.Name[i] is SubIndex 006 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 8 entry.
+OElist.Name[i] is SubIndex 007 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 9 entry.
+OElist.Name[i] is SubIndex 008 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 10 entry.
+OElist.Name[i] is SubIndex 009 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 11 entry.
+OElist.Name[i] is SubIndex 010 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 12 entry.
+OElist.Name[i] is SubIndex 011 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 13 entry.
+OElist.Name[i] is SubIndex 012 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 14 entry.
+OElist.Name[i] is SubIndex 013 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 15 entry.
+OElist.Name[i] is SubIndex 014 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 16 entry.
+OElist.Name[i] is SubIndex 015 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 17 entry.
+OElist.Name[i] is SubIndex 016 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 18 entry.
+OElist.Name[i] is SubIndex 017 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 19 entry.
+OElist.Name[i] is SubIndex 018 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 20 entry.
+OElist.Name[i] is SubIndex 019 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 21 entry.
+OElist.Name[i] is SubIndex 020 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 22 entry.
+OElist.Name[i] is SubIndex 021 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 23 entry.
+OElist.Name[i] is SubIndex 022 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 24 entry.
+OElist.Name[i] is SubIndex 023 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 25 entry.
+OElist.Name[i] is SubIndex 024 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 26 entry.
+OElist.Name[i] is SubIndex 025 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 27 entry.
+OElist.Name[i] is SubIndex 026 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 28 entry.
+OElist.Name[i] is SubIndex 027 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 29 entry.
+OElist.Name[i] is SubIndex 028 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 30 entry.
+OElist.Name[i] is SubIndex 029 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 31 entry.
+OElist.Name[i] is SubIndex 030 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 32 entry.
+OElist.Name[i] is SubIndex 031 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 33 entry.
+OElist.Name[i] is SubIndex 032 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 34 entry.
+OElist.Name[i] is SubIndex 001 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 35 entry.
+OElist.Name[i] is SubIndex 002 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 36 entry.
+OElist.Name[i] is SubIndex 003 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 37 entry.
+OElist.Name[i] is SubIndex 004 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 38 entry.
+OElist.Name[i] is SubIndex 005 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 39 entry.
+OElist.Name[i] is SubIndex 006 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 40 entry.
+OElist.Name[i] is SubIndex 007 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 41 entry.
+OElist.Name[i] is SubIndex 008 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 42 entry.
+OElist.Name[i] is SubIndex 009 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 43 entry.
+OElist.Name[i] is SubIndex 010 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 44 entry.
+OElist.Name[i] is SubIndex 011 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 45 entry.
+OElist.Name[i] is SubIndex 012 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 46 entry.
+OElist.Name[i] is SubIndex 013 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 47 entry.
+OElist.Name[i] is SubIndex 014 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 48 entry.
+OElist.Name[i] is SubIndex 015 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 49 entry.
+OElist.Name[i] is SubIndex 016 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 50 entry.
+OElist.Name[i] is SubIndex 017 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 51 entry.
+OElist.Name[i] is SubIndex 018 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 52 entry.
+OElist.Name[i] is SubIndex 019 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 53 entry.
+OElist.Name[i] is SubIndex 020 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 54 entry.
+OElist.Name[i] is SubIndex 021 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 55 entry.
+OElist.Name[i] is SubIndex 022 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 56 entry.
+OElist.Name[i] is SubIndex 023 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 57 entry.
+OElist.Name[i] is SubIndex 024 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 58 entry.
+OElist.Name[i] is SubIndex 025 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 59 entry.
+OElist.Name[i] is SubIndex 026 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 60 entry.
+OElist.Name[i] is SubIndex 027 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 61 entry.
+OElist.Name[i] is SubIndex 028 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 62 entry.
+OElist.Name[i] is SubIndex 029 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 63 entry.
+OElist.Name[i] is SubIndex 030 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 64 entry.
+OElist.Name[i] is SubIndex 031 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 65 entry.
+OElist.Name[i] is SubIndex 032 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 66 entry.
+OElist.Name[i] is SubIndex 033 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 67 entry.
+OElist.Name[i] is SubIndex 034 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 68 entry.
+OElist.Name[i] is SubIndex 035 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 69 entry.
+OElist.Name[i] is SubIndex 036 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 70 entry.
+OElist.Name[i] is SubIndex 037 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 71 entry.
+OElist.Name[i] is SubIndex 038 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 72 entry.
+OElist.Name[i] is SubIndex 039 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 73 entry.
+OElist.Name[i] is SubIndex 040 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 74 entry.
+OElist.Name[i] is SubIndex 041 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 75 entry.
+OElist.Name[i] is SubIndex 042 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 76 entry.
+OElist.Name[i] is SubIndex 043 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 77 entry.
+OElist.Name[i] is SubIndex 044 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 78 entry.
+OElist.Name[i] is SubIndex 045 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 79 entry.
+OElist.Name[i] is SubIndex 046 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 80 entry.
+OElist.Name[i] is SubIndex 047 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 81 entry.
+OElist.Name[i] is SubIndex 048 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 82 entry.
+OElist.Name[i] is SubIndex 049 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 83 entry.
+OElist.Name[i] is SubIndex 050 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 84 entry.
+OElist.Name[i] is SubIndex 051 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 85 entry.
+OElist.Name[i] is SubIndex 052 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 86 entry.
+OElist.Name[i] is SubIndex 053 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 87 entry.
+OElist.Name[i] is SubIndex 054 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 88 entry.
+OElist.Name[i] is SubIndex 055 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 89 entry.
+OElist.Name[i] is SubIndex 056 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 90 entry.
+OElist.Name[i] is SubIndex 057 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 91 entry.
+OElist.Name[i] is SubIndex 058 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 92 entry.
+OElist.Name[i] is SubIndex 059 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 93 entry.
+OElist.Name[i] is SubIndex 060 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 94 entry.
+OElist.Name[i] is SubIndex 061 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 95 entry.
+OElist.Name[i] is SubIndex 062 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 96 entry.
+OElist.Name[i] is SubIndex 063 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 97 entry.
+OElist.Name[i] is SubIndex 064 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 98 entry.
+OElist.Name[i] is SubIndex 065 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 99 entry.
+OElist.Name[i] is SubIndex 066 at 0 entry.
+OElist.DataType[i] is 6 at 0 entry
+OElist.BitLength[i] is 16 at 0 entry
+OElist.ObjAccess[i] is 127 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 100 entry.
+OElist item at 101 entry.
+OElist.Name[i] is SubIndex 068 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 102 entry.
+OElist.Name[i] is SubIndex 069 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 103 entry.
+OElist.Name[i] is SubIndex 070 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 104 entry.
+OElist.Name[i] is SubIndex 071 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 105 entry.
+OElist.Name[i] is SubIndex 072 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 106 entry.
+OElist.Name[i] is SubIndex 073 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+OElist item at 107 entry.
+OElist.Name[i] is SubIndex 074 at 0 entry.
+OElist.DataType[i] is 0 at 0 entry
+OElist.BitLength[i] is 0 at 0 entry
+OElist.ObjAccess[i] is 0 at 0 entry
+OElist.ValueInfo[i] is 0 at 0 entry
+
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+
+Slaves mapped, state to SAFE_OP.
+
+Number of ouptut Bytes is 582 but oloop is 8
+Number of input Bytes is 582 but iloop is 8
+segments : 1 : 1164 0 0 0
+Request operational state for all slaves
+
+Calculated workcounter 3
+Operational state reached for all slaves.
+
+OElist item at 0 entry.
+Compared OK REF_SPEED to string found REF_SPEED at 0 entry
+OElist item at 1 entry.
+OElist item at 2 entry.
+OElist item at 3 entry.
+OElist item at 4 entry.
+OElist item at 5 entry.
+OElist item at 6 entry.
+OElist item at 7 entry.
+OElist item at 8 entry.
+OElist item at 9 entry.
+OElist item at 10 entry.
+OElist item at 11 entry.
+OElist item at 12 entry.
+OElist item at 13 entry.
+OElist item at 14 entry.
+OElist item at 15 entry.
+OElist item at 16 entry.
+OElist item at 17 entry.
+OElist item at 18 entry.
+OElist item at 19 entry.
+OElist item at 20 entry.
+OElist item at 21 entry.
+OElist item at 22 entry.
+OElist item at 23 entry.
+OElist item at 24 entry.
+OElist item at 25 entry.
+OElist item at 26 entry.
+OElist item at 27 entry.
+OElist item at 28 entry.
+OElist item at 29 entry.
+OElist item at 30 entry.
+OElist item at 31 entry.
+OElist item at 32 entry.
+OElist item at 33 entry.
+OElist item at 34 entry.
+OElist item at 35 entry.
+OElist item at 36 entry.
+OElist item at 37 entry.
+OElist item at 38 entry.
+OElist item at 39 entry.
+OElist item at 40 entry.
+OElist item at 41 entry.
+OElist item at 42 entry.
+OElist item at 43 entry.
+OElist item at 44 entry.
+OElist item at 45 entry.
+OElist item at 46 entry.
+OElist item at 47 entry.
+OElist item at 48 entry.
+OElist item at 49 entry.
+OElist item at 50 entry.
+OElist item at 51 entry.
+OElist item at 52 entry.
+OElist item at 53 entry.
+OElist item at 54 entry.
+OElist item at 55 entry.
+OElist item at 56 entry.
+OElist item at 57 entry.
+OElist item at 58 entry.
+OElist item at 59 entry.
+OElist item at 60 entry.
+OElist item at 61 entry.
+OElist item at 62 entry.
+OElist item at 63 entry.
+OElist item at 64 entry.
+OElist item at 65 entry.
+OElist item at 66 entry.
+OElist item at 67 entry.
+OElist item at 68 entry.
+OElist item at 69 entry.
+OElist item at 70 entry.
+OElist item at 71 entry.
+OElist item at 72 entry.
+OElist item at 73 entry.
+OElist item at 74 entry.
+OElist item at 75 entry.
+OElist item at 76 entry.
+OElist item at 77 entry.
+OElist item at 78 entry.
+OElist item at 79 entry.
+OElist item at 80 entry.
+OElist item at 81 entry.
+OElist item at 82 entry.
+OElist item at 83 entry.
+OElist item at 84 entry.
+OElist item at 85 entry.
+OElist item at 86 entry.
+OElist item at 87 entry.
+OElist item at 88 entry.
+OElist item at 89 entry.
+OElist item at 90 entry.
+OElist item at 91 entry.
+OElist item at 92 entry.
+OElist item at 93 entry.
+OElist item at 94 entry.
+OElist item at 95 entry.
+OElist item at 96 entry.
+OElist item at 97 entry.
+OElist item at 98 entry.
+OElist item at 99 entry.
+OElist item at 100 entry.
+OElist item at 101 entry.
+OElist item at 102 entry.
+OElist item at 103 entry.
+OElist item at 104 entry.
+OElist item at 105 entry.
+OElist item at 106 entry.
+OElist item at 107 entry.
+
+Target wel curr NOT FOUND
+Set REF_SPEED to 30
+
+Start cyclyc testProcessdata cycle    0, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 00 00 1e 00 00 00 00 00 T:699094010729358080Processdata cycle    1, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 00 00 1e 00 00 00 00 00 T:699094010744121920Processdata cycle    2, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 00 00 1e 00 00 00 00 00 T:699094010759107520Processdata cycle    3, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 00 00 1e 00 00 00 00 00 T:699094010774129880Processdata cycle    4, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 01 00 1f 00 00 00 00 00 T:699094010789991560Processdata cycle    5, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 02 00 20 00 00 00 00 00 T:699094010805017320Processdata cycle    6, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 02 00 20 00 00 00 00 00 T:699094010820027600Processdata cycle    7, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 03 00 21 00 00 00 00 00 T:699094010834942080Processdata cycle    8, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 03 00 21 00 00 00 00 00 T:699094010849893200Processdata cycle    9, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 04 00 22 00 00 00 00 00 T:699094010864940600Processdata cycle   10, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 05 00 23 00 00 00 00 00 T:699094010879993640Processdata cycle   11, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 06 00 24 00 00 00 00 00 T:699094010895014840Processdata cycle   12, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 06 00 24 00 00 00 00 00 T:699094010910024160Processdata cycle   13, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 07 00 25 00 00 00 00 00 T:699094010925032400Processdata cycle   14, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 07 00 25 00 00 00 00 00 T:699094010940171360Processdata cycle   15, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 08 00 26 00 00 00 00 00 T:699094010954894360Processdata cycle   16, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 08 00 26 00 00 00 00 00 T:699094010969806520Processdata cycle   17, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 09 00 27 00 00 00 00 00 T:699094010984760600Processdata cycle   18, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 09 00 27 00 00 00 00 00 T:699094010999740640Processdata cycle   19, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0a 00 28 00 00 00 00 00 T:699094011014695280Processdata cycle   20, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0a 00 28 00 00 00 00 00 T:699094011029713280Processdata cycle   21, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0b 00 29 00 00 00 00 00 T:699094011044596040Processdata cycle   22, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0b 00 29 00 00 00 00 00 T:699094011059583560Processdata cycle   23, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0c 00 2a 00 00 00 00 00 T:699094011074616120Processdata cycle   24, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0c 00 2a 00 00 00 00 00 T:699094011089577400Processdata cycle   25, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0d 00 2b 00 00 00 00 00 T:699094011104363440Processdata cycle   26, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0d 00 2b 00 00 00 00 00 T:699094011120378640Processdata cycle   27, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0e 00 2c 00 00 00 00 00 T:699094011135390120Processdata cycle   28, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0e 00 2c 00 00 00 00 00 T:699094011150514200Processdata cycle   29, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0f 00 2d 00 00 00 00 00 T:699094011165264200Processdata cycle   30, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 0f 00 2d 00 00 00 00 00 T:699094011180229280Processdata cycle   31, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 10 00 2e 00 00 00 00 00 T:699094011195131840Processdata cycle   32, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 10 00 2e 00 00 00 00 00 T:699094011210109600Processdata cycle   33, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 11 00 2f 00 00 00 00 00 T:699094011226123640Processdata cycle   34, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 12 00 30 00 00 00 00 00 T:699094011241038120Processdata cycle   35, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 13 00 31 00 00 00 00 00 T:699094011255985480Processdata cycle   36, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 13 00 31 00 00 00 00 00 T:699094011271033920Processdata cycle   37, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 14 00 32 00 00 00 00 00 T:699094011286036720Processdata cycle   38, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 15 00 33 00 00 00 00 00 T:699094011300977280Processdata cycle   39, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 15 00 33 00 00 00 00 00 T:699094011315932680Processdata cycle   40, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 16 00 34 00 00 00 00 00 T:699094011331025880Processdata cycle   41, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 16 00 34 00 00 00 00 00 T:699094011346070520Processdata cycle   42, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 17 00 35 00 00 00 00 00 T:699094011361151840Processdata cycle   43, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 17 00 35 00 00 00 00 00 T:699094011376071520Processdata cycle   44, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 18 00 36 00 00 00 00 00 T:699094011391036720Processdata cycle   45, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 18 00 36 00 00 00 00 00 T:699094011405959400Processdata cycle   46, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 19 00 37 00 00 00 00 00 T:699094011420840920Processdata cycle   47, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 19 00 37 00 00 00 00 00 T:699094011436024760Processdata cycle   48, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1a 00 38 00 00 00 00 00 T:699094011450951440Processdata cycle   49, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1a 00 38 00 00 00 00 00 T:699094011465878800Processdata cycle   50, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1b 00 39 00 00 00 00 00 T:699094011480726480Processdata cycle   51, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1b 00 39 00 00 00 00 00 T:699094011495611400Processdata cycle   52, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1c 00 3a 00 00 00 00 00 T:699094011510607880Processdata cycle   53, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1c 00 3a 00 00 00 00 00 T:699094011525551880Processdata cycle   54, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1d 00 3b 00 00 00 00 00 T:699094011540652080Processdata cycle   55, WKC 3 , O: 1e 00 00 00 00 00 00 00 I: 1e 00 3c 00 00 00 00 00 T:699094011555750240Target reached at: 55
+
+Request init state for all slaves
+End simple test, close socket
+End program

@@ -1,3 +1,100 @@
+#25022022
+@tag_2502_00
+Verifing system limit
+Il numero massimo di elememti mappabili per l'accesso aciclico è:
+Max. no. of
+Elements Per ADI
+(Acyclic access):  255 
+Max. ADI Size (in bytes) (Acyclic access) 1524 
+(tratto dalla pag 147 del Software design guide hms-hmsi-216-125)
+
+Dati per ethercat.
+
+Da pagina 12 della Software Guide:
+Acyclic requests are translated in a uniform manner, and dedicated objects provide diagnostic
+and alarm handling according to each network standard.
+
+Nell'ultima prova siamo arrivati a 68 x 2 bytes con 6 entries ciclici.
+A pag 11 del documento NetworkGuideEthercat hms-scm-102-034
+Trovo scritto il seguente:
+Up to 1486 bytes of fast cyclic I/O in each direction
+Vado semplicente a trovare una mappatura che mi porti ai limiti suddetti.
+aggiungo un array di 40 elementi di 32 bit
+Totale OUPUT: 
+	REF_SPEED + REF_WEL_CUR = 4 Bytes
+	ABP_UINT16_READ = 32 * 2 = 64 Bytes
+	ABP_UINT32_READ = 354 * 4 = 1416 Bytes
+	LAST_OUTPUT	= 2 Bytes
+Totale 1486
+
+Test Run: simple_test@tag_2502_00.txt
+Lanciando il test si vede che mappa 
+ouptut Bytes is 582
+input Bytes is 582 
+
+La mappatura è però in linea con lo slave:
+Mapped PD size, RdPd 582 WrPd: 582
+New process data sizes RdPd 582 WrPd 582
+New process data sizes RdPd 582 WrPd 582
+Quindi perché lo slave mi ha tagliato? Che conti ha fatto?
+Non ho aggiornato l'array
+Non vedo però il LAST_OUT nel file di log. E' possibile ci sia un problema nel SOEM ancora?
+
+Lancio un altro test
+@tag_2502_01
+Rebuild mapping
+
+Dimensione Array =  256
+Incontro questo errore:
+Severity  : ABCC_SEV_WARNING
+Error code: ABCC_EC_RESP_MSG_E_BIT_SET (ErrNo: 8)
+Add info  : (UINT32)( (psMsg )->abData[ 0 ] ) (0xff)
+File      : C:\lavoro\Clienti\HiFuture\Tecna\Progetti\Anybus\host-application-example-code-(for-compactcom-30-and-40-series)\Projects\Windows\abcc_drv\src\abcc_setup.c (Line:681)
+
+Dimensione Array =  160 --> Mappa 710 Bytes è OK
+Dimensione Array =  192 --> Mappa 838 Bytes è OK
+Dimensione Array =  224 --> Mappa 966 Bytes è OK
+Dimensione Array =  256 --> KO
+Dimensione Array =  240 --> Mappa 1030 Bytes è OK
+Dimensione Array =  249 --> Mappa 1066 Bytes è OK
+Dimensione Array =  251 --> Mappa 1074 Bytes è OK
+Dimensione Array =  255 --> Mappa 1090 Bytes è OK
+
+Sostanzialmente 256 viene visto come -1 e fallisce
+Si arriva quindi al limite di 255. 256 fallisce e numeri maggiori riparte da 0
+511 sarà uguale a 255. Esatto
+
+Metto l'array dei 16 bit a 230 ed ottengo esattamente 1486
+Ne aggiungo 1 ed infatti fallisce.
+Mantengo questa configurazione e vedo cosa ottengo sul master
+
+simple_test@tag_2502_01.txt
+
+Nel SOEM c'è una limitazione sull'array di ricera (logica utente e non logica SOEM)
+La correggo. 
+Uso 1524 Numero massimo di ADI per Ethercat
+
+simple_test@tag_2502_02.txt
+
+Corretti alcuni bug sul SOEM ora simple_test@tag_2502_04.txt
+Tutto ciò che mappo su Slave lo vedo nel Master
+Ora:
+1) Aggiungo sul master la ricerca del LAST_OUT
+2) Scrivo un valore da master
+3) Print del valore impostato da master su slave
+
+Ci deve essere un errore nel SOEM
+Ora sullo slave ho:
+Update 5 element of the UINT32 array with value: -587202560
+Ma sul master avrei inviato il valore 221
+Mettiamoci un valore a uint32 anche sul SOEM
+
+
+
+
+
+
+
 #18022022
 @tag_1802_00
 Extending App
@@ -21,7 +118,12 @@ File Access over EtherCAT (FoE)
 If the device should support firmware download via EtherCAT, FoE should be supported. FoE is
 based on TFTP. It provides fast file transfer and small protocol implementation.
 
-Ma prima chiudo con la prova col codesys.
+Ma prima chiudo con la prova col codesys. OK
+
+@tag_1802_01
+SOEM vs SLAVE
+Provo col SOEM a vedere di fare un applicativo che aggiorna e legge i dati dallo slave
+
 
 
 #17022022

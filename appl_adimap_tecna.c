@@ -70,19 +70,26 @@
 ** Data holder for the ADI instances
 **------------------------------------------------------------------------------
 */
+#define TECNA_MAX_ARRAY_FOR_32_BIT      255 // @tag_2502_01
+#define TECNA_MAX_ARRAY_FOR_16_BIT      230 // @tag_2502_01
+
 static UINT16 appl_iSpeed;
 static UINT16 appl_iRefSpeed;
 static UINT16 appl_iWelCur;
 static UINT16 appl_iRefWelCur;
-static UINT16 appl_aiUint16[32];  // @tag_1802_00
-static UINT16 appl_aiUint16Ghost[32];  // @tag_1802_00
+static UINT16 appl_aiUint16[TECNA_MAX_ARRAY_FOR_16_BIT];  // @tag_1802_00
+static UINT32 appl_aiUint32[TECNA_MAX_ARRAY_FOR_32_BIT];  // @tag_2502_01
+static UINT16  appl_iLastIn;    // @tag_2502_00
+static UINT16  appl_iLastOut;    // @tag_2502_00
 
+static UINT16 appl_aiUint16Ghost[TECNA_MAX_ARRAY_FOR_16_BIT];  // @tag_1802_00
 
 /*------------------------------------------------------------------------------
 ** Min, max and default value for appl_aiUint16
 **------------------------------------------------------------------------------
 */
 static AD_UINT16Type appl_sUint16Prop = { { 0, 0xFFFF, 0 } };
+static AD_UINT32Type appl_sUint32Prop = { { 0, 0xFFFFFFFF, 0 } }; // @tag_2502_00
 
 /*******************************************************************************
 ** Public Globals
@@ -122,8 +129,12 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
    {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } },
    {  0x3,  "WEL_CUR",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iWelCur,    &appl_sUint16Prop } } },
    {  0x4,  "REF_WEL_CUR", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefWelCur, &appl_sUint16Prop } } },
-   {  0x5,  "ABP_UINT16_WRITE",   ABP_UINT16,   32, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16, &appl_sUint16Prop } } },  // @tag_1802_00
-   {  0x6,  "ABP_UINT16_READ",    ABP_UINT16,   32, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint16, &appl_sUint16Prop } } }  // @tag_1802_00
+   {  0x5,  "ABP_UINT16_WRITE",   ABP_UINT16,   TECNA_MAX_ARRAY_FOR_16_BIT, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16, &appl_sUint16Prop } } },  // @tag_1802_00
+   {  0x6,  "ABP_UINT16_READ",    ABP_UINT16,   TECNA_MAX_ARRAY_FOR_16_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint16, &appl_sUint16Prop } } },  // @tag_1802_00
+   {  0x7,  "ABP_UINT32_WRITE",   ABP_UINT32,   TECNA_MAX_ARRAY_FOR_32_BIT, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint32, &appl_sUint32Prop } } },  // @tag_2502_00
+   {  0x8,  "ABP_UINT32_READ",    ABP_UINT32,   TECNA_MAX_ARRAY_FOR_32_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint32, &appl_sUint32Prop } } },  // @tag_2502_00
+   {  0x9,  "LAST_IN",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iLastIn,    &appl_sUint16Prop } } },
+   {  0xa,  "LAST_OUT", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iLastOut, &appl_sUint16Prop } } },
 };
 
 #else
@@ -160,6 +171,10 @@ const AD_MapType APPL_asAdObjDefaultMap[] =
    { 4, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { 5, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
    { 6, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { 7, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 8, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+   { 9, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 10, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { AD_MAP_END_ENTRY }
 };
 #else
@@ -188,7 +203,14 @@ const AD_MapType APPL_asAdObjDefaultMap[] =
 
 UINT16 APPL_GetNumAdi(void)
 {
+    int a = sizeof(APPL_asAdiEntryList);
+    int b = sizeof(APPL_asAdObjDefaultMap);
+    int c = sizeof(AD_AdiEntryType);
+    int d = sizeof(AD_MapType);
     return(sizeof(APPL_asAdiEntryList) / sizeof(AD_AdiEntryType));
+    /// -1 is because of  AD_MAP_END_ENTRY 
+    /// return((sizeof(APPL_asAdObjDefaultMap) / sizeof(AD_MapType)) -1 );
+
 }
 
 void APPL_CyclicalProcessing(void)
@@ -199,7 +221,7 @@ void APPL_CyclicalProcessing(void)
         ** An example of ADI data handling.
         */
 
-        for (int i = 0; i < 32; i++) {
+        for (int i = 0; i < TECNA_MAX_ARRAY_FOR_16_BIT; i++) {
             if (appl_aiUint16Ghost[i] != appl_aiUint16[i]) {
                 /// Align internal array as soon as external var is changed
                 appl_aiUint16Ghost[i] = appl_aiUint16[i];
@@ -208,12 +230,24 @@ void APPL_CyclicalProcessing(void)
         }
 
 
+        for (int i = 0; i < TECNA_MAX_ARRAY_FOR_32_BIT; i++) {
+            if (0 != appl_aiUint32[i]) {
+                DEBUG_EVENT(("Update %d element of the UINT32 array with value: %d\n", i, appl_aiUint32[i])); // @tag_2502_09
+            } /// else
+        }
+
+
+        if (appl_iLastIn != appl_iLastOut) {
+            DEBUG_EVENT(("appl_iLastIn is %d and appl_iLastOut is %d\n", appl_iLastIn, appl_iLastOut)); // @tag_2502_05
+            appl_iLastIn = appl_iLastOut;
+        } /// else
+
         if (appl_iSpeed > appl_iRefSpeed)
         {
             /*
             ** Do something that lowers speed.
             */
-            // DEBUG_EVENT(("appl_iSpeed > appl_iRefSpeed\n")); // @tag_1702_01
+            DEBUG_EVENT(("appl_iSpeed > appl_iRefSpeed\n")); // @tag_1702_01 @tag_1802_01
             DEBUG_EVENT(("appl_iSpeed is %d and appl_iRefSpeed is %d\n", appl_iSpeed,appl_iRefSpeed)); // @tag_1802_00
 
             appl_iSpeed -= 1;
@@ -224,8 +258,10 @@ void APPL_CyclicalProcessing(void)
             ** Do something that increases speed.
             */
             DEBUG_EVENT(("appl_iSpeed < appl_iRefSpeed\n")); // @tag_1702_01
+            DEBUG_EVENT(("appl_iSpeed is %d and appl_iRefSpeed is %d\n", appl_iSpeed, appl_iRefSpeed)); // @tag_1802_01
 
             appl_iSpeed += 1;
+            appl_iWelCur += 1;
         }
     }
     else
