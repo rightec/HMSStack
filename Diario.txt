@@ -4,7 +4,32 @@ Ho richiesto l'output del LAST OUT e viene aggiornato l'elemento 5 dell'array di
 
 OK il problema è questo. Quando da SOEM scrivo sull'output ci vuole il riferimento assoluto
 Io sto dando il riferimento ADI ma dovrei dare un indirizzo assoluto per esempio 
-LAST_OUT so già che è l'ultimo quindi 1486 bytes  -2 = 1484 ==> l'indirizzo è 1483
+LAST_OUT so già che è l'ultimo quindi 1486 bytes  -2 = 1484 (tag@26002_00)
+
+tag@26002_01 e tag@26002_02:
+Ora devo rendere sistematica la cosa nel SOEM
+Fatto
+
+Ci sono due aspetti ancora da chiarire:
+Il primo è che vedo sul SOEM il numero a 16 bit che pare girato come indianismo
+E' l'indianismo oppure ho sbagliato la conversione?
+L'altro è che si dovrà tener conto anche delle entries di una ADI.
+In tutti i casi che abbiamo visto ad ogni ADI corrisponde una entry.
+Almeno per come vengono presi e mappati dal SOEM. 
+Per ora la questione è sospesa.
+
+Accertato che entrambi sono LITTLE ENDIAN. Quindi è un bug
+Si sono io che non ho rispettato il LSB first
+Ok risolto tag@26002_0x
+
+
+
+
+
+
+
+
+
 
 
 #25022022
