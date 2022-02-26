@@ -1,3 +1,12 @@
+#26022022
+C'è ancora qualcosa che non va nella mappa del SOEM
+Ho richiesto l'output del LAST OUT e viene aggiornato l'elemento 5 dell'array di 32
+
+OK il problema è questo. Quando da SOEM scrivo sull'output ci vuole il riferimento assoluto
+Io sto dando il riferimento ADI ma dovrei dare un indirizzo assoluto per esempio 
+LAST_OUT so già che è l'ultimo quindi 1486 bytes  -2 = 1484 ==> l'indirizzo è 1483
+
+
 #25022022
 @tag_2502_00
 Verifing system limit

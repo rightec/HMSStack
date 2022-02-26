@@ -232,13 +232,13 @@ void APPL_CyclicalProcessing(void)
 
         for (int i = 0; i < TECNA_MAX_ARRAY_FOR_32_BIT; i++) {
             if (0 != appl_aiUint32[i]) {
-                DEBUG_EVENT(("Update %d element of the UINT32 array with value: %d\n", i, appl_aiUint32[i])); // @tag_2502_09
+                DEBUG_EVENT(("Update %d element of the UINT32 array with value: %x\n", i, appl_aiUint32[i])); // @tag_2502_09
             } /// else
         }
 
 
         if (appl_iLastIn != appl_iLastOut) {
-            DEBUG_EVENT(("appl_iLastIn is %d and appl_iLastOut is %d\n", appl_iLastIn, appl_iLastOut)); // @tag_2502_05
+            DEBUG_EVENT(("appl_iLastIn is 0x%x and appl_iLastOut is 0x%x\n", appl_iLastIn, appl_iLastOut)); // @tag_2502_05
             appl_iLastIn = appl_iLastOut;
         } /// else
 
