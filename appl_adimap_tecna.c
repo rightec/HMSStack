@@ -70,8 +70,19 @@
 ** Data holder for the ADI instances
 **------------------------------------------------------------------------------
 */
+#define TAG_2502_01
+#define TAG_2802_01
+#undef TAG_2502_01
+#ifdef TAG_2502_01
 #define TECNA_MAX_ARRAY_FOR_32_BIT      255 // @tag_2502_01
 #define TECNA_MAX_ARRAY_FOR_16_BIT      230 // @tag_2502_01
+#endif
+#ifdef TAG_2802_01
+#define TECNA_MAX_ARRAY_FOR_32_BIT      220 // @tag_2802_01
+#define TECNA_MAX_ARRAY_FOR_16_BIT      230 // @tag_2802_01
+#define TECNA_MAX_ARRAY_FOR_8_BIT       10 // @tag_2802_01
+#endif
+
 
 static UINT16 appl_iSpeed;
 static UINT16 appl_iRefSpeed;
@@ -79,6 +90,9 @@ static UINT16 appl_iWelCur;
 static UINT16 appl_iRefWelCur;
 static UINT16 appl_aiUint16[TECNA_MAX_ARRAY_FOR_16_BIT];  // @tag_1802_00
 static UINT32 appl_aiUint32[TECNA_MAX_ARRAY_FOR_32_BIT];  // @tag_2502_01
+#ifdef TAG_2802_01
+static UINT32 appl_aiUint8[TECNA_MAX_ARRAY_FOR_8_BIT];  // @tag_2802_01
+#endif
 static UINT16  appl_iLastIn;    // @tag_2502_00
 static UINT16  appl_iLastOut;    // @tag_2502_00
 
@@ -90,6 +104,10 @@ static UINT16 appl_aiUint16Ghost[TECNA_MAX_ARRAY_FOR_16_BIT];  // @tag_1802_00
 */
 static AD_UINT16Type appl_sUint16Prop = { { 0, 0xFFFF, 0 } };
 static AD_UINT32Type appl_sUint32Prop = { { 0, 0xFFFFFFFF, 0 } }; // @tag_2502_00
+#ifdef TAG_2802_01
+static AD_UINT8Type appl_sUint8Prop = { { 0, 0xFFFFFFFF, 0 } };  // @tag_2802_01
+#endif
+
 
 /*******************************************************************************
 ** Public Globals
@@ -135,6 +153,10 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
    {  0x8,  "ABP_UINT32_READ",    ABP_UINT32,   TECNA_MAX_ARRAY_FOR_32_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint32, &appl_sUint32Prop } } },  // @tag_2502_00
    {  0x9,  "LAST_IN",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iLastIn,    &appl_sUint16Prop } } },
    {  0xa,  "LAST_OUT", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iLastOut, &appl_sUint16Prop } } },
+#ifdef TAG_2802_01
+   {  0xb,  "ABP_UINT8_WRITE",   ABP_UINT8,   TECNA_MAX_ARRAY_FOR_8_BIT, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint8, &appl_sUint8Prop } } },  // @tag_2502_00
+   {  0xc,  "ABP_UINT8_READ",    ABP_UINT8,   TECNA_MAX_ARRAY_FOR_8_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint8, &appl_sUint8Prop } } },  // @tag_2802_00
+#endif
 };
 
 #else
@@ -175,6 +197,10 @@ const AD_MapType APPL_asAdObjDefaultMap[] =
    { 8, PD_READ,  AD_MAP_ALL_ELEM, 0 },
    { 9, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
    { 10, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+#ifdef TAG_2802_01
+   { 11, PD_WRITE, AD_MAP_ALL_ELEM, 0 },
+   { 12, PD_READ,  AD_MAP_ALL_ELEM, 0 },
+#endif
    { AD_MAP_END_ENTRY }
 };
 #else

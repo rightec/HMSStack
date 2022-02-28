@@ -1,3 +1,101 @@
+#28022022 @1
+Eseguo la nuova seguente mappatura:
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+   {  0x1,  "SPEED",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iSpeed,    &appl_sUint16Prop } } },
+   {  0x2,  "REF_SPEED", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefSpeed, &appl_sUint16Prop } } },
+   {  0x3,  "WEL_CUR",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iWelCur,    &appl_sUint16Prop } } },
+   {  0x4,  "REF_WEL_CUR", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iRefWelCur, &appl_sUint16Prop } } },
+   {  0x5,  "ABP_UINT16_WRITE",   ABP_UINT16,   TECNA_MAX_ARRAY_FOR_16_BIT, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16, &appl_sUint16Prop } } },  // @tag_1802_00
+   {  0x6,  "ABP_UINT16_READ",    ABP_UINT16,   TECNA_MAX_ARRAY_FOR_16_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint16, &appl_sUint16Prop } } },  // @tag_1802_00
+   {  0x7,  "ABP_UINT32_WRITE",   ABP_UINT32,   TECNA_MAX_ARRAY_FOR_32_BIT, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint32, &appl_sUint32Prop } } },  // @tag_2502_00
+   {  0x8,  "ABP_UINT32_READ",    ABP_UINT32,   TECNA_MAX_ARRAY_FOR_32_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint32, &appl_sUint32Prop } } },  // @tag_2502_00
+   {  0x9,  "LAST_IN",     ABP_UINT16,   1, APPL_WRITE_MAP_READ_ACCESS_DESC, { { &appl_iLastIn,    &appl_sUint16Prop } } },
+   {  0xa,  "LAST_OUT", ABP_UINT16,   1, APPL_READ_MAP_WRITE_ACCESS_DESC, { { &appl_iLastOut, &appl_sUint16Prop } } },
+#ifdef TAG_2802_01
+   {  0xb,  "ABP_UINT8_WRITE",   ABP_UINT8,   TECNA_MAX_ARRAY_FOR_8_BIT, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint8, &appl_sUint8Prop } } },  // @tag_2502_00
+   {  0xc,  "ABP_UINT8_READ",    ABP_UINT8,   TECNA_MAX_ARRAY_FOR_8_BIT, APPL_READ_MAP_WRITE_ACCESS_DESC,  { { appl_aiUint8, &appl_sUint8Prop } } },  // @tag_2802_00
+#endif
+};
+
+Gli oggetti sono 29 e mi torna.
+Poi tra gli oggetti:
+9) Receive PDO mapping (254 + entries)
+10) Receive PDO mapping (209 + entries)
+11) Transmit PDO mapping (254 + entries)
+12) Transmit PDO mapping (209 + entries)
+
+Però sostanzialmente io ho:
+a) 220 items a 32
+b) 230 items a 16
+c) 10 items a 8
+d) 3 items a 16
+Che fa 463 che è uguale alla somma di 254 + 209.
+Quindi tutto ciò che è mappato in ciclico è mappato in aciclico?
+Potrebbe essere questo il senso.
+
+Come trovo la corrispondenza?
+L'indirizzo del primo oggetto mappato  in lettura è 0x20020010
+Potrebbe essere in effetti il valore di ref_speed
+Se io riesco ad accedere in qualche modo a questo indirizzo e scriverci quando sono 
+in IDLE ho ottenuto la scrittura aciclica.
+
+
+
+
+#28022022 @0
+Riprendo alcune definizioni:
+ADO: Application Data Object: Oggetto che rappresenta i dati che si devono scambiare sul network.
+Ogni istanza di questo oggetto ADI rappresenta un blocco di dati.
+ADI sono normalmente associate ai parametri aciclici. 
+Nel caso di ethercat ADI sono mappate nel PDO del CANOpen Object dictionary.
+
+Dal file di log tag@2802_00.txt vedo che:
+a) Lo slave ha 27 oggetti descritti su COE.
+ 1) Device Type
+ 2) Error Register
+ 3) Predefined error field
+ 4) Manuf Device name
+ 5) Manuf HW version
+ 6) Manuf SW version
+ 7) Restore def param
+ 8) Identity object
+ 9) Receive PDO mapping (254 + entries)
+10) Receive PDO mapping (234 + entries)
+11) Transmit PDO mapping (254 + entries)
+12) Transmit PDO mapping (234 + entries)
+13) Sync Manager comm type
+14) Sync Manager Rx PDO assign
+15) Sync Manager Tx PDO assign
+16) Output Sync Manager param
+17) Input Sync Manager param
+18) SPEED (16 bit)
+19) REF_SPEED
+20) WEL_CUR (16 bit)
+21) REF_WEl_CUR
+22) ABP_UINT16_WRITE (230)
+23) ABP_UINT16_READ (230)
+24) ABP_UINT32_WRITE (255)
+25) ABP_UINT32_READ (255)
+26) LAST_IN (16 bit)
+27) LAST_OUT
+
+Quello che viene mappato tra gli oggetti da 18 a 27 è chiaro e rispecchia esattamente il mapping fatto nello slave
+Il receive (transmit) PDO mapping 234 mi è chiaro: Sono gli oggetti a 16 bit mappati dallo slave.
+Pare di capire che quelli a 32 bit abbiano raggiunto il loro limite. Sarebbe il numero massimo di istanze in un oggetto.
+ 
+
+
+#27022022
+Nel repo SOEM derivo dal Master 2 branches
+a) Cyclic Branch che è il risultato finora conseguito (mappatura massima su slave)
+ed intercetto e modifica di variabili da parte del master
+b) Acyclic Branch che è il test sulla parte aciclica ancora da realizzare
+Sul branch master, in corrispondenza di questa derivazione ho messo il tag CYC.
+
+
+
+
 #26022022
 C'è ancora qualcosa che non va nella mappa del SOEM
 Ho richiesto l'output del LAST OUT e viene aggiornato l'elemento 5 dell'array di 32
