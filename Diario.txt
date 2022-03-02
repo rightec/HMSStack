@@ -1,3 +1,65 @@
+#02032022
+Il sw di esempio per l'aciclica sembra essere questo APPL_ADI_SETUP_SEPARATE_16. Perché richiede la attivazione delle callback
+La schermata di avvio di questo esempio si presenta del tutto simile a quelle già viste per l'altro esempio:
+
+
+Mapped PD size, RdPd 64 WrPd: 64
+ANB_STATUS: ABP_ANB_STATE_NW_INIT
+New process data sizes RdPd 64 WrPd 64
+New process data sizes RdPd 64 WrPd 64
+ANB_STATUS: ABP_ANB_STATE_WAIT_PROCESS
+
+L'application entry list è fatta così
+
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+   { 10,   "ABP_UINT16_SET",        ABP_UINT16,   32, APPL_READ_MAP_WRITE_ACCESS_DESC, { { appl_aiUint16_10 ,NULL } }, NULL, SetAdi10Value },
+   { 11,   "ABP_UINT16_GET",        ABP_UINT16,   32, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16_11 ,NULL } }, GetAdi11Value, NULL },
+   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_NOT_MAP_WRITE_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, NULL, NULL         },
+};
+
+Mentre la mappatura
+
+const AD_MapType APPL_asAdObjDefaultMap[] =
+{
+   { 10,  PD_READ,   AD_MAP_ALL_ELEM, 0 },
+   { 11,  PD_WRITE,  AD_MAP_ALL_ELEM, 0 },
+   { AD_MAP_END_ENTRY }
+};
+
+Quelli che lo stack chiama "Process data" sono le variabili inserite nel processo ciclico
+64 infatti sta ad incdcare 32 * sizeof(UINT16) = 64. Uno per la lettura e uno per la scrittura. 
+Il contatore è fuori dal ciclico.
+
+Ci lancio contro il simple test ciclico:
+simple_test.exe \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} -CYC > tag@0203_00.txt
+C'è la mappatura e parte l'operazionale (comunicazione ciclica). La cosa regge. C'è un particolare che riguarda i diritti d'accesso. Il messaggio indica che non li gestisco, ma va bene
+non è importante.
+Voglio verificarlo con slaveinfo originale:
+slaveinfo.exe \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} -sdo > slaveInfoSdo@tag0203_00.txt ---> Ok vedo tutti gli oggetti
+slaveinfo.exe \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} -map > slaveInfoMap@tag0203_00.txt ---> Ok vedo solo gli oggetto per ciclico
+
+Quindi è definitivo. Lo slaveinfo con l'opzione map vede solo i "Process Data" mentre -sdo vede tutti
+Vado a correggere il simpletest modificato.
+simple_test.exe \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} -ACY > tag@0203_01.txt
+
+OK. Vado avanti. 
+Tiro su il codesys
+Creo l'Esi file: HMS Industrial NetworksESI_Tecna_5_Acyc
+Da codesys non so come cambiare il valore aciclico.
+
+
+
+
+
+
+
+#01032022
+Sto provando a vedere se con i risultati ricavati dalla mappatura riesco a usare i dati mappati per stimolare una comunicazione acicilica.
+Ci sono ancora cosa non chiare su come azionare questo tipo di cominicazione.
+Nel SOEM c'è l'esempio per linux. Prova a compilarlo sotto windows (tag@0103_00)
+
+
 #28022022 @1
 Eseguo la nuova seguente mappatura:
 const AD_AdiEntryType APPL_asAdiEntryList[] =

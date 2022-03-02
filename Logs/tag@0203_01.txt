@@ -1,0 +1,64 @@
+SOEM (Simple Open EtherCAT Master)
+Simple test
+ARGV simple_test.exe
+strlen(*argv) 15
+argvMain 0 is simple_test.exe
+ARGV \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+strlen(*argv) 50
+argvMain 1 is \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+ARGV -ACY
+strlen(*argv) 4
+argvMain 2 is -ACY
+You selected an acyclic test (-ACY)
+SOEM (Simple Open EtherCAT Master)
+Slaveinfo
+ifbuf is: \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+Starting slaveinfo
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+Calculated workcounter 3
+
+Slave:1
+ Name:Anybus CompactCom 40 EtherCAT
+ Output size: 512bits
+ Input size: 512bits
+ State: 4
+ Delay: 0[ns]
+ Has DC: 1
+ DCParentport:0
+ Activeports:0.1.0.0
+ Configured address: 1001
+ Man: e000001b ID: 00000036 Rev: 00020015
+ SM0 A:4000 L: 276 F:00010026 Type:1
+ SM1 A:4800 L: 276 F:00010022 Type:2
+ SM2 A:1000 L:  64 F:00010064 Type:3
+ SM3 A:2800 L:  64 F:00010020 Type:4
+ FMMU0 Ls:00000000 Ll:  64 Lsb:0 Leb:7 Ps:1000 Psb:0 Ty:02 Act:01
+ FMMU1 Ls:00000040 Ll:  64 Lsb:0 Leb:7 Ps:2800 Psb:0 Ty:01 Act:01
+ FMMUfunc 0:1 1:2 2:3 3:0
+ MBX length wr: 276 rd: 276 MBX protocols : 0c
+ CoE details: 2f FoE details: 01 EoE details: 00 SoE details: 00
+ Ebus current: 0[mA]
+ only LRD/LWR:0
+SI_SDO function run
+ENTER si_sdo
+ CoE Object Description found, 18 entries.
+EXIT si_sdo
+End slaveinfo, close socket
+End SlaveInfo program
+
+Starting simple test revision tag@0103_00.txt
+Against Slave with tag; tag_0103_0x
+
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+
+Slaves mapped, state to SAFE_OP.
+
+Start ACYCLIC TEST
+
+Search for REF_SPEED which length is 9
+ REF_SPEED Did not find
+
+End simple test, close socket
+End program

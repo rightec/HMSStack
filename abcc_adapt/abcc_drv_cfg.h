@@ -259,7 +259,7 @@
    #define ABCC_CFG_STRUCT_DATA_TYPE                  ( FALSE )
 #endif
 #ifndef ABCC_CFG_ADI_GET_SET_CALLBACK
-   #define ABCC_CFG_ADI_GET_SET_CALLBACK              ( FALSE )
+   #define ABCC_CFG_ADI_GET_SET_CALLBACK              ( TRUE )
 #endif
 #ifndef ABCC_CFG_ADI_TRANS_SET_CALLBACK
    #define ABCC_CFG_ADI_TRANS_SET_CALLBACK            ( FALSE )
