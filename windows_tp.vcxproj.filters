@@ -210,7 +210,10 @@
     <ClCompile Include="abcc_drv\src\abcc_timer.c">
       <Filter>Source Files\abcc_drv\src</Filter>
     </ClCompile>
-    <ClCompile Include="appl_adimap_tecna.c">
+    <ClCompile Include="example_app\appl_adimap_tecna.c">
+      <Filter>Source Files\example_app</Filter>
+    </ClCompile>
+    <ClCompile Include="example_app\appl_adimap_tecna_ACYC.c">
       <Filter>Source Files\example_app</Filter>
     </ClCompile>
   </ItemGroup>

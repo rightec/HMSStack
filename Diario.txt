@@ -1,3 +1,8 @@
+#07032022
+Sulla parte slave faccio una suite di test specifica per la parte aciclica.
+
+
+
 #02032022
 Il sw di esempio per l'aciclica sembra essere questo APPL_ADI_SETUP_SEPARATE_16. Perché richiede la attivazione delle callback
 La schermata di avvio di questo esempio si presenta del tutto simile a quelle già viste per l'altro esempio:

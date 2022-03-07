@@ -133,7 +133,6 @@
     <ClCompile Include="abcc_obj\opcua_obj.c" />
     <ClCompile Include="abcc_obj\safe_obj.c" />
     <ClCompile Include="abcc_obj\sync_obj.c" />
-    <ClCompile Include="appl_adimap_tecna.c" />
     <ClCompile Include="example_app\appl_abcc_handler.c" />
     <ClCompile Include="example_app\appl_adimap_alltypes.c" />
     <ClCompile Include="example_app\appl_adimap_asm.c" />
@@ -142,6 +141,8 @@
     <ClCompile Include="example_app\appl_adimap_simple16.c" />
     <ClCompile Include="example_app\appl_adimap_speed_example.c" />
     <ClCompile Include="example_app\appl_adimap_sync.c" />
+    <ClCompile Include="example_app\appl_adimap_tecna.c" />
+    <ClCompile Include="example_app\appl_adimap_tecna_ACYC.c" />
     <ClCompile Include="example_app\appl_adimap_verif.c" />
     <ClCompile Include="example_app\appl_obj_port.c" />
     <ClCompile Include="main.c" />
