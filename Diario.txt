@@ -1,5 +1,26 @@
 #07032022
 Sulla parte slave faccio una suite di test specifica per la parte aciclica.
+@tag_0703_00
+Eseguo il test base e vedo a che punto siamo:
+simple_test.exe \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} -ACY > stACY@tag_0703_00.txt
+
+Nota sullo slave:
+Lo slave è configurato così:
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+   { 10,   "ABP_UINT16_SET",        ABP_UINT16,   32, APPL_READ_MAP_WRITE_ACCESS_DESC, { { appl_aiUint16_10 ,NULL } }, NULL, SetAdi10Value },
+   { 11,   "ABP_UINT16_GET",        ABP_UINT16,   32, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16_11 ,NULL } }, GetAdi11Value, NULL },
+   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_WRITE_MAP_READ_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, //  @tag_0703_00
+//   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_NOT_MAP_WRITE_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, //  @tag_0703_00
+};
+
+A run time la variabile impostata a ciclo di processo è sempre attiva in lettura, ovvero passo in continuazione dalla GetAdi11Value. 
+Questo capita anche se sono in stato di WAIT_PROCESSING
+Con certezza posso dire che il parametro solo aciclico è comunque letto durate lo stato di INIT. 
+Quindi non serve essere in operazionale. 
+
+
+
 
 
 
