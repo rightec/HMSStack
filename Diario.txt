@@ -1,3 +1,29 @@
+#09032022
+Sto cercando ancora di lavorare su SOEM
+0x200c      "ABP_UINT16_COUNTER"                          [VAR]
+si_sdo: ObjAccess[h] for h=0 is 0x87
+OEList dump
+    0x00      "ABP_UINT16_COUNTER"                          [UNSIGNED16       R_R_R_]      0xe682 / 59010
+0x200d      "ABP_UINT16_SETTER"                           [VAR]
+si_sdo: ObjAccess[h] for h=0 is 0x7f
+
+Generalmente posso dire che con gli accessi 
+	0x7F Leggo/scrivo. Output per il master / Input per lo slave
+	0x87 Leggo. Input per il master / Output per lo slave
+
+Ho trovato la maniera per leggere e scrivere con il SOEM le acicliche
+Test log: tag@09032022_03.txt
+if ((OEListRefSpeed.ObjAccess[iTargetRefEntryPos] & 0x007f))
+            {
+               uint16_t u16val = 12; /// Counter to set
+               uint16_t index = 0x200d + 0x10;
+               printf("iTargetRefEntryPos is %d and right access are 0x%x\n",iTargetRefEntryPos,(OEListRefSpeed.ObjAccess[iTargetRefEntryPos] ));
+               ec_SDOwrite(0, index, 0x01, FALSE, sizeof(u16val), &u16val, EC_TIMEOUTTXM); 
+            }
+
+Questa scrive l'aciclica
+
+
 #07032022
 Sulla parte slave faccio una suite di test specifica per la parte aciclica.
 @tag_0703_00

@@ -1,0 +1,959 @@
+SOEM (Simple Open EtherCAT Master)
+Simple test
+ARGV simple_test.exe
+strlen(*argv) 15
+argvMain 0 is simple_test.exe
+ARGV \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+strlen(*argv) 50
+argvMain 1 is \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+ARGV -ACY
+strlen(*argv) 4
+argvMain 2 is -ACY
+You selected an acyclic test (-ACY)
+SOEM (Simple Open EtherCAT Master)
+Slaveinfo
+ifbuf is: \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A}
+Starting slaveinfo
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+Calculated workcounter 3
+
+Slave:1
+ Name:Anybus CompactCom 40 EtherCAT
+ Output size: 512bits
+ Input size: 512bits
+ State: 4
+ Delay: 0[ns]
+ Has DC: 1
+ DCParentport:0
+ Activeports:0.1.0.0
+ Configured address: 1001
+ Man: e000001b ID: 00000036 Rev: 00020015
+ SM0 A:4000 L: 276 F:00010026 Type:1
+ SM1 A:4800 L: 276 F:00010022 Type:2
+ SM2 A:1000 L:  64 F:00010064 Type:3
+ SM3 A:2800 L:  64 F:00010020 Type:4
+ FMMU0 Ls:00000000 Ll:  64 Lsb:0 Leb:7 Ps:1000 Psb:0 Ty:02 Act:01
+ FMMU1 Ls:00000040 Ll:  64 Lsb:0 Leb:7 Ps:2800 Psb:0 Ty:01 Act:01
+ FMMUfunc 0:1 1:2 2:3 3:0
+ MBX length wr: 276 rd: 276 MBX protocols : 0c
+ CoE details: 2f FoE details: 01 EoE details: 00 SoE details: 00
+ Ebus current: 0[mA]
+ only LRD/LWR:0
+SI_SDO function run
+ENTER si_sdo
+ CoE Object Description found, 19 entries.
+0x1000      "Device Type"                                 [VAR]
+si_sdo: Right access for item 0 is not managed for entry 0. Your right are 0x7
+OEList dump
+    0x00      "Device Type"                                 [UNSIGNED32       R_R_R_]      0x00000000 / 0
+0x1001      "Error Register"                              [VAR]
+si_sdo: Right access for item 1 is not managed for entry 0. Your right are 0x7
+OEList dump
+    0x00      "Error Register"                              [UNSIGNED8        R_R_R_]      0x00 / 0
+0x1003      "Pre-defined error field"                     [ARRAY  maxsub(0x05 / 5)]
+si_sdo: Right access for item 2 is not managed for entry 0. Your right are 0x3f
+si_sdo: Right access for item 2 is not managed for entry 1. Your right are 0x7
+si_sdo: Right access for item 2 is not managed for entry 2. Your right are 0x7
+si_sdo: Right access for item 2 is not managed for entry 3. Your right are 0x7
+si_sdo: Right access for item 2 is not managed for entry 4. Your right are 0x7
+si_sdo: Right access for item 2 is not managed for entry 5. Your right are 0x7
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        RWRWRW]      0x00 / 0
+0x1008      "Manufacturer Device Name"                    [VAR]
+si_sdo: Right access for item 3 is not managed for entry 0. Your right are 0x7
+OEList dump
+    0x00      "Manufacturer Device Name"                    [VISIBLE_STR(232) R_R_R_]      "Anybus CompactCom 40 EtherCAT"
+0x1009      "Manufacturer Hardware Version"               [VAR]
+si_sdo: Right access for item 4 is not managed for entry 0. Your right are 0x7
+OEList dump
+    0x00      "Manufacturer Hardware Version"               [VISIBLE_STR(8)   R_R_R_]      "2"
+0x100a      "Manufacturer Software Version"               [VAR]
+si_sdo: Right access for item 5 is not managed for entry 0. Your right are 0x7
+OEList dump
+    0x00      "Manufacturer Software Version"               [VISIBLE_STR(56)  R_R_R_]      "2.21.01"
+0x1011      "Restore default parameters"                  [ARRAY  maxsub(0x01 / 1)]
+si_sdo: Right access for item 6 is not managed for entry 0. Your right are 0x7
+si_sdo: Right access for item 6 is not managed for entry 1. Your right are 0x3f
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED32       RWRWRW]      0x00000001 / 1
+0x1018      "Identity Object"                             [RECORD  maxsub(0x04 / 4)]
+si_sdo: Right access for item 7 is not managed for entry 0. Your right are 0x7
+si_sdo: Right access for item 7 is not managed for entry 1. Your right are 0x7
+si_sdo: Right access for item 7 is not managed for entry 2. Your right are 0x7
+si_sdo: Right access for item 7 is not managed for entry 3. Your right are 0x7
+si_sdo: Right access for item 7 is not managed for entry 4. Your right are 0x7
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x04 / 4
+    0x01      "Vendor ID"                                   [UNSIGNED32       R_R_R_]      0xe000001b / 3758096411
+    0x02      "Product Code"                                [UNSIGNED32       R_R_R_]      0x00000036 / 54
+    0x03      "Revision Number"                             [UNSIGNED32       R_R_R_]      0x00020015 / 131093
+    0x04      "Serial Number"                               [UNSIGNED32       R_R_R_]      0xa051f05c / 2689724508
+0x1600      "Receive PDO Mapping"                         [RECORD  maxsub(0xfe / 254)]
+si_sdo: Right access for item 8 is not managed for entry 0. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 1. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 2. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 3. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 4. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 5. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 6. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 7. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 8. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 9. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 10. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 11. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 12. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 13. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 14. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 15. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 16. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 17. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 18. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 19. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 20. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 21. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 22. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 23. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 24. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 25. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 26. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 27. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 28. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 29. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 30. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 31. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 32. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 33. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 34. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 35. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 36. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 37. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 38. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 39. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 40. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 41. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 42. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 43. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 44. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 45. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 46. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 47. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 48. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 49. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 50. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 51. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 52. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 53. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 54. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 55. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 56. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 57. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 58. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 59. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 60. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 61. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 62. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 63. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 64. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 65. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 66. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 67. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 68. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 69. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 70. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 71. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 72. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 73. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 74. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 75. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 76. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 77. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 78. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 79. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 80. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 81. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 82. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 83. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 84. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 85. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 86. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 87. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 88. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 89. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 90. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 91. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 92. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 93. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 94. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 95. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 96. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 97. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 98. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 99. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 100. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 101. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 102. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 103. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 104. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 105. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 106. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 107. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 108. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 109. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 110. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 111. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 112. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 113. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 114. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 115. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 116. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 117. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 118. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 119. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 120. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 121. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 122. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 123. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 124. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 125. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 126. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 127. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 128. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 129. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 130. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 131. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 132. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 133. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 134. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 135. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 136. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 137. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 138. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 139. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 140. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 141. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 142. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 143. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 144. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 145. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 146. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 147. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 148. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 149. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 150. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 151. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 152. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 153. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 154. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 155. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 156. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 157. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 158. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 159. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 160. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 161. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 162. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 163. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 164. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 165. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 166. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 167. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 168. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 169. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 170. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 171. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 172. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 173. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 174. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 175. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 176. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 177. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 178. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 179. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 180. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 181. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 182. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 183. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 184. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 185. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 186. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 187. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 188. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 189. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 190. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 191. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 192. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 193. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 194. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 195. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 196. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 197. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 198. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 199. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 200. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 201. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 202. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 203. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 204. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 205. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 206. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 207. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 208. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 209. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 210. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 211. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 212. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 213. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 214. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 215. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 216. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 217. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 218. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 219. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 220. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 221. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 222. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 223. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 224. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 225. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 226. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 227. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 228. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 229. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 230. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 231. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 232. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 233. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 234. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 235. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 236. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 237. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 238. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 239. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 240. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 241. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 242. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 243. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 244. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 245. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 246. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 247. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 248. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 249. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 250. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 251. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 252. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 253. Your right are 0xf
+si_sdo: Right access for item 8 is not managed for entry 254. Your right are 0xf
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x20 / 32
+    0x01      "Mapped Object 001"                           [UNSIGNED32       RWR_R_]      0x200a0110 / 537526544
+    0x02      "Mapped Object 002"                           [UNSIGNED32       RWR_R_]      0x200a0210 / 537526800
+    0x03      "Mapped Object 003"                           [UNSIGNED32       RWR_R_]      0x200a0310 / 537527056
+    0x04      "Mapped Object 004"                           [UNSIGNED32       RWR_R_]      0x200a0410 / 537527312
+    0x05      "Mapped Object 005"                           [UNSIGNED32       RWR_R_]      0x200a0510 / 537527568
+    0x06      "Mapped Object 006"                           [UNSIGNED32       RWR_R_]      0x200a0610 / 537527824
+    0x07      "Mapped Object 007"                           [UNSIGNED32       RWR_R_]      0x200a0710 / 537528080
+    0x08      "Mapped Object 008"                           [UNSIGNED32       RWR_R_]      0x200a0810 / 537528336
+    0x09      "Mapped Object 009"                           [UNSIGNED32       RWR_R_]      0x200a0910 / 537528592
+    0x0a      "Mapped Object 010"                           [UNSIGNED32       RWR_R_]      0x200a0a10 / 537528848
+    0x0b      "Mapped Object 011"                           [UNSIGNED32       RWR_R_]      0x200a0b10 / 537529104
+    0x0c      "Mapped Object 012"                           [UNSIGNED32       RWR_R_]      0x200a0c10 / 537529360
+    0x0d      "Mapped Object 013"                           [UNSIGNED32       RWR_R_]      0x200a0d10 / 537529616
+    0x0e      "Mapped Object 014"                           [UNSIGNED32       RWR_R_]      0x200a0e10 / 537529872
+    0x0f      "Mapped Object 015"                           [UNSIGNED32       RWR_R_]      0x200a0f10 / 537530128
+    0x10      "Mapped Object 016"                           [UNSIGNED32       RWR_R_]      0x200a1010 / 537530384
+    0x11      "Mapped Object 017"                           [UNSIGNED32       RWR_R_]      0x200a1110 / 537530640
+    0x12      "Mapped Object 018"                           [UNSIGNED32       RWR_R_]      0x200a1210 / 537530896
+    0x13      "Mapped Object 019"                           [UNSIGNED32       RWR_R_]      0x200a1310 / 537531152
+    0x14      "Mapped Object 020"                           [UNSIGNED32       RWR_R_]      0x200a1410 / 537531408
+    0x15      "Mapped Object 021"                           [UNSIGNED32       RWR_R_]      0x200a1510 / 537531664
+    0x16      "Mapped Object 022"                           [UNSIGNED32       RWR_R_]      0x200a1610 / 537531920
+    0x17      "Mapped Object 023"                           [UNSIGNED32       RWR_R_]      0x200a1710 / 537532176
+    0x18      "Mapped Object 024"                           [UNSIGNED32       RWR_R_]      0x200a1810 / 537532432
+    0x19      "Mapped Object 025"                           [UNSIGNED32       RWR_R_]      0x200a1910 / 537532688
+    0x1a      "Mapped Object 026"                           [UNSIGNED32       RWR_R_]      0x200a1a10 / 537532944
+    0x1b      "Mapped Object 027"                           [UNSIGNED32       RWR_R_]      0x200a1b10 / 537533200
+    0x1c      "Mapped Object 028"                           [UNSIGNED32       RWR_R_]      0x200a1c10 / 537533456
+    0x1d      "Mapped Object 029"                           [UNSIGNED32       RWR_R_]      0x200a1d10 / 537533712
+    0x1e      "Mapped Object 030"                           [UNSIGNED32       RWR_R_]      0x200a1e10 / 537533968
+    0x1f      "Mapped Object 031"                           [UNSIGNED32       RWR_R_]      0x200a1f10 / 537534224
+    0x20      "Mapped Object 032"                           [UNSIGNED32       RWR_R_]      0x200a2010 / 537534480
+0x1a00      "Transmit PDO Mapping"                        [RECORD  maxsub(0xfe / 254)]
+si_sdo: Right access for item 9 is not managed for entry 0. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 1. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 2. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 3. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 4. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 5. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 6. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 7. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 8. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 9. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 10. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 11. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 12. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 13. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 14. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 15. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 16. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 17. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 18. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 19. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 20. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 21. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 22. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 23. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 24. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 25. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 26. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 27. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 28. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 29. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 30. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 31. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 32. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 33. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 34. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 35. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 36. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 37. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 38. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 39. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 40. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 41. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 42. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 43. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 44. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 45. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 46. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 47. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 48. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 49. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 50. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 51. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 52. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 53. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 54. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 55. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 56. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 57. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 58. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 59. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 60. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 61. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 62. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 63. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 64. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 65. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 66. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 67. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 68. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 69. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 70. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 71. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 72. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 73. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 74. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 75. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 76. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 77. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 78. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 79. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 80. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 81. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 82. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 83. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 84. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 85. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 86. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 87. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 88. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 89. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 90. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 91. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 92. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 93. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 94. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 95. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 96. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 97. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 98. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 99. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 100. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 101. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 102. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 103. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 104. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 105. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 106. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 107. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 108. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 109. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 110. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 111. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 112. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 113. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 114. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 115. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 116. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 117. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 118. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 119. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 120. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 121. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 122. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 123. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 124. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 125. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 126. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 127. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 128. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 129. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 130. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 131. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 132. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 133. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 134. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 135. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 136. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 137. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 138. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 139. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 140. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 141. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 142. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 143. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 144. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 145. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 146. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 147. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 148. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 149. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 150. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 151. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 152. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 153. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 154. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 155. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 156. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 157. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 158. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 159. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 160. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 161. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 162. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 163. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 164. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 165. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 166. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 167. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 168. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 169. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 170. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 171. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 172. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 173. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 174. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 175. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 176. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 177. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 178. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 179. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 180. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 181. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 182. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 183. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 184. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 185. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 186. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 187. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 188. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 189. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 190. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 191. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 192. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 193. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 194. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 195. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 196. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 197. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 198. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 199. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 200. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 201. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 202. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 203. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 204. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 205. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 206. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 207. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 208. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 209. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 210. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 211. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 212. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 213. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 214. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 215. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 216. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 217. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 218. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 219. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 220. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 221. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 222. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 223. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 224. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 225. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 226. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 227. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 228. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 229. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 230. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 231. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 232. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 233. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 234. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 235. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 236. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 237. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 238. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 239. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 240. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 241. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 242. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 243. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 244. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 245. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 246. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 247. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 248. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 249. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 250. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 251. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 252. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 253. Your right are 0xf
+si_sdo: Right access for item 9 is not managed for entry 254. Your right are 0xf
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x20 / 32
+    0x01      "Mapped Object 001"                           [UNSIGNED32       RWR_R_]      0x200b0110 / 537592080
+    0x02      "Mapped Object 002"                           [UNSIGNED32       RWR_R_]      0x200b0210 / 537592336
+    0x03      "Mapped Object 003"                           [UNSIGNED32       RWR_R_]      0x200b0310 / 537592592
+    0x04      "Mapped Object 004"                           [UNSIGNED32       RWR_R_]      0x200b0410 / 537592848
+    0x05      "Mapped Object 005"                           [UNSIGNED32       RWR_R_]      0x200b0510 / 537593104
+    0x06      "Mapped Object 006"                           [UNSIGNED32       RWR_R_]      0x200b0610 / 537593360
+    0x07      "Mapped Object 007"                           [UNSIGNED32       RWR_R_]      0x200b0710 / 537593616
+    0x08      "Mapped Object 008"                           [UNSIGNED32       RWR_R_]      0x200b0810 / 537593872
+    0x09      "Mapped Object 009"                           [UNSIGNED32       RWR_R_]      0x200b0910 / 537594128
+    0x0a      "Mapped Object 010"                           [UNSIGNED32       RWR_R_]      0x200b0a10 / 537594384
+    0x0b      "Mapped Object 011"                           [UNSIGNED32       RWR_R_]      0x200b0b10 / 537594640
+    0x0c      "Mapped Object 012"                           [UNSIGNED32       RWR_R_]      0x200b0c10 / 537594896
+    0x0d      "Mapped Object 013"                           [UNSIGNED32       RWR_R_]      0x200b0d10 / 537595152
+    0x0e      "Mapped Object 014"                           [UNSIGNED32       RWR_R_]      0x200b0e10 / 537595408
+    0x0f      "Mapped Object 015"                           [UNSIGNED32       RWR_R_]      0x200b0f10 / 537595664
+    0x10      "Mapped Object 016"                           [UNSIGNED32       RWR_R_]      0x200b1010 / 537595920
+    0x11      "Mapped Object 017"                           [UNSIGNED32       RWR_R_]      0x200b1110 / 537596176
+    0x12      "Mapped Object 018"                           [UNSIGNED32       RWR_R_]      0x200b1210 / 537596432
+    0x13      "Mapped Object 019"                           [UNSIGNED32       RWR_R_]      0x200b1310 / 537596688
+    0x14      "Mapped Object 020"                           [UNSIGNED32       RWR_R_]      0x200b1410 / 537596944
+    0x15      "Mapped Object 021"                           [UNSIGNED32       RWR_R_]      0x200b1510 / 537597200
+    0x16      "Mapped Object 022"                           [UNSIGNED32       RWR_R_]      0x200b1610 / 537597456
+    0x17      "Mapped Object 023"                           [UNSIGNED32       RWR_R_]      0x200b1710 / 537597712
+    0x18      "Mapped Object 024"                           [UNSIGNED32       RWR_R_]      0x200b1810 / 537597968
+    0x19      "Mapped Object 025"                           [UNSIGNED32       RWR_R_]      0x200b1910 / 537598224
+    0x1a      "Mapped Object 026"                           [UNSIGNED32       RWR_R_]      0x200b1a10 / 537598480
+    0x1b      "Mapped Object 027"                           [UNSIGNED32       RWR_R_]      0x200b1b10 / 537598736
+    0x1c      "Mapped Object 028"                           [UNSIGNED32       RWR_R_]      0x200b1c10 / 537598992
+    0x1d      "Mapped Object 029"                           [UNSIGNED32       RWR_R_]      0x200b1d10 / 537599248
+    0x1e      "Mapped Object 030"                           [UNSIGNED32       RWR_R_]      0x200b1e10 / 537599504
+    0x1f      "Mapped Object 031"                           [UNSIGNED32       RWR_R_]      0x200b1f10 / 537599760
+    0x20      "Mapped Object 032"                           [UNSIGNED32       RWR_R_]      0x200b2010 / 537600016
+0x1c00      "Sync Manager Communication Type"             [ARRAY  maxsub(0x04 / 4)]
+si_sdo: Right access for item 10 is not managed for entry 0. Your right are 0x7
+si_sdo: Right access for item 10 is not managed for entry 1. Your right are 0x7
+si_sdo: Right access for item 10 is not managed for entry 2. Your right are 0x7
+si_sdo: Right access for item 10 is not managed for entry 3. Your right are 0x7
+si_sdo: Right access for item 10 is not managed for entry 4. Your right are 0x7
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x04 / 4
+    0x01      "SubIndex 001"                                [UNSIGNED8        R_R_R_]      0x01 / 1
+    0x02      "SubIndex 002"                                [UNSIGNED8        R_R_R_]      0x02 / 2
+    0x03      "SubIndex 003"                                [UNSIGNED8        R_R_R_]      0x03 / 3
+    0x04      "SubIndex 004"                                [UNSIGNED8        R_R_R_]      0x04 / 4
+0x1c12      "Sync Manager Rx PDO assign"                  [ARRAY  maxsub(0x01 / 1)]
+si_sdo: Right access for item 11 is not managed for entry 0. Your right are 0xf
+si_sdo: Right access for item 11 is not managed for entry 1. Your right are 0xf
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWR_R_]      0x1600 / 5632
+0x1c13      "Sync Manager Tx PDO assign"                  [ARRAY  maxsub(0x01 / 1)]
+si_sdo: Right access for item 12 is not managed for entry 0. Your right are 0xf
+si_sdo: Right access for item 12 is not managed for entry 1. Your right are 0xf
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        RWR_R_]      0x01 / 1
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWR_R_]      0x1a00 / 6656
+0x1c32      "Output SyncManager Parameter"                [RECORD  maxsub(0x0c / 12)]
+si_sdo: Right access for item 13 is not managed for entry 0. Your right are 0x7
+si_sdo: Right access for item 13 is not managed for entry 1. Your right are 0xf
+si_sdo: Right access for item 13 is not managed for entry 2. Your right are 0xf
+si_sdo: Right access for item 13 is not managed for entry 3. Your right are 0xf
+si_sdo: Right access for item 13 is not managed for entry 4. Your right are 0x7
+si_sdo: Right access for item 13 is not managed for entry 5. Your right are 0x7
+si_sdo: Right access for item 13 is not managed for entry 6. Your right are 0x7
+si_sdo: Right access for item 13 is not managed for entry 7. Your right are 0x0
+si_sdo: Right access for item 13 is not managed for entry 8. Your right are 0x0
+si_sdo: Right access for item 13 is not managed for entry 9. Your right are 0x7
+si_sdo: Right access for item 13 is not managed for entry 10. Your right are 0x0
+si_sdo: Right access for item 13 is not managed for entry 11. Your right are 0x0
+si_sdo: Right access for item 13 is not managed for entry 12. Your right are 0x7
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x0c / 12
+    0x01      "Synchronization Type"                        [UNSIGNED16       RWR_R_]      0x0000 / 0
+    0x02      "Cycle Time"                                  [UNSIGNED32       RWR_R_]      0x001e8480 / 2000000
+    0x03      "Shift Time"                                  [UNSIGNED32       RWR_R_]      0x00000000 / 0
+    0x04      "Synchronization Types supported"             [UNSIGNED16       R_R_R_]      0x0001 / 1
+    0x05      "Minimum Cycle Time"                          [UNSIGNED32       R_R_R_]      0x000186a0 / 100000
+    0x06      "Calc and Copy Time"                          [UNSIGNED32       R_R_R_]      0x000001f4 / 500
+    0x09      "Delay Time"                                  [UNSIGNED32       R_R_R_]      0x00000000 / 0
+    0x0c      "Cycle Time Too Small Counter"                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x1c33      "Input SyncManager Parameter"                 [RECORD  maxsub(0x0c / 12)]
+si_sdo: Right access for item 14 is not managed for entry 0. Your right are 0x7
+si_sdo: Right access for item 14 is not managed for entry 1. Your right are 0xf
+si_sdo: Right access for item 14 is not managed for entry 2. Your right are 0x7
+si_sdo: Right access for item 14 is not managed for entry 3. Your right are 0xf
+si_sdo: Right access for item 14 is not managed for entry 4. Your right are 0x7
+si_sdo: Right access for item 14 is not managed for entry 5. Your right are 0x7
+si_sdo: Right access for item 14 is not managed for entry 6. Your right are 0x7
+si_sdo: Right access for item 14 is not managed for entry 7. Your right are 0x0
+si_sdo: Right access for item 14 is not managed for entry 8. Your right are 0x0
+si_sdo: Right access for item 14 is not managed for entry 9. Your right are 0x0
+si_sdo: Right access for item 14 is not managed for entry 10. Your right are 0x0
+si_sdo: Right access for item 14 is not managed for entry 11. Your right are 0x0
+si_sdo: Right access for item 14 is not managed for entry 12. Your right are 0x7
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x0c / 12
+    0x01      "Synchronization Type"                        [UNSIGNED16       RWR_R_]      0x0000 / 0
+    0x02      "Cycle Time"                                  [UNSIGNED32       R_R_R_]      0x001e8480 / 2000000
+    0x03      "Shift Time"                                  [UNSIGNED32       RWR_R_]      0x00000000 / 0
+    0x04      "Synchronization Types supported"             [UNSIGNED16       R_R_R_]      0x0001 / 1
+    0x05      "Minimum Cycle Time"                          [UNSIGNED32       R_R_R_]      0x000186a0 / 100000
+    0x06      "Calc and Copy Time"                          [UNSIGNED32       R_R_R_]      0x000001f4 / 500
+    0x0c      "Cycle Time Too Small Counter"                [UNSIGNED16       R_R_R_]      0x0000 / 0
+0x200a      "ABP_UINT16_SET"                              [ARRAY  maxsub(0x20 / 32)]
+si_sdo: Right access for item 15 is not managed for entry 0. Your right are 0x7
+si_sdo: ObjAccess[h] for h=1 is 0x7f
+si_sdo: ObjAccess[h] for h=2 is 0x7f
+si_sdo: ObjAccess[h] for h=3 is 0x7f
+si_sdo: ObjAccess[h] for h=4 is 0x7f
+si_sdo: ObjAccess[h] for h=5 is 0x7f
+si_sdo: ObjAccess[h] for h=6 is 0x7f
+si_sdo: ObjAccess[h] for h=7 is 0x7f
+si_sdo: ObjAccess[h] for h=8 is 0x7f
+si_sdo: ObjAccess[h] for h=9 is 0x7f
+si_sdo: ObjAccess[h] for h=10 is 0x7f
+si_sdo: ObjAccess[h] for h=11 is 0x7f
+si_sdo: ObjAccess[h] for h=12 is 0x7f
+si_sdo: ObjAccess[h] for h=13 is 0x7f
+si_sdo: ObjAccess[h] for h=14 is 0x7f
+si_sdo: ObjAccess[h] for h=15 is 0x7f
+si_sdo: ObjAccess[h] for h=16 is 0x7f
+si_sdo: ObjAccess[h] for h=17 is 0x7f
+si_sdo: ObjAccess[h] for h=18 is 0x7f
+si_sdo: ObjAccess[h] for h=19 is 0x7f
+si_sdo: ObjAccess[h] for h=20 is 0x7f
+si_sdo: ObjAccess[h] for h=21 is 0x7f
+si_sdo: ObjAccess[h] for h=22 is 0x7f
+si_sdo: ObjAccess[h] for h=23 is 0x7f
+si_sdo: ObjAccess[h] for h=24 is 0x7f
+si_sdo: ObjAccess[h] for h=25 is 0x7f
+si_sdo: ObjAccess[h] for h=26 is 0x7f
+si_sdo: ObjAccess[h] for h=27 is 0x7f
+si_sdo: ObjAccess[h] for h=28 is 0x7f
+si_sdo: ObjAccess[h] for h=29 is 0x7f
+si_sdo: ObjAccess[h] for h=30 is 0x7f
+si_sdo: ObjAccess[h] for h=31 is 0x7f
+si_sdo: ObjAccess[h] for h=32 is 0x7f
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWRWRW]      Time:1646866700.798 SDO slave:1 index:200a.00 error:06010002 Attempt to write to a read only object
+
+    0x02      "SubIndex 002"                                [UNSIGNED16       RWRWRW]      
+    0x03      "SubIndex 003"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x04      "SubIndex 004"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x05      "SubIndex 005"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x06      "SubIndex 006"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x07      "SubIndex 007"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x08      "SubIndex 008"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x09      "SubIndex 009"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x0a      "SubIndex 010"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x0b      "SubIndex 011"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x0c      "SubIndex 012"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x0d      "SubIndex 013"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x0e      "SubIndex 014"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x0f      "SubIndex 015"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x10      "SubIndex 016"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x11      "SubIndex 017"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x12      "SubIndex 018"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x13      "SubIndex 019"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x14      "SubIndex 020"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x15      "SubIndex 021"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x16      "SubIndex 022"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x17      "SubIndex 023"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x18      "SubIndex 024"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x19      "SubIndex 025"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x1a      "SubIndex 026"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x1b      "SubIndex 027"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x1c      "SubIndex 028"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x1d      "SubIndex 029"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x1e      "SubIndex 030"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x1f      "SubIndex 031"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+    0x20      "SubIndex 032"                                [UNSIGNED16       RWRWRW]      0x000c / 12
+0x200b      "ABP_UINT16_GET"                              [ARRAY  maxsub(0x20 / 32)]
+si_sdo: Right access for item 16 is not managed for entry 0. Your right are 0x7
+si_sdo: ObjAccess[h] for h=1 is 0x87
+si_sdo: ObjAccess[h] for h=2 is 0x87
+si_sdo: ObjAccess[h] for h=3 is 0x87
+si_sdo: ObjAccess[h] for h=4 is 0x87
+si_sdo: ObjAccess[h] for h=5 is 0x87
+si_sdo: ObjAccess[h] for h=6 is 0x87
+si_sdo: ObjAccess[h] for h=7 is 0x87
+si_sdo: ObjAccess[h] for h=8 is 0x87
+si_sdo: ObjAccess[h] for h=9 is 0x87
+si_sdo: ObjAccess[h] for h=10 is 0x87
+si_sdo: ObjAccess[h] for h=11 is 0x87
+si_sdo: ObjAccess[h] for h=12 is 0x87
+si_sdo: ObjAccess[h] for h=13 is 0x87
+si_sdo: ObjAccess[h] for h=14 is 0x87
+si_sdo: ObjAccess[h] for h=15 is 0x87
+si_sdo: ObjAccess[h] for h=16 is 0x87
+si_sdo: ObjAccess[h] for h=17 is 0x87
+si_sdo: ObjAccess[h] for h=18 is 0x87
+si_sdo: ObjAccess[h] for h=19 is 0x87
+si_sdo: ObjAccess[h] for h=20 is 0x87
+si_sdo: ObjAccess[h] for h=21 is 0x87
+si_sdo: ObjAccess[h] for h=22 is 0x87
+si_sdo: ObjAccess[h] for h=23 is 0x87
+si_sdo: ObjAccess[h] for h=24 is 0x87
+si_sdo: ObjAccess[h] for h=25 is 0x87
+si_sdo: ObjAccess[h] for h=26 is 0x87
+si_sdo: ObjAccess[h] for h=27 is 0x87
+si_sdo: ObjAccess[h] for h=28 is 0x87
+si_sdo: ObjAccess[h] for h=29 is 0x87
+si_sdo: ObjAccess[h] for h=30 is 0x87
+si_sdo: ObjAccess[h] for h=31 is 0x87
+si_sdo: ObjAccess[h] for h=32 is 0x87
+OEList dump
+    0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32
+    0x01      "SubIndex 001"                                [UNSIGNED16       R_R_R_]      Time:1646866702.938 SDO slave:1 index:200b.00 error:06010002 Attempt to write to a read only object
+
+    0x02      "SubIndex 002"                                [UNSIGNED16       R_R_R_]      Time:1646866702.996 SDO slave:1 index:200b.01 error:06010002 Attempt to write to a read only object
+
+    0x03      "SubIndex 003"                                [UNSIGNED16       R_R_R_]      Time:1646866703.060 SDO slave:1 index:200b.02 error:06010002 Attempt to write to a read only object
+
+    0x04      "SubIndex 004"                                [UNSIGNED16       R_R_R_]      Time:1646866703.123 SDO slave:1 index:200b.03 error:06010002 Attempt to write to a read only object
+
+    0x05      "SubIndex 005"                                [UNSIGNED16       R_R_R_]      Time:1646866703.185 SDO slave:1 index:200b.04 error:06010002 Attempt to write to a read only object
+
+    0x06      "SubIndex 006"                                [UNSIGNED16       R_R_R_]      Time:1646866703.249 SDO slave:1 index:200b.05 error:06010002 Attempt to write to a read only object
+
+    0x07      "SubIndex 007"                                [UNSIGNED16       R_R_R_]      Time:1646866703.313 SDO slave:1 index:200b.06 error:06010002 Attempt to write to a read only object
+
+    0x08      "SubIndex 008"                                [UNSIGNED16       R_R_R_]      Time:1646866703.377 SDO slave:1 index:200b.07 error:06010002 Attempt to write to a read only object
+
+    0x09      "SubIndex 009"                                [UNSIGNED16       R_R_R_]      Time:1646866703.440 SDO slave:1 index:200b.08 error:06010002 Attempt to write to a read only object
+
+    0x0a      "SubIndex 010"                                [UNSIGNED16       R_R_R_]      Time:1646866703.502 SDO slave:1 index:200b.09 error:06010002 Attempt to write to a read only object
+
+    0x0b      "SubIndex 011"                                [UNSIGNED16       R_R_R_]      Time:1646866703.564 SDO slave:1 index:200b.0a error:06010002 Attempt to write to a read only object
+
+    0x0c      "SubIndex 012"                                [UNSIGNED16       R_R_R_]      Time:1646866703.627 SDO slave:1 index:200b.0b error:06010002 Attempt to write to a read only object
+
+    0x0d      "SubIndex 013"                                [UNSIGNED16       R_R_R_]      Time:1646866703.691 SDO slave:1 index:200b.0c error:06010002 Attempt to write to a read only object
+
+    0x0e      "SubIndex 014"                                [UNSIGNED16       R_R_R_]      Time:1646866703.753 SDO slave:1 index:200b.0d error:06010002 Attempt to write to a read only object
+
+    0x0f      "SubIndex 015"                                [UNSIGNED16       R_R_R_]      Time:1646866703.816 SDO slave:1 index:200b.0e error:06010002 Attempt to write to a read only object
+
+    0x10      "SubIndex 016"                                [UNSIGNED16       R_R_R_]      Time:1646866703.878 SDO slave:1 index:200b.0f error:06010002 Attempt to write to a read only object
+
+    0x11      "SubIndex 017"                                [UNSIGNED16       R_R_R_]      Time:1646866703.941 SDO slave:1 index:200b.10 error:06010002 Attempt to write to a read only object
+
+    0x12      "SubIndex 018"                                [UNSIGNED16       R_R_R_]      Time:1646866704.003 SDO slave:1 index:200b.11 error:06010002 Attempt to write to a read only object
+
+    0x13      "SubIndex 019"                                [UNSIGNED16       R_R_R_]      Time:1646866704.065 SDO slave:1 index:200b.12 error:06010002 Attempt to write to a read only object
+
+    0x14      "SubIndex 020"                                [UNSIGNED16       R_R_R_]      Time:1646866704.127 SDO slave:1 index:200b.13 error:06010002 Attempt to write to a read only object
+
+    0x15      "SubIndex 021"                                [UNSIGNED16       R_R_R_]      Time:1646866704.189 SDO slave:1 index:200b.14 error:06010002 Attempt to write to a read only object
+
+    0x16      "SubIndex 022"                                [UNSIGNED16       R_R_R_]      Time:1646866704.251 SDO slave:1 index:200b.15 error:06010002 Attempt to write to a read only object
+
+    0x17      "SubIndex 023"                                [UNSIGNED16       R_R_R_]      Time:1646866704.315 SDO slave:1 index:200b.16 error:06010002 Attempt to write to a read only object
+
+    0x18      "SubIndex 024"                                [UNSIGNED16       R_R_R_]      Time:1646866704.377 SDO slave:1 index:200b.17 error:06010002 Attempt to write to a read only object
+
+    0x19      "SubIndex 025"                                [UNSIGNED16       R_R_R_]      Time:1646866704.441 SDO slave:1 index:200b.18 error:06010002 Attempt to write to a read only object
+
+    0x1a      "SubIndex 026"                                [UNSIGNED16       R_R_R_]      Time:1646866704.501 SDO slave:1 index:200b.19 error:06010002 Attempt to write to a read only object
+
+    0x1b      "SubIndex 027"                                [UNSIGNED16       R_R_R_]      Time:1646866704.563 SDO slave:1 index:200b.1a error:06010002 Attempt to write to a read only object
+
+    0x1c      "SubIndex 028"                                [UNSIGNED16       R_R_R_]      Time:1646866704.626 SDO slave:1 index:200b.1b error:06010002 Attempt to write to a read only object
+
+    0x1d      "SubIndex 029"                                [UNSIGNED16       R_R_R_]      Time:1646866704.689 SDO slave:1 index:200b.1c error:06010002 Attempt to write to a read only object
+
+    0x1e      "SubIndex 030"                                [UNSIGNED16       R_R_R_]      Time:1646866704.751 SDO slave:1 index:200b.1d error:06010002 Attempt to write to a read only object
+
+    0x1f      "SubIndex 031"                                [UNSIGNED16       R_R_R_]      Time:1646866704.814 SDO slave:1 index:200b.1e error:06010002 Attempt to write to a read only object
+
+    0x20      "SubIndex 032"                                [UNSIGNED16       R_R_R_]      Time:1646866704.876 SDO slave:1 index:200b.1f error:06010002 Attempt to write to a read only object
+
+ - Time:1646866704.940 SDO slave:1 index:200b.20 error:06010002 Attempt to write to a read only object
+
+ - 
+0x200c      "ABP_UINT16_COUNTER"                          [VAR]
+si_sdo: ObjAccess[h] for h=0 is 0x87
+OEList dump
+    0x00      "ABP_UINT16_COUNTER"                          [UNSIGNED16       R_R_R_]      0x17f8 / 6136
+ - Time:1646866705.193 SDO slave:1 index:200c.00 error:06010002 Attempt to write to a read only object
+
+ - 
+0x200d      "ABP_UINT16_SETTER"                           [VAR]
+si_sdo: ObjAccess[h] for h=0 is 0x7f
+OEList dump
+    0x00      "ABP_UINT16_SETTER"                           [UNSIGNED16       RWRWRW]      0x000c / 12
+EXIT si_sdo
+End slaveinfo, close socket
+End SlaveInfo program
+
+Starting simple test revision tag@0903_00.txt
+Against Slave with tag; tag_0903_0x
+
+ec_init on \Device\NPF_{D8D267BF-D178-4544-B628-9DE58ABAE75A} succeeded.
+1 slaves found and configured.
+
+Slaves mapped, state to SAFE_OP.
+
+Start ACYCLIC TEST
+
+Search for ABP_UINT16_COUNTER which length is 18
+Compared OK ABP_UINT16_COUNTER to string found ABP_UINT16_COUNTER at 17 entry
+ ABP_UINT16_COUNTER FOUND
+OElist.Name[i] is ABP_UINT16_COUNTER  
+OElist.DataType[i] is 6 
+OElist.BitLength[i] is 16 
+OElist.ObjAccess[i] is 135 
+OElist.ValueInfo[i] is 0 
+
+Number of ouptut Bytes is 64 but oloop is 8
+Number of input Bytes is 64 but iloop is 8
+iTargetRefEntryPos is 0 and right access are 0x87
+Processdata cycle 1 , DCtime            0, O: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f I: 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Processdata cycle 2 , DCtime            0, O: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f I: 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Processdata cycle 3 , DCtime            0, O: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f I: 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Processdata cycle 4 , DCtime            0, O: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f I: 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Processdata cycle 5 , DCtime            0, O: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f I: 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 90 91 92 93 94 95 96 97 98 99 9a 9b 9c 9d 9e 9f a0 a1 a2 a3 a4 a5 a6 a7 a8 a9 aa ab ac ad ae af b0 b1 b2 b3 b4 b5 b6 b7 b8 b9 ba bb bc bd be bf c0 c1 c2 c3 c4 c5 c6 c7 c8 c9 ca cb cc cd ce cf d0 d1 d2 d3 d4 d5 d6 d7 d8 d9 da db dc dd de df e0 e1 e2 e3 e4 e5 e6 e7 e8 e9 ea eb ec ed ee ef f0 f1 f2 f3 f4 f5 f6 f7 f8 f9 fa fb fc fd fe ff 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d 1e 1f 20 21 22 23 24 25 26 27 28 29 2a 2b 2c 2d 2e 2f 30 31 32 33 34 35 36 37 38 39 3a 3b 3c 3d 3e 3f 40 41 42 43 44 45 46 47 48 49 4a 4b 4c 4d 4e 4f 50 51 52 53 54 55 56 57 58 59 5a 5b 5c 5d 5e 5f 60 61 62 63 64 65 66 67 68 69 6a 6b 6c 6d 6e 6f 70 71 72 73 74 75 76 77 78 79 7a 7b 7c 7d 7e 7f 80 81 82 83 84 85 86 87 88 89 8a 8b 8c 8d 8e 8f 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+End simple test, close socket
+End program

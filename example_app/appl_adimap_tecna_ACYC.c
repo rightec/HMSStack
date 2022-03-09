@@ -83,6 +83,7 @@
 static void SetAdi10Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElements, UINT8 bStartIndex );
 static void GetAdi11Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElements, UINT8 bStartIndex );
 static void GetAdi12Value(const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElements, UINT8 bStartIndex);
+static void SetAdi13Value(const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElements, UINT8 bStartIndex); //  @tag_0903_00
 
 /*------------------------------------------------------------------------------
 ** Data holder for the ADI instances
@@ -91,6 +92,7 @@ static void GetAdi12Value(const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElemen
 static UINT16  appl_aiUint16_10[ 32 ];
 static UINT16  appl_aiUint16_11[ 32 ];
 static UINT16  appl_Uint16_12 = 9;  // StartValue @tag_0703_01
+static UINT16  appl_Uint16_13 = 0;  //  @tag_0903_00
 static UINT16  appl_glob_getCounter_12 = 0; //  @tag_0703_00
 /*******************************************************************************
 ** Public Globals
@@ -110,8 +112,9 @@ const AD_AdiEntryType APPL_asAdiEntryList[] =
 {
    { 10,   "ABP_UINT16_SET",        ABP_UINT16,   32, APPL_READ_MAP_WRITE_ACCESS_DESC, { { appl_aiUint16_10 ,NULL } }, NULL, SetAdi10Value },
    { 11,   "ABP_UINT16_GET",        ABP_UINT16,   32, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16_11 ,NULL } }, GetAdi11Value, NULL },
-   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_WRITE_MAP_READ_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, //  @tag_tag_0703_00
-//   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_NOT_MAP_WRITE_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, //  @tag_tag_0703_00
+   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_WRITE_MAP_READ_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, //  @tag_0703_00
+   { 13,   "ABP_UINT16_SETTER",     ABP_UINT16,   1,  APPL_READ_MAP_WRITE_ACCESS_DESC,  { { &appl_Uint16_13 ,NULL  } }, NULL, SetAdi13Value         }, //  @tag_0903_00
+///   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_NOT_MAP_WRITE_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, //  @tag_0703_00
 };
 
 /*
@@ -144,6 +147,7 @@ static void GetAdi11Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumEleme
 {
    appl_Uint16_12++;
 }
+
 /*------------------------------------------------------------------------------
 ** Callback of type ABCC_SetAdiValueFuncType. The function will be called when
 ** the network writes to ADI#10. It copies the changed values from ADI#10 to ADI#11.
@@ -159,6 +163,7 @@ static void SetAdi10Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumEleme
       appl_aiUint16_11[ index ] = appl_aiUint16_10[ index ];
    }
 }
+
 /*------------------------------------------------------------------------------
 ** @tag_0703_00
 ** Callback of type ABCC_GetAdiValueFuncType. The function will be called when
@@ -180,6 +185,29 @@ static void GetAdi12Value(const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElemen
     }
 
 }
+
+/*------------------------------------------------------------------------------
+** Callback of type ABCC_SetAdiValueFuncType. The function will be called when
+** the network writes to ADI#13.  
+** @tag_0903_00
+**
+** ABCC_SetAdiValueFuncType is declared in abcc_ad_if.h
+**------------------------------------------------------------------------------
+*/
+static void SetAdi13Value(const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElements, UINT8 bStartIndex)
+{
+    DEBUG_EVENT(("SetAdi13Value. New Value is %d\n",appl_Uint16_13)); 
+
+/*
+** An example of ADI data handling.
+*/
+    if (appl_glob_getCounter_12 > 0)
+    {
+        appl_glob_getCounter_12--;
+        DEBUG_EVENT(("appl_glob_getCounter_12 is now %d\n", appl_glob_getCounter_12)); 
+    } /// else    
+}
+
 
 /*******************************************************************************
 ** Public Services
@@ -203,7 +231,7 @@ void APPL_CyclicalProcessing( void )
         if (appl_glob_getCounter_12 > 0 )
         {
             DEBUG_EVENT(("appl_glob_getCounter_12 is now %d\n", appl_glob_getCounter_12)); // @tag_0703_01
-
+            appl_Uint16_12++;
         }
         else 
         {
