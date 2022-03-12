@@ -1,3 +1,8 @@
+#12032022 - Tag_01
+Faccio sul SOEM un pò di pulizia per rimuovere verbosità
+
+
+
 #12032022 - Tag_00
 Il lavoro massimale è semrpe sul SOEM
 Stiamo cercando ci capire le primitive.
@@ -7,9 +12,67 @@ Sul lato SOEM c'è un commit con il tag tag@12032022_00
 Da questo file estraggo dal log queste righe:
 
 ********************************************************************************************************************************************************
+0x200a      "ABP_UINT16_SET"                              [ARRAY  maxsub(0x20 / 32)]
+0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32
+Tryng to write to 0x200a at index 15 and access index 0. Right are: 0x7
+Time:1647075214.047 SDO slave:1 index:200a.00 error:06010002 Attempt to write to a read only object
 
+________________________________________________________________________________________________________________________________________________________ 
 
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWRWRW]      Tryng to write to 0x200a at index 15 and access index 1. Right are: 0x7f 
 
+    0x02      "SubIndex 002"                                [UNSIGNED16       RWRWRW]      Tryng to write to 0x200a at index 15 and access index 2. Right are: 0x7f 
+
+    0x03      "SubIndex 003"                                [UNSIGNED16       RWRWRW]      0x000c / 12Tryng to write to 0x200a at index 15 and access index 3. Right are: 0x7f 
+
+    0x04      "SubIndex 004"                                [UNSIGNED16       RWRWRW]      0x000c / 12Tryng to write to 0x200a at index 15 and access index 4. Right are: 0x7f 
+    .
+    .
+    .
+    .
+	
+    0x1f      "SubIndex 031"                                [UNSIGNED16       RWRWRW]      0x000c / 12Tryng to write to 0x200a at index 15 and access index 31. Right are: 0x7f 
+
+    0x20      "SubIndex 032"                                [UNSIGNED16       RWRWRW]      0x000c / 12Tryng to write to 0x200a at index 15 and access index 32. Right are: 0x7f 
+
+________________________________________________________________________________________________________________________________________________________ 
+
+Dal lato slave abbiamo una mappatura così descritta:
+
+const AD_AdiEntryType APPL_asAdiEntryList[] =
+{
+   { 10,   "ABP_UINT16_SET",        ABP_UINT16,   32, APPL_READ_MAP_WRITE_ACCESS_DESC, { { appl_aiUint16_10 ,NULL } }, NULL, SetAdi10Value },
+   { 11,   "ABP_UINT16_GET",        ABP_UINT16,   32, APPL_WRITE_MAP_READ_ACCESS_DESC, { { appl_aiUint16_11 ,NULL } }, GetAdi11Value, NULL },
+   { 12,   "ABP_UINT16_COUNTER",    ABP_UINT16,   1,  APPL_WRITE_MAP_READ_ACCESS_DESC,  { { &appl_Uint16_12 ,NULL  } }, GetAdi12Value, NULL         }, 
+   { 13,   "ABP_UINT16_SETTER",     ABP_UINT16,   1,  APPL_READ_MAP_WRITE_ACCESS_DESC,  { { &appl_Uint16_13 ,NULL  } }, NULL, SetAdi13Value         }, 
+};
+
+Però sono leggibili in operazionale solo quelle descritte qui:
+
+const AD_MapType APPL_asAdObjDefaultMap[] =
+{
+   { 10,  PD_READ,   AD_MAP_ALL_ELEM, 0 },
+   { 11,  PD_WRITE,  AD_MAP_ALL_ELEM, 0 },
+   { AD_MAP_END_ENTRY }
+};
+
+Quando il SOEM vede RWRWRW significa che vede 0x7f che coincide con APPL_READ_MAP_WRITE_ACCESS_DESC del lato slave
+Quando il SOEM vede R_R_R_ significa che vede 0x7 che coincide con APPL_WRITE_MAP_READ_ACCESS_DESC del lato slave
+
+L'estratto di codice del SOEM è questo:
+
+                    if ((OElist.ObjAccess[j] & 0x007f))
+                    {
+                        uint16_t u16val = i; /// Data to write
+                        if (ODlist.Index[i] >= 0x2000){
+                            printf("Tryng to write to 0x%x at index %d and access index %d. Right are: 0x%x \n", ODlist.Index[i],i,j,OElist.ObjAccess[j]);
+                            ec_SDOwrite(cnt, ODlist.Index[i], j, FALSE, sizeof(u16val), &u16val, EC_TIMEOUTTXM); 
+                        } ///              
+                    }
+
+Quindi quando l'oggetto è accessibile in R/W, il SOEM scrive altrimenti riporta un fallimento: error:06010002 Attempt to write to a read only object
+
+Dal lato slave le callback mi confermano che riesco a scrivere su ABP_UINT16_SET e ABP_UINT16_SETTER con questo meccanismo(ec_SDOWrite) nello stato di INIT
 
 ********************************************************************************************************************************************************
 

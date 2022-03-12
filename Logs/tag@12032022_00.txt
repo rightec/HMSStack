@@ -182,7 +182,7 @@ ODlist.Index[14] is 0x1c33: OEList dump
 ODlist.Index[15] is 0x200a: OEList dump
     0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32Tryng to write to 0x200a at index 15 and access index 0. Right are: 0x7 
 
-    0x01      "SubIndex 001"                                [UNSIGNED16       RWRWRW]      Time:1647075214.047 SDO slave:1 index:200a.00 error:06010002 Attempt to write to a read only object
+    0x01      "SubIndex 001"                                [UNSIGNED16       RWRWRW]      Time:1647077193.639 SDO slave:1 index:200a.00 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200a at index 15 and access index 1. Right are: 0x7f 
 
     0x02      "SubIndex 002"                                [UNSIGNED16       RWRWRW]      Tryng to write to 0x200a at index 15 and access index 2. Right are: 0x7f 
@@ -251,110 +251,110 @@ Tryng to write to 0x200a at index 15 and access index 1. Right are: 0x7f
 ODlist.Index[16] is 0x200b: OEList dump
     0x00      "Number of entries"                           [UNSIGNED8        R_R_R_]      0x20 / 32Tryng to write to 0x200b at index 16 and access index 0. Right are: 0x7 
 
-    0x01      "SubIndex 001"                                [UNSIGNED16       R_R_R_]      Time:1647075216.188 SDO slave:1 index:200b.00 error:06010002 Attempt to write to a read only object
+    0x01      "SubIndex 001"                                [UNSIGNED16       R_R_R_]      Time:1647077195.931 SDO slave:1 index:200b.00 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 1. Right are: 0x87 
 
-    0x02      "SubIndex 002"                                [UNSIGNED16       R_R_R_]      Time:1647075216.247 SDO slave:1 index:200b.01 error:06010002 Attempt to write to a read only object
+    0x02      "SubIndex 002"                                [UNSIGNED16       R_R_R_]      Time:1647077195.988 SDO slave:1 index:200b.01 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 2. Right are: 0x87 
 
-    0x03      "SubIndex 003"                                [UNSIGNED16       R_R_R_]      Time:1647075216.311 SDO slave:1 index:200b.02 error:06010002 Attempt to write to a read only object
+    0x03      "SubIndex 003"                                [UNSIGNED16       R_R_R_]      Time:1647077196.051 SDO slave:1 index:200b.02 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 3. Right are: 0x87 
 
-    0x04      "SubIndex 004"                                [UNSIGNED16       R_R_R_]      Time:1647075216.373 SDO slave:1 index:200b.03 error:06010002 Attempt to write to a read only object
+    0x04      "SubIndex 004"                                [UNSIGNED16       R_R_R_]      Time:1647077196.112 SDO slave:1 index:200b.03 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 4. Right are: 0x87 
 
-    0x05      "SubIndex 005"                                [UNSIGNED16       R_R_R_]      Time:1647075216.437 SDO slave:1 index:200b.04 error:06010002 Attempt to write to a read only object
+    0x05      "SubIndex 005"                                [UNSIGNED16       R_R_R_]      Time:1647077196.175 SDO slave:1 index:200b.04 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 5. Right are: 0x87 
 
-    0x06      "SubIndex 006"                                [UNSIGNED16       R_R_R_]      Time:1647075216.499 SDO slave:1 index:200b.05 error:06010002 Attempt to write to a read only object
+    0x06      "SubIndex 006"                                [UNSIGNED16       R_R_R_]      Time:1647077196.238 SDO slave:1 index:200b.05 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 6. Right are: 0x87 
 
-    0x07      "SubIndex 007"                                [UNSIGNED16       R_R_R_]      Time:1647075216.561 SDO slave:1 index:200b.06 error:06010002 Attempt to write to a read only object
+    0x07      "SubIndex 007"                                [UNSIGNED16       R_R_R_]      Time:1647077196.300 SDO slave:1 index:200b.06 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 7. Right are: 0x87 
 
-    0x08      "SubIndex 008"                                [UNSIGNED16       R_R_R_]      Time:1647075216.624 SDO slave:1 index:200b.07 error:06010002 Attempt to write to a read only object
+    0x08      "SubIndex 008"                                [UNSIGNED16       R_R_R_]      Time:1647077196.363 SDO slave:1 index:200b.07 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 8. Right are: 0x87 
 
-    0x09      "SubIndex 009"                                [UNSIGNED16       R_R_R_]      Time:1647075216.686 SDO slave:1 index:200b.08 error:06010002 Attempt to write to a read only object
+    0x09      "SubIndex 009"                                [UNSIGNED16       R_R_R_]      Time:1647077196.422 SDO slave:1 index:200b.08 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 9. Right are: 0x87 
 
-    0x0a      "SubIndex 010"                                [UNSIGNED16       R_R_R_]      Time:1647075216.750 SDO slave:1 index:200b.09 error:06010002 Attempt to write to a read only object
+    0x0a      "SubIndex 010"                                [UNSIGNED16       R_R_R_]      Time:1647077196.483 SDO slave:1 index:200b.09 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 10. Right are: 0x87 
 
-    0x0b      "SubIndex 011"                                [UNSIGNED16       R_R_R_]      Time:1647075216.813 SDO slave:1 index:200b.0a error:06010002 Attempt to write to a read only object
+    0x0b      "SubIndex 011"                                [UNSIGNED16       R_R_R_]      Time:1647077196.545 SDO slave:1 index:200b.0a error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 11. Right are: 0x87 
 
-    0x0c      "SubIndex 012"                                [UNSIGNED16       R_R_R_]      Time:1647075216.873 SDO slave:1 index:200b.0b error:06010002 Attempt to write to a read only object
+    0x0c      "SubIndex 012"                                [UNSIGNED16       R_R_R_]      Time:1647077196.606 SDO slave:1 index:200b.0b error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 12. Right are: 0x87 
 
-    0x0d      "SubIndex 013"                                [UNSIGNED16       R_R_R_]      Time:1647075216.933 SDO slave:1 index:200b.0c error:06010002 Attempt to write to a read only object
+    0x0d      "SubIndex 013"                                [UNSIGNED16       R_R_R_]      Time:1647077196.667 SDO slave:1 index:200b.0c error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 13. Right are: 0x87 
 
-    0x0e      "SubIndex 014"                                [UNSIGNED16       R_R_R_]      Time:1647075216.995 SDO slave:1 index:200b.0d error:06010002 Attempt to write to a read only object
+    0x0e      "SubIndex 014"                                [UNSIGNED16       R_R_R_]      Time:1647077196.731 SDO slave:1 index:200b.0d error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 14. Right are: 0x87 
 
-    0x0f      "SubIndex 015"                                [UNSIGNED16       R_R_R_]      Time:1647075217.057 SDO slave:1 index:200b.0e error:06010002 Attempt to write to a read only object
+    0x0f      "SubIndex 015"                                [UNSIGNED16       R_R_R_]      Time:1647077196.792 SDO slave:1 index:200b.0e error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 15. Right are: 0x87 
 
-    0x10      "SubIndex 016"                                [UNSIGNED16       R_R_R_]      Time:1647075217.120 SDO slave:1 index:200b.0f error:06010002 Attempt to write to a read only object
+    0x10      "SubIndex 016"                                [UNSIGNED16       R_R_R_]      Time:1647077196.854 SDO slave:1 index:200b.0f error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 16. Right are: 0x87 
 
-    0x11      "SubIndex 017"                                [UNSIGNED16       R_R_R_]      Time:1647075217.182 SDO slave:1 index:200b.10 error:06010002 Attempt to write to a read only object
+    0x11      "SubIndex 017"                                [UNSIGNED16       R_R_R_]      Time:1647077196.918 SDO slave:1 index:200b.10 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 17. Right are: 0x87 
 
-    0x12      "SubIndex 018"                                [UNSIGNED16       R_R_R_]      Time:1647075217.244 SDO slave:1 index:200b.11 error:06010002 Attempt to write to a read only object
+    0x12      "SubIndex 018"                                [UNSIGNED16       R_R_R_]      Time:1647077196.982 SDO slave:1 index:200b.11 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 18. Right are: 0x87 
 
-    0x13      "SubIndex 019"                                [UNSIGNED16       R_R_R_]      Time:1647075217.305 SDO slave:1 index:200b.12 error:06010002 Attempt to write to a read only object
+    0x13      "SubIndex 019"                                [UNSIGNED16       R_R_R_]      Time:1647077197.044 SDO slave:1 index:200b.12 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 19. Right are: 0x87 
 
-    0x14      "SubIndex 020"                                [UNSIGNED16       R_R_R_]      Time:1647075217.369 SDO slave:1 index:200b.13 error:06010002 Attempt to write to a read only object
+    0x14      "SubIndex 020"                                [UNSIGNED16       R_R_R_]      Time:1647077197.108 SDO slave:1 index:200b.13 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 20. Right are: 0x87 
 
-    0x15      "SubIndex 021"                                [UNSIGNED16       R_R_R_]      Time:1647075217.433 SDO slave:1 index:200b.14 error:06010002 Attempt to write to a read only object
+    0x15      "SubIndex 021"                                [UNSIGNED16       R_R_R_]      Time:1647077197.168 SDO slave:1 index:200b.14 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 21. Right are: 0x87 
 
-    0x16      "SubIndex 022"                                [UNSIGNED16       R_R_R_]      Time:1647075217.495 SDO slave:1 index:200b.15 error:06010002 Attempt to write to a read only object
+    0x16      "SubIndex 022"                                [UNSIGNED16       R_R_R_]      Time:1647077197.231 SDO slave:1 index:200b.15 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 22. Right are: 0x87 
 
-    0x17      "SubIndex 023"                                [UNSIGNED16       R_R_R_]      Time:1647075217.559 SDO slave:1 index:200b.16 error:06010002 Attempt to write to a read only object
+    0x17      "SubIndex 023"                                [UNSIGNED16       R_R_R_]      Time:1647077197.295 SDO slave:1 index:200b.16 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 23. Right are: 0x87 
 
-    0x18      "SubIndex 024"                                [UNSIGNED16       R_R_R_]      Time:1647075217.619 SDO slave:1 index:200b.17 error:06010002 Attempt to write to a read only object
+    0x18      "SubIndex 024"                                [UNSIGNED16       R_R_R_]      Time:1647077197.359 SDO slave:1 index:200b.17 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 24. Right are: 0x87 
 
-    0x19      "SubIndex 025"                                [UNSIGNED16       R_R_R_]      Time:1647075217.680 SDO slave:1 index:200b.18 error:06010002 Attempt to write to a read only object
+    0x19      "SubIndex 025"                                [UNSIGNED16       R_R_R_]      Time:1647077197.421 SDO slave:1 index:200b.18 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 25. Right are: 0x87 
 
-    0x1a      "SubIndex 026"                                [UNSIGNED16       R_R_R_]      Time:1647075217.744 SDO slave:1 index:200b.19 error:06010002 Attempt to write to a read only object
+    0x1a      "SubIndex 026"                                [UNSIGNED16       R_R_R_]      Time:1647077197.483 SDO slave:1 index:200b.19 error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 26. Right are: 0x87 
 
-    0x1b      "SubIndex 027"                                [UNSIGNED16       R_R_R_]      Time:1647075217.808 SDO slave:1 index:200b.1a error:06010002 Attempt to write to a read only object
+    0x1b      "SubIndex 027"                                [UNSIGNED16       R_R_R_]      Time:1647077197.544 SDO slave:1 index:200b.1a error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 27. Right are: 0x87 
 
-    0x1c      "SubIndex 028"                                [UNSIGNED16       R_R_R_]      Time:1647075217.871 SDO slave:1 index:200b.1b error:06010002 Attempt to write to a read only object
+    0x1c      "SubIndex 028"                                [UNSIGNED16       R_R_R_]      Time:1647077197.607 SDO slave:1 index:200b.1b error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 28. Right are: 0x87 
 
-    0x1d      "SubIndex 029"                                [UNSIGNED16       R_R_R_]      Time:1647075217.933 SDO slave:1 index:200b.1c error:06010002 Attempt to write to a read only object
+    0x1d      "SubIndex 029"                                [UNSIGNED16       R_R_R_]      Time:1647077197.670 SDO slave:1 index:200b.1c error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 29. Right are: 0x87 
 
-    0x1e      "SubIndex 030"                                [UNSIGNED16       R_R_R_]      Time:1647075217.996 SDO slave:1 index:200b.1d error:06010002 Attempt to write to a read only object
+    0x1e      "SubIndex 030"                                [UNSIGNED16       R_R_R_]      Time:1647077197.734 SDO slave:1 index:200b.1d error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 30. Right are: 0x87 
 
-    0x1f      "SubIndex 031"                                [UNSIGNED16       R_R_R_]      Time:1647075218.059 SDO slave:1 index:200b.1e error:06010002 Attempt to write to a read only object
+    0x1f      "SubIndex 031"                                [UNSIGNED16       R_R_R_]      Time:1647077197.796 SDO slave:1 index:200b.1e error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 31. Right are: 0x87 
 
-    0x20      "SubIndex 032"                                [UNSIGNED16       R_R_R_]      Time:1647075218.121 SDO slave:1 index:200b.1f error:06010002 Attempt to write to a read only object
+    0x20      "SubIndex 032"                                [UNSIGNED16       R_R_R_]      Time:1647077197.858 SDO slave:1 index:200b.1f error:06010002 Attempt to write to a read only object
 Tryng to write to 0x200b at index 16 and access index 32. Right are: 0x87 
 
- - Time:1647075218.183 SDO slave:1 index:200b.20 error:06010002 Attempt to write to a read only object
+ - Time:1647077197.921 SDO slave:1 index:200b.20 error:06010002 Attempt to write to a read only object
 
  - 
 0x200c      "ABP_UINT16_COUNTER"                          [VAR]
 ODlist.Index[17] is 0x200c: OEList dump
-    0x00      "ABP_UINT16_COUNTER"                          [UNSIGNED16       R_R_R_]      0x3857 / 14423Tryng to write to 0x200c at index 17 and access index 0. Right are: 0x87 
+    0x00      "ABP_UINT16_COUNTER"                          [UNSIGNED16       R_R_R_]      0x2410 / 9232Tryng to write to 0x200c at index 17 and access index 0. Right are: 0x87 
 
- - Time:1647075218.434 SDO slave:1 index:200c.00 error:06010002 Attempt to write to a read only object
+ - Time:1647077198.168 SDO slave:1 index:200c.00 error:06010002 Attempt to write to a read only object
 
  - 
 0x200d      "ABP_UINT16_SETTER"                           [VAR]

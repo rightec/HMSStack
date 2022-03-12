@@ -163,7 +163,7 @@ static void SetAdi10Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumEleme
    {
       appl_aiUint16_11[ index ] = appl_aiUint16_10[ index ];
       DEBUG_EVENT(("ABCC_AnbState() = %d\n", ABCC_AnbState()));
-      DEBUG_EVENT(("appl_aiUint16_10[ %d ] is %d\n", appl_aiUint16_10[index],index));
+      DEBUG_EVENT(("appl_aiUint16_10[ %d ] is %d\n",index, appl_aiUint16_10[index]));
    }
 }
 
