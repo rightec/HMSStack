@@ -158,9 +158,12 @@ static void GetAdi11Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumEleme
 static void SetAdi10Value( const struct AD_AdiEntry* psAdiEntry, UINT8 bNumElements, UINT8 bStartIndex )
 {
    UINT8 index;
+   DEBUG_EVENT(("SetAdi10Value Callback\n"));
    for( index = bStartIndex ; index < bStartIndex+bNumElements ; index++ )
    {
       appl_aiUint16_11[ index ] = appl_aiUint16_10[ index ];
+      DEBUG_EVENT(("ABCC_AnbState() = %d\n", ABCC_AnbState()));
+      DEBUG_EVENT(("appl_aiUint16_10[ %d ] is %d\n", appl_aiUint16_10[index],index));
    }
 }
 
