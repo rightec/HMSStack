@@ -1,7 +1,10 @@
+#12032022 - Tag_02
+E' la funzione si_sdo(int slave) che fa la lettura e scrittura
+La metto pari pari nella parte di test
+
+
 #12032022 - Tag_01
 Faccio sul SOEM un pò di pulizia per rimuovere verbosità
-
-
 
 #12032022 - Tag_00
 Il lavoro massimale è semrpe sul SOEM
